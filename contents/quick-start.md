@@ -4,6 +4,7 @@
 author: The Shokunin Team
 banner: https://kura.pro/unsplash/images/banners/masaaki-komori-3SWDMwyBFLI-unsplash.jpg
 charset: utf-8
+cname: shokunin.one
 copyright: © 2023 Shokunin
 description: Shokunin Static Site Generator is a blazing fast and flexible static site generator that can be used to create professional static websites and blogs. It features built-in support for GitHub Flavored Markdown, Google Analytics, Bing Analytics, Atom and RSS feeds, minification, a built-in development server, multiple content formats, and more.
 icon: "https://kura.pro/shokunin/images/favicon.ico"
@@ -91,34 +92,3 @@ bing_site_verification: 1234567890
 ---
 
 ## Installation
-
-The following **ISO 20022 Payment Initiation message types** are
-currently supported:
-
-- **[pain.001.001.03](/pain.001.001.03/)** - Customer Credit Transfer Initiation
-
-This message is used to transmit credit transfer instructions from the
-originator (the party initiating the payment) to the originator's bank.
-The message supports both bulk and single payment instructions, allowing
-for the transmission of multiple payments in a batch or individual
-payments separately. The pain.001.001.03 message format is part of the
-ISO 20022 standard and is commonly used for SEPA Credit Transfers within
-the Single Euro Payments Area. It includes relevant information such as
-the originator's and beneficiary's details, payment amounts, payment
-references, and other transaction-related information required for
-processing the credit transfers.
-
-- **[pain.001.001.09](/pain.001.001.09/)** - Customer Credit Transfer Initiation
-
-This message format is part of the ISO 20022 standard and is commonly
-used for SEPA Credit Transfers within the Single Euro Payments Area. It
-enables the transmission of credit transfer instructions from the
-originator to the originator's bank. The message includes essential
-information such as the originator's and beneficiary's details, payment
-amounts, payment references, and other transaction-related information
-required for processing the credit transfers.
-
-**Pain001** is a powerful tool that can help businesses and
-organizations to simplify and automate their payment processing by
-providing a simple and easy way to create ISO 20022-compliant payment
-files.

@@ -4,6 +4,7 @@
 author: The Shokunin Team
 banner: "https://kura.pro/unsplash/images/banners/lan-pham-4qG2qqXi3tY-unsplash.jpg"
 charset: utf-8
+cname: shokunin.one
 copyright: © 2023 Shokunin is a static site generator written in Rust
 description: Shokunin is a modern static site generator. It's a fast and flexible solution that can create professional websites and blogs with ease.
 icon: "https://kura.pro/shokunin/images/favicon.ico"
@@ -120,4 +121,4 @@ We built **Shokunin** to give you total control over your HTML, CSS and JavaScri
 
 If you have any questions about **Shokunin**, don't hesitate to reach out. We are always happy to help.
 
-[Get up and running in seconds.](/quick-start/index.html "Get up and running in seconds.") ❯
+[Get up and running in seconds ❯](/quick-start/index.html "Get up and running in seconds.")

@@ -1,0 +1,22 @@
+{
+  "background_color": "#000",
+  "description": "Shokunin is a modern static site generator. It's a fast and flexible solution that can create professional websites and blogs with ease.",
+  "dir": "/",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "purpose": "any maskable",
+      "sizes": "512x512",
+      "src": "https://kura.pro/shokunin/images/favicon.ico",
+      "type": "image/png"
+    }
+  ],
+  "identity": "/",
+  "lang": "en-GB",
+  "name": "Shokunin is a static site generator written in Rust",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "/",
+  "start_url": "/",
+  "theme_color": "#fff"
+}
