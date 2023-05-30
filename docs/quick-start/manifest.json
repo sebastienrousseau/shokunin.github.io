@@ -13,7 +13,7 @@
   ],
   "identity": "/",
   "lang": "en-GB",
-  "name": "Quick Start",
+  "name": "Shokunin is a static site generator written in Rust",
   "orientation": "any",
   "scope": "/",
   "short_name": "/",
