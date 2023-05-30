@@ -48,7 +48,7 @@ og_description: Shokunin is a static site generator. It is fast and flexible, an
 ## og - The Open Graph image of the page.
 og_image: https://kura.pro/shokunin/images/logos/shokunin.svg
 ## og:image:alt - The Open Graph image alt of the page.
-og_image_alt: Pain001 Logo
+og_image_alt: Shokunin Logo
 ## og - The Open Graph locale of the page.
 og_locale: en_GB
 ## og - The Open Graph site name of the page.
@@ -71,7 +71,7 @@ twitter_description: Shokunin is a static site generator. It is fast and flexibl
 ## twitter_image - The Twitter Card image of the page.
 twitter_image: https://kura.pro/shokunin/images/logos/shokunin.svg
 ## twitter_image:alt - The Twitter Card image alt of the page.
-twitter_image_alt: Pain001 Logo
+twitter_image_alt: Shokunin Logo
 ## twitter_site - The Twitter Card site of the page.
 twitter_site: wwdseb
 ## twitter_title - The Twitter Card title of the page.
@@ -82,7 +82,7 @@ twitter_url: https://shokunin.com
 # Google Analytics - The Google Analytics front matter (YAML).
 
 ## google_site_verification - The Google Analytics site verification of the page.
-google_site_verification: 1234567890
+google_site_verification: G-8MGBE9BCZC
 
 # Bing Webmaster Tools - The Bing Webmaster Tools front matter (YAML).
 
