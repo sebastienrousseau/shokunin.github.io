@@ -1,6 +1,6 @@
 {
   "background_color": "#ffffff",
-  "description": "Shokunin is a cutting-edge Static Site Generator (SSG) created for speed and flexibility. Offering a secure, super flexible solution, it effortlessly generates professional websites and blogs within seconds.",
+  "description": "Leverage the simplicity and power of Shokunin, a cutting-edge Static Site Generator (SSG) created for speed and flexibility.",
   "display": "standalone",
   "icons": [
     {
@@ -10,7 +10,7 @@
       "type": "image/png"
     }
   ],
-  "name": "Shokunin, a powerful, Rust-based Static Site Generator",
+  "name": "Installation",
   "orientation": "portrait-primary",
   "scope": "/",
   "short_name": "shokunin",

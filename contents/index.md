@@ -1,34 +1,36 @@
 ---
 # Front Matter (YAML).
 
-author: The Shokunin Team
+atom_link: "https://shokunin.one/rss.xml"
+author: "Sebastien Rousseau"
 banner: "https://kura.pro/unsplash/images/banners/lan-pham-4qG2qqXi3tY-unsplash.jpg"
-charset: utf-8
-cname: shokunin.one
-copyright: © 2023 Shokunin is a static site generator written in Rust
-description: Shokunin is a modern static site generator. It's a fast and flexible solution that can create professional websites and blogs with ease.
+charset: "utf-8"
+cname: "shokunin.one"
+copyright: "© 2023 Shokunin (職人) Static Site Generator. All rights reserved."
+description: "Shokunin is a cutting-edge Static Site Generator (SSG) created for speed and flexibility. Offering a secure, super flexible solution, it effortlessly generates professional websites and blogs within seconds."
 icon: "https://kura.pro/shokunin/images/favicon.ico"
-image: "https://kura.pro/shokunin/images/titles/title-shokunin.svg"
-keywords: static site generator, static site generation, static website generator, static website generation, static site builder, static website builder, static site tool, static website tool, static site software, rust
-language: en-GB
-layout: index
-name: Shokunin is a static site generator written in Rust
-permalink: https://shokunin.one
-subtitle: Designed for speed, security and reliability.
+image: "https://kura.pro/shokunin/images/titles/title-shokunin.webp"
+keywords: "static site generator, static site generation, static website generator, static website generation, static site builder, static website builder, static site tool, static website tool, static site software, rust"
+language: "en-GB"
+layout: "index"
+name: "Shokunin, a powerful, Rust-based Static Site Generator"
+permalink: "https://shokunin.one"
+short_name: "shokunin"
+subtitle: "Designed for speed, security and reliability"
 theme_color: "#ff2722"
-title: Shokunin is a static site generator written in Rust
-url: https://shokunin.one
+title: "Shokunin, a powerful, Rust-based Static Site Generator"
+url: "https://shokunin.one"
 
 # RSS - The RSS feed front matter (YAML).
 
-generator: "Shokunin Static Site Generator (v0.0.12)"
-item_description: An open-source static site generators (ssg) written in Rust, designed for speed, security and reliability.
+generator: "Shokunin Static Site Generator (v0.0.13)"
+item_description: "Shokunin is a cutting-edge Static Site Generator (SSG) created for speed and flexibility. Offering a secure, super flexible solution, it effortlessly generates professional websites and blogs within seconds."
 item_guid: https://shokunin.one/
 item_link: https://shokunin.one/rss.xml
-item_pub_date: "Thu, 01 June 2023 23:23:23 BST"
+item_pub_date: "Fri, 02 June 2023 23:23:23 BST"
 item_title: "Shokunin - RSS Feed"
-last_build_date: "Thu, 01 June 2023 23:23:23 BST"
-pub_date: "Thu, 01 June 2023 23:23:23 BST"
+last_build_date: "Fri, 02 June 2023 23:23:23 BST"
+pub_date: "Fri, 02 June 2023 23:23:23 BST"
 
 # MS Application - The MS Application front matter (YAML).
 
@@ -39,14 +41,14 @@ msapplication_tap_highlight: no
 ## msapplication - The MS Application tile color of the page.
 msapplication_tile_color: "#7ce846"
 ## msapplication_tile_image - The MS Application tile image of the page.
-msapplication_tile_image: https://kura.pro/shokunin/images/logos/shokunin.svg
+msapplication_tile_image: https://kura.pro/shokunin/images/logos/shokunin.webp
 
 # Open Graph - The Open Graph front matter (YAML).
 
 ## og - The Open Graph description of the page.
-og_description: Shokunin is a static site generator. It is fast and flexible, and can be used to create professional websites and blogs.
+og_description: "Shokunin is a cutting-edge Static Site Generator (SSG) created for speed and flexibility. Offering a secure, super flexible solution, it effortlessly generates professional websites and blogs within seconds."
 ## og - The Open Graph image of the page.
-og_image: https://kura.pro/shokunin/images/logos/shokunin.svg
+og_image: https://kura.pro/shokunin/images/logos/shokunin.webp
 ## og:image:alt - The Open Graph image alt of the page.
 og_image_alt: Shokunin Logo
 ## og - The Open Graph locale of the page.
@@ -54,7 +56,7 @@ og_locale: en_GB
 ## og - The Open Graph site name of the page.
 og_site_name: shokunin.com
 ## og - The Open Graph title of the page.
-og_title: Shokunin, a Static Site Generator (SSG) written in Rust
+og_title: Shokunin, a powerful, Rust-based Static Site Generator
 ## og - The Open Graph type of the page.
 og_type: website
 ## og - The Open Graph url of the page.
@@ -67,9 +69,9 @@ twitter_card: summary
 ## twitter_creator - The Twitter Card creator of the page.
 twitter_creator: wwdseb
 ## twitter_description - The Twitter Card description of the page.
-twitter_description: Shokunin is a static site generator. It is fast and flexible, and can be used to create professional websites and blogs.
+twitter_description: "Shokunin is a cutting-edge Static Site Generator (SSG) created for speed and flexibility. Offering a secure, super flexible solution, it effortlessly generates professional websites and blogs within seconds."
 ## twitter_image - The Twitter Card image of the page.
-twitter_image: https://kura.pro/shokunin/images/logos/shokunin.svg
+twitter_image: https://kura.pro/shokunin/images/logos/shokunin.webp
 ## twitter_image:alt - The Twitter Card image alt of the page.
 twitter_image_alt: Shokunin Logo
 ## twitter_site - The Twitter Card site of the page.
@@ -79,46 +81,41 @@ twitter_title: Shokunin, a Static Site Generator (SSG) written in Rust
 ## twitter_url - The Twitter Card url of the page.
 twitter_url: https://shokunin.com
 
-# Google Analytics - The Google Analytics front matter (YAML).
-
-## google_site_verification - The Google Analytics site verification of the page.
-google_site_verification: G-8MGBE9BCZC
-
-# Bing Webmaster Tools - The Bing Webmaster Tools front matter (YAML).
-
-## bing_site_verification - The Bing Webmaster Tools site verification of the page.
-bing_site_verification: 1234567890
-
 ---
 
-## Designed to help
+## Why choose Shokunin?
 
-**Shokunin** is a highly-optimised, static site generator that is easy to use and comes with a wealth of powerful features. You can design websites that not only look great and function smoothly, but that also do exactly what you want the way you want it done.
+### Incredibly fast
 
-It uses a simple and clean folder structure and Markdown files tailored to create a static website that can be easily deployed in a matter of seconds. It features built-in support for GitHub Flavored Markdown, Google Analytics, Bing Analytics, Atom, and RSS feeds, minification, a built-in development server, multiple content formats, and more.
+Shokunin is a blazing-fast Static Site Generator (SSG) built in Rust to facilitate the creation of SEO-friendly websites, documents, and blogs.
 
-The library generates static HTML from Markdown, YAML, JSON, and TOML files. It also supports HTML themes and custom templates to help you create high quality websites with ease, customizing every aspect of your site's look and feel.
+### Versatile and ready-to-use
 
-## Features ✨
+Shokunin is feature-rich, supporting GitHub Flavoured Markdown (GFM), Google Analytics, Bing Analytics, Atom, RSS feeds, and source code minification. It's versatile, tailoring to diverse web development needs and use cases.
 
-**Shokunin Static Site Generator** features are:
+### Content-focused
 
-- Built-in support for [GitHub Flavored Markdown][01] (GFM)
-- Built-in support for Google Analytics and Bing Analytics
-- Compatible with various HTML themes and Premium templates
-- Generates Atom and RSS feeds for your blog posts
-- Generates minified versions for optimal performance and SEO
-- Includes a built-in Rust development server for local development and testing
-- Supports multiple content formats, including Markdown, YAML, JSON, TOML, XML, etc.
-- Built-in support for sitemap generation, robots.txt generation, canonical name (CNAME) records and custom 404 pages
-- Supports custom templates and HTML themes
+Shokunin prioritises content, offering the ability to generate static HTML from Markdown, YAML, JSON, and TOML files. It fully supports HTML themes, custom templates, and even includes a built-in Rust development server for local development and testing. Enjoy faster, and fully automated creation of your sitemaps, robots.txt, canonical name (CNAME) records, and custom 404 pages. With Shokunin, you're in control of your data.
 
-[01]: https://github.github.com/gfm/ "GitHub Flavored Markdown"
+## Key Features of Shokunin ✨
 
-## Anything’s possible with Shokunin
+- Built-in support for [GitHub Flavoured Markdown][01] (GFM)
+- Integrated with Google Analytics and Bing Analytics
+- Compatibility with various HTML themes and Premium templates
+- Atom and RSS feeds generation for blog posts
+- Minified versions for optimal performance and SEO
+- Built-in Rust development server for local testing and development
+- Support for multiple content formats including Markdown, YAML, JSON, TOML, XML, etc.
+- Sitemap, robots.txt, canonical name (CNAME) records, and custom 404 pages generation
+- Custom templates and HTML themes support
 
-We built **Shokunin** to give you total control over your HTML, CSS and JavaScript without getting in your way and without sacrificing the content. ‍
+## Shokunin in Action
 
-If you have any questions about **Shokunin**, don't hesitate to reach out. We are always happy to help.
+We believe in simplicity and speed. Shokunin is crafted with flexibility and adjustability in mind, catering to everything from simple blogs to complex websites. We give you full control over your HTML, CSS, and JavaScript, letting you focus on what's important. Write your content in Markdown, YAML, JSON, TOML, or XML, create your HTML templates and leave the website generation to us.
 
-[Get up and running in seconds ❯](/quick-start/index.html "Get up and running in seconds.")
+Should you have any questions or require assistance, don't hesitate to reach out. We're always here to help!
+
+[Getting started with Shokunin ❯][02]
+
+[01]: https://github.github.com/gfm/ "GitHub Flavoured Markdown"
+[02]: /installation/index.html "Getting started with Shokunin"
