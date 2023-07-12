@@ -3,14 +3,15 @@
 # Front Matter (YAML)
 
 author: "Shokunin Static Site Generator"
-banner_alt: "White Circuit Breaker"
+banner_alt: "Brown And White Fox In White Background"
 banner_height: "100vh"
 banner_width: "100vw"
-banner: "https://kura.pro/unsplash/images/banners/masaaki-komori-A_Zxb4Ka-Gg-unsplash.jpg"
+banner: "https://kura.pro/unsplash/images/banners/birger-strahl-fOV7nWWIwRk-unsplash.jpg"
 cdn: "https://kura.pro"
 charset: "utf-8"
+cname: "shokunin.one"
 copyright: "© 2023 Shokunin Static Site Generator. All rights reserved."
-description: "The page may have been removed or renamed."
+description: "It looks like you’re offline. Check your connection and try again."
 format-detection: "telephone=no"
 hreflang: "en-gb"
 icon: "https://kura.pro/shokunin/images/favicon.ico"
@@ -19,7 +20,7 @@ image_alt: "Logo of Shokunin, a powerful, Rust-based Static Site Generator"
 image_height: "630"
 image_width: "1200"
 image: "https://kura.pro/shokunin/images/titles/title-shokunin.webp"
-keywords: "404, page not found, not available"
+keywords: "offline, connection, error, unable to connect"
 language: "en-GB"
 layout: "page"
 locale: "en_GB"
@@ -27,29 +28,30 @@ logo_alt: "Logo of Shokunin, a powerful, Rust-based Static Site Generator"
 logo_height: "33"
 logo_width: "181"
 logo: "https://kura.pro/shokunin/images/titles/title-shokunin.webp"
-name: "404"
-permalink: "https://shokunin.one/404/index.html"
+name: "Offline"
+permalink: "https://shokunin.one/offline/index.html"
 rating: "general"
 referrer: "no-referrer"
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: "shokunin"
-subtitle: "Sorry we can't find that page."
+subtitle: "Check your connection and try again."
 theme_color: "rgb(181, 0, 0)"
-title: "Shokunin - Page not found"
-url: "https://shokunin.one/404/index.html"
+title: "Shokunin - No Internet Connection"
+url: "https://shokunin.one"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 
 # RSS - The RSS feed front matter (YAML).
-atom_link: "https://shokunin.one/404/rss.xml"
+
+atom_link: "https://shokunin.one/offline/rss.xml"
 category: "Software, Static Site Generator, Rust"
 docs: "https://validator.w3.org/feed/docs/rss2.html"
 generator: "Shokunin 🦀 (version 0.0.14)"
-item_description: "The page may have been removed or renamed."
-item_guid: "https://shokunin.one/404/rss.xml"
-item_link: "https://shokunin.one/404/rss.xml"
+item_description: "It looks like you’re offline. Check your connection and try again."
+item_guid: "https://shokunin.one/offline/rss.xml"
+item_link: "https://shokunin.one/offline/rss.xml"
 item_pub_date: "Wed, 12 Jul 2023 12:12:12 GMT"
-item_title: "Shokunin - Page not found"
+item_title: "Shokunin - No Internet Connection"
 last_build_date: "Wed, 12 Jul 2023 12:12:12 GMT"
 managing_editor: "contact@shokunin.one"
 pub_date: "Wed, 12 Jul 2023 12:12:12 GMT"
@@ -58,12 +60,13 @@ type: "website"
 webmaster: "contact@shokunin.one"
 
 # Apple - The Apple front matter (YAML).
+
 apple_mobile_web_app_orientations: "portrait"
 apple_touch_icon_sizes: "192x192"
 apple-mobile-web-app-capable: "yes"
 apple-mobile-web-app-status-bar-inset: "black"
 apple-mobile-web-app-status-bar-style: "black-translucent"
-apple-mobile-web-app-title: "Shokunin - Page not found"
+apple-mobile-web-app-title: "Shokunin, a powerful, Rust-based Static Site Generator"
 apple-touch-fullscreen: "yes"
 
 # MS Application - The MS Application front matter (YAML).
@@ -71,37 +74,36 @@ apple-touch-fullscreen: "yes"
 msapplication-config: "/browserconfig.xml"
 msapplication-tap-highlight: "no"
 msapplication-TileColor: "rgb(181, 0, 0)"
-msapplication-tile-image: "https://kura.pro/shokunin/images/logos/shokunin.svg"
+msapplication_tile_image: "https://kura.pro/shokunin/images/logos/shokunin.svg"
 
 # Twitter Card - The Twitter Card front matter (YAML).
 
 twitter_card: "summary"
 twitter_creator: "@wwdseb"
-twitter_description: "The page may have been removed or renamed."
+twitter_description: "It looks like you’re offline. Check your connection and try again."
 twitter_image: "https://kura.pro/shokunin/images/logos/shokunin.svg"
 twitter_image_alt: "Logo of Shokunin, a powerful, Rust-based Static Site Generator"
 twitter_site: "@wwdseb"
-twitter_title: "Shokunin - Page not found"
-twitter_url: "https://shokunin.one/404/index.html"
+twitter_title: "Shokunin - No Internet Connection"
+twitter_url: "https://www.shokunin.one"
 
 # Humans.txt - The Humans.txt front matter (YAML).
 
-author_website: "https://kura.pro"
+author_website: "https://shokunin.one"
 author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thanks for reading!"
 site_last_updated: "2023-07-05"
 site_standards: "HTML5, CSS3, RSS, Atom, JSON, XML, YAML, Markdown, TOML"
-site_components: "Kaishi, Kaishi Builder, Kaishi CLI, Kaishi Templates, Kaishi Themes"
+site_components: "Shokunin SSG, Shokunin CLI, Shokunin Templates, Shokunin Themes, Kaishi SSG, Kaishi CLI, Kaishi Templates, Kaishi Themes"
 site_software: "Shokunin, Rust"
 
 ---
 
-This page is a 404 error, which means you've clicked on a bad link or you've
-asked for a page that doesn't exist. Please find some helpful links below to
-get you back on track.
+Try:
 
-Here are a few links that may be helpful:
-
-- [homepage](/) - The homepage of this site
-- [contact](/contact/) - Get in touch with us
+- Turning off airplane mode.
+- Turning on Wi-Fi, mobile data, or cellular data.
+- Checking the signal in your area.
+- Checking the cables and connections.
+- Restarting your router.

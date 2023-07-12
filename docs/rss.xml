@@ -1,1 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shokunin, a powerful, Rust-based Static Site Generator</title><link>https://shokunin.one</link><description>Shokunin is a cutting-edge Static Site Generator (SSG) created for speed and flexibility. Offering a secure, super flexible solution, it effortlessly generates professional websites and blogs within seconds.</description><generator>Shokunin Static Site Generator (v0.0.13)</generator><language>en-GB</language><lastBuildDate>Fri, 02 June 2023 23:23:23 BST</lastBuildDate><pubDate>Fri, 02 June 2023 23:23:23 BST</pubDate><atom:link href="https://shokunin.one/rss.xml" rel="self" type="application/rss+xml"/><item><title>Shokunin - RSS Feed</title><link>https://shokunin.one/rss.xml</link><pubDate>Fri, 02 June 2023 23:23:23 BST</pubDate><guid>https://shokunin.one/</guid><description>Shokunin is a cutting-edge Static Site Generator (SSG) created for speed and flexibility. Offering a secure, super flexible solution, it effortlessly generates professional websites and blogs within seconds.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Shokunin, a powerful, Rust-based Static Site Generator</title>
+        <link>https://shokunin.one</link>
+        <description>Shokunin is a cutting-edge Static Site Generator (SSG) created for speed and
+            flexibility. Offering a secure, super flexible solution, it effortlessly generates
+            professional websites and blogs within seconds.</description>
+        <generator>Shokunin Static Site Generator (v0.0.14)</generator>
+        <language>en-GB</language>
+        <lastBuildDate>Fri, 02 June 2023 23:23:23 BST</lastBuildDate>
+        <pubDate>Fri, 02 June 2023 23:23:23 BST</pubDate>
+        <atom:link href="https://shokunin.one/rss.xml" rel="self" type="application/rss+xml" />
+        <item>
+            <title>Shokunin - RSS Feed</title>
+            <link>https://shokunin.one/rss.xml</link>
+            <pubDate>Fri, 02 June 2023 23:23:23 BST</pubDate>
+            <guid>https://shokunin.one/</guid>
+            <description>Shokunin is a cutting-edge Static Site Generator (SSG) created for speed
+                and flexibility. Offering a secure, super flexible solution, it effortlessly
+                generates professional websites and blogs within seconds.</description>
+        </item>
+    </channel>
+</rss>

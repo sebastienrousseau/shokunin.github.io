@@ -2,7 +2,7 @@
 
 <img
   align="right"
-  alt="Logo of the Shokunin (職人) Static Site Generator"
+  alt="Logo of the Shokunin Static Site Generator"
   height="261"
   src="https://kura.pro/shokunin/images/logos/shokunin.svg"
   width="261"

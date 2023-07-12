@@ -1,325 +1,287 @@
 <!DOCTYPE html>
-<html lang="{{lang}}">
+<html lang="{{language}}">
   <head>
     <meta charset="{{charset}}" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <title>{{title}}</title>
 
     <!-- # Start Primary Meta Tags -->
-    <title>{{title}}</title>
-    {{meta}}
-    <meta name="title" content="{{title}}" />
-    <meta name="description" content="{{description}}" />
-    <meta name="keywords" content="{{keywords}}" />
-    <meta name="generator" content="{{generator}}" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="robots" content="{{robots}}" />
-    <meta name="theme-color" content="{{theme_color}}" />
+    {{primary}}
     <!-- # End Primary Meta Tags -->
+
+    <!-- # Start Open Graph / Facebook Meta Tags -->
+    {{opengraph}}
+    <!-- # End Open Graph / Facebook Meta Tags -->
+
+    <!-- # Start Accessibility Meta Tags -->
+    <meta name="accessibility" content="ARIA" />
+    <meta name="accessibility" content="fullKeyboardControl" />
+    <meta name="accessibility" content="noFlashingHazard" />
+    <!-- # End Accessibility Meta Tags -->
+
+    <!-- # Start Apple Meta Tags -->
+    {{apple}}
+    <!-- # End Apple Meta Tags -->
+
+    <!-- # Start Content Security Policy Meta Tags -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self';
+            script-src 'self' 'unsafe-inline' *.google-analytics.com https://cdn.jsdelivr.net unpkg.com www.googletagmanager.com x.clarity.ms;
+            connect-src 'self' collect;
+            img-src 'self' data: https: kura.pro;
+            style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;
+            media-src 'self';"
+    />
+    <!-- # End Content Security Policy Meta Tags -->
+
+    <!-- # Start Microsoft Meta Tags -->
+    {{microsoft}}
+    <!-- # End Microsoft Meta Tags -->
+
+    <!-- # Start Twitter Meta Tags -->
+    {{twitter}}
+    <!-- # End Twitter Meta Tags -->
+
+    <!-- # Start Links -->
+    <link rel="alternate" href="{{url}}" hreflang="{{hreflang}}" />
+    <link rel="canonical" href="{{url}}" />
     <link
       rel="icon"
       type="image/x-icon"
-      href="https://kura.pro/shokunin/images/favicon.ico"
+      href="{{cdn}}/{{short_name}}/images/favicon.ico"
     />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      as="style"
       crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      onload="this.onload=null;this.rel='stylesheet'"
+      rel="preload"
     />
+
     <link
       rel="apple-touch-icon"
-      href="https://kura.pro/shokunin/images/icons/192x192.png"
-      sizes="192x192"
+      href="{{cdn}}/{{short_name}}/images/icons/{{apple_touch_icon_sizes}}.png"
+      sizes="{{apple_touch_icon_sizes}}"
     />
     <link
       rel="icon"
       type="image/png"
-      href="https://kura.pro/shokunin/images/icons/16x16.png"
+      href="{{cdn}}/{{short_name}}/images/icons/16x16.png"
       sizes="16x16"
     />
     <link
       rel="icon"
       type="image/png"
-      href="https://kura.pro/shokunin/images/icons/32x32.png"
+      href="{{cdn}}/{{short_name}}/images/icons/32x32.png"
       sizes="32x32"
     />
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="manifest" href="{{permalink}}/manifest.json" />
     <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+    <!-- # End Links -->
 
+    <!-- # Start Start Styles -->
     <style>
-      a {
-        color: var(--bs-link-color);
-        text-decoration: none;
-      }
-      a:hover {
-        color: var(--bs-link-hover-color);
-        text-decoration: none;
-      }
+            a {
+              color: {{theme_color}};
+              text-decoration: none;
+            }
 
-      table {
-        border: 1px solid black;
-        border-collapse: collapse;
-        border-spacing: 0;
-        empty-cells: show;
-        margin-bottom: 25px;
-        width: 100%;
-      }
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+              color: {{theme_color}};
+              text-decoration: none;
+            }
 
-      td,
-      th,
-      thead {
-        vertical-align: top;
+            a:hover {
+              color: {{theme_color}};
+              opacity: .618;
+              text-decoration: underline;
+            }
+            table{
+          border:1px solid black;
+          border-collapse:collapse;
+          border-spacing:0;
+          empty-cells:show;
+          margin-bottom:26.18px;
+          width:100%
       }
-
-      thead {
+      td,th,thead{
+          vertical-align:top
+      }
+      thead{
+          background-color:#f1f1f1;
+          text-align:left;
+          border-bottom:1px solid black
+      }
+      td,th{
+          background-color:transparent;
+          border-left:1px solid black;
+          border-width:0 0 0 1px;
+          margin:0;
+          overflow:visible;
+          padding:6.18px 12px
+      }
+      pre {
         background-color: #f1f1f1;
-        text-align: left;
-        border-bottom: 1px solid black;
-      }
-
-      td,
-      th {
-        background-color: transparent;
-
-        border-left: 1px solid black;
-        border-width: 0 0 0 1px;
-        margin: 0;
-        overflow: visible;
-        padding: 6px 12px;
+        display: block;
+        padding: 1.618rem;
+        word-break: break-all;
+        word-wrap: break-word;
+        white-space: pre-wrap;
       }
     </style>
-
-    <!-- # Start Open Graph / Facebook -->
-    <meta name="og:description" content="{{og_description}}" />
-    <meta name="og:image:alt" content="{{og_image_alt}}" />
-    <meta property="og:image" content="{{og_image}}" />
-    <meta property="og:locale" content="{{og_locale}}" />
-    <meta property="og:site_name" content="{{og_site_name}}" />
-    <meta property="og:title" content="{{og_title}}" />
-    <meta property="og:type" content="{{og_type}}" />
-    <meta property="og:url" content="{{og_url}}" />
-    <!-- # End Open Graph / Facebook -->
-
-    <!-- # Start Schema.org -->
-    <meta itemprop="name" content="{{name}}" />
-    <meta itemprop="description" content="{{description}}" />
-    <meta itemprop="image" content="{{image}}" />
-    <!-- # End Schema.org -->
-
-    <!-- # Start Accessibility -->
-    <meta name="accessibility" content="ARIA" />
-    <meta name="accessibility" content="fullKeyboardControl" />
-    <meta name="accessibility" content="noFlashingHazard" />
-    <!-- # End Accessibility -->
-
-    <!-- # Start Apple -->
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="apple-mobile-web-app-title" content="{{title}}" />
-    <meta name="application-name" content="{{name}}" />
-    <meta name="author" content="{{author}}" />
-    <!-- # End Apple -->
-
-    <!-- # Start Content Security Policy -->
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="
-    default-src 'self';
-    connect-src 'self' https://*.google-analytics.com;
-    script-src 'self' 'nonce-randomString1' 'nonce-randomString2' 'nonce-randomString3' 'nonce-randomString4' https://www.googletagmanager.com https://www.clarity.ms https://cdn.jsdelivr.net;
-    style-src 'self' 'unsafe-inline' https://kura.pro https://unpkg.com/ https://cdn.jsdelivr.net;
-    img-src 'self' https://kura.pro https://unpkg.com/ data:;
-    media-src 'self';
-"
-    />
-    <!-- # End Content Security Policy -->
-
-    <!-- # Start Microsoft -->
-    <meta name="msvalidate1" content="{{msvalidate1}}" />
-    <meta name="msapplication-config" content="{{msapplication_config}}" />
-    <meta
-      name="msapplication-tap-highlight"
-      content="{{msapplication_tap_highlight}}"
-    />
-    <meta
-      name="msapplication-TileColor"
-      content="{{msapplication_tile_color}}"
-    />
-    <meta
-      name="msapplication-TileImage"
-      content="{{msapplication_tile_image}}"
-    />
-    <!-- # End Microsoft -->
-
-    <!-- # Start Twitter -->
-    <meta name="twitter:card" content="{{twitter_card}}" />
-    <meta name="twitter:creator" content="@{{twitter_creator}}" />
-    <meta name="twitter:description" content="{{twitter_description}}" />
-    <meta name="twitter:image" content="{{twitter_image}}" />
-    <meta name="twitter:twitter_image_alt" content="{{twitter_image_alt}}" />
-    <meta name="twitter:site" content="@{{twitter_site}}" />
-    <meta name="twitter:title" content="{{twitter_title}}" />
-    <meta name="twitter:url" content="{{twitter_url}}" />
-    <!-- # End Twitter -->
+    <!-- # End Styles -->
   </head>
   <body
     id="page-top"
     itemscope
     itemtype="http://schema.org/WebPage"
-    class="text-center"
+    class="text-center bg-white text-dark"
   >
-    <!-- Responsive navbar-->
+    <!-- # Start Responsive navbar -->
     <nav
       class="navbar navbar-expand-lg navbar-light bg-white text-dark fixed-top"
       id="mainNav"
-      role="navigation"
       itemscope
       itemtype="http://schema.org/SiteNavigationElement"
-      style="--bs-opacity: 0.9; opacity: 0.9"
     >
       <div class="container p-3">
         <figure class="py-0 mb-0">
           <a href="/" tabindex="0" class="navbar-brand">
             <img
               alt="Logo of {{name}}"
-              id="{{name}}"
-              itemprop="image"
-              itemtype="http://schema.org/ImageObject"
-              src="{{image}}"
-              height="33"
               title="Logo of {{name}}"
+              height="{{logo_height}}"
+              id="{{name}}"
+              src="{{logo}}"
+              width="{{logo_width}}"
             />
           </a>
+          <figcaption class="visually-hidden">{{subtitle}}</figcaption>
         </figure>
         <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          class="navbar-toggler"
+          data-bs-target="#navbarSupportedContent"
+          data-bs-toggle="collapse"
+          type="button"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a
-                class="text-uppercase nav-link nav-link"
-                aria-current="page"
-                href="/index.html"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="text-uppercase nav-link nav-link active"
-                aria-current="page"
-                href="/installation/index.html"
-                >Installation</a
-              >
-            </li>
-            <li class="text-uppercase nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                id="navbarDropdown"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                >Resources</a
-              >
-              <ul
-                class="dropdown-menu dropdown-menu-end"
-                aria-labelledby="navbarDropdown"
-              >
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="https://github.com/sebastienrousseau/shokunin"
-                    >GitHub</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="https://docs.rs/crate/ssg/"
-                    >Documentation</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="https://kaishi.one">Themes</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
+        <div
+          class="collapse navbar-collapse"
+          role="navigation"
+          id="navbarSupportedContent"
+        >
+          {{navigation}}
         </div>
       </div>
     </nav>
+    <!-- # End Responsive navbar -->
 
-    <!-- Header -->
+    <!-- Header-->
     <header>
       <div
-        class="w-100"
+        class="w-100 p-5"
         style="
           background-image: url({{banner}});
-          background-position: center;
+          background-position: center center;
           background-repeat: no-repeat;
           background-size: cover;
-          height: 100vh;
-          width: 100vh;
+          height: {{banner_height}};
+          width: {{banner_width}};
         "
+        role="img"
+        title="{{banner_alt}}"
+        aria-label="{{banner_alt}}"
       >
-        <div class="position-relative overflow-hidden top-50 text-center">
-          <strong class="display-4 fw-normal">{{title}}</strong>
-          <p class="lead fw-normal">{{subtitle}}</p>
+        <div class="w-100 h-100 p-5 d-flex align-items-center">
+          <div
+          class="text-center text-white center mx-auto rounded rounded-3 p-5"
+          style="
+            background-color: rgba(0, 0, 0, 0.618);
+            width: 61.8vw;
+            height: auto;
+          "
+          >
+            <p class="display-3 fw-bold">{{name}}</p>
+            <p class="display-6 fw-normal">{{subtitle}}</p>
+          </div>
         </div>
       </div>
     </header>
 
     <!-- Main content-->
     <main id="main" class="bd-masthead fs-5 p-5" aria-label="main">
-      <div class="px-5 text-start justify-content-between">{{content}}</div>
+      <div class="container text-start justify-content-between">
+        {{content}}
+      </div>
     </main>
 
     <!-- Footer-->
-    <footer id="footer" class="center text-center" aria-label="footer">
-      <p>{{copyright}}</p>
+    <footer id="footer" aria-label="footer" class="footer border-top mt-auto py-3">
+      <img
+        alt="{{subtitle}}"
+        height="32"
+        src="{{cdn}}/{{short_name}}/images/logos/{{short_name}}.webp"
+        title="{{subtitle}}"
+        width="32"
+      />
+      <span class="px-2">{{copyright}}</span>
+      <span class="px-2">
+        <a href="/contact/index.html">Contact</a>
+      </span>
+      <span class="px-2">
+        <a href="/privacy/index.html">Privacy & Cookie Policy</a>
+      </span>
+      <span class="px-2">
+        <a href="/terms/index.html">Terms of Use</a>
+      </span>
     </footer>
-
-    <!-- Bootstrap core JS-->
     <script
-      crossorigin
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      async
+      crossorigin="anonymous"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     ></script>
-    <script
-      async="true"
-      src="https://www.googletagmanager.com/gtag/js?id=G-8MGBE9BCZC"
-    ></script>
-    <script nonce="randomString2">
-      function gtag() {
-        dataLayer.push(arguments);
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "WebSite",
+        "name": "{{name}}",
+        "url": "{{url}}"
       }
-      (window.dataLayer = window.dataLayer || []),
-        gtag("js", new Date()),
-        gtag("config", "G-8MGBE9BCZC", {
-          anonymize_ip: !0,
-        });
     </script>
-    <script nonce="randomString1">
-      !(function (f, h, k, j, g, b, d) {
-        (f[k] =
-          f[k] ||
-          function () {
-            (f[k].q = f[k].q || []).push(arguments);
-          }),
-          ((b = h.createElement(j)).async = 1),
-          (b.src = "https://www.clarity.ms/tag/hbynubbdiw?ref=bwt"),
-          (d = h.getElementsByTagName(j)[0]).parentNode.insertBefore(b, d);
-      })(window, document, "clarity", "script");
+    <script>
+      // This is an Immediately Invoked Function Expression (IIFE) which helps
+      // to avoid declaring any globals.
+      (function () {
+        // Create a new script element
+        var script = document.createElement("script");
+
+        // Set the source of the script element to "/main.js".
+        // A timestamp is appended as a query string to ensure the browser
+        // always fetches the latest version of the script, bypassing the
+        // cache.
+        script.src = "/main.js?" + new Date().getTime();
+
+        // The script is of type "text/javascript"
+        script.type = "text/javascript";
+
+        // The script is set to execute asynchronously as soon as it's
+        //available
+        script.async = true;
+
+        // Append the script element to the head of the document
+        document.head.appendChild(script);
+      })(); // The function is immediately invoked
     </script>
   </body>
 </html>

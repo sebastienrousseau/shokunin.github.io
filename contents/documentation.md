@@ -1,101 +1,141 @@
 ---
-# Front Matter (YAML).
 
-atom_link: "https://shokunin.one/installation/rss.xml"
-author: "Sebastien Rousseau"
-banner: https://kura.pro/unsplash/images/banners/masaaki-komori-3SWDMwyBFLI-unsplash.jpg
+# Front Matter (YAML)
+
+author: "Shokunin Static Site Generator"
+banner_alt: "Pink Cherry Blossom In Close Up Photography"
+banner_height: "100vh"
+banner_width: "100vw"
+banner: "https://kura.pro/unsplash/images/banners/masaaki-komori-3SWDMwyBFLI-unsplash.jpg"
+cdn: "https://kura.pro"
 charset: "utf-8"
 cname: "shokunin.one"
-copyright: "© 2023 Shokunin (職人) Static Site Generator. All rights reserved."
+copyright: "© 2023 Shokunin Static Site Generator. All rights reserved."
 description: "Leverage the simplicity and power of Shokunin, a cutting-edge Static Site Generator (SSG) created for speed and flexibility."
+download: "https://github.com/sebastienrousseau/shokunin/archive/refs/tags/v0.0.14.zip"
+format-detection: "telephone=no"
+hreflang: "en-gb"
 icon: "https://kura.pro/shokunin/images/favicon.ico"
+id: "https://shokunin.one"
+image_alt: "Logo of Shokunin, a powerful, Rust-based Static Site Generator"
+image_height: "630"
+image_width: "1200"
 image: "https://kura.pro/shokunin/images/titles/title-shokunin.webp"
 keywords: "static site generator, static site generation, static website generator, static website generation, static site builder, static website builder, static site tool, static website tool, static site software, rust"
 language: "en-GB"
-layout: page
-name: "Installation"
-permalink: "https://shokunin.one/installation"
+layout: "page"
+locale: "en_GB"
+logo_alt: "Logo of Shokunin, a powerful, Rust-based Static Site Generator"
+logo_height: "33"
+logo_width: "181"
+logo: "https://kura.pro/shokunin/images/titles/title-shokunin.webp"
+name: "Documentation"
+permalink: "https://shokunin.one/documentation/index.html"
+rating: "general"
+referrer: "no-referrer"
+revisit-after: "7 days"
+robots: "index, follow"
 short_name: "shokunin"
-subtitle: "Shokunin includes everything you need to develop, and test your website."
-theme_color: "#ff2722"
-title: "Installation"
+subtitle: "Installation instructions, and documentation for Shokunin Static Site Generator (SSG)"
+theme_color: "rgb(181, 0, 0)"
+title: "Shokunin - Installation Guide"
 url: "https://shokunin.one"
+viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 
 # RSS - The RSS feed front matter (YAML).
 
-generator: "Shokunin Static Site Generator (v0.0.13)"
+atom_link: "https://shokunin.one/documentation/rss.xml"
+category: "Software, Static Site Generator, Rust"
+docs: "https://validator.w3.org/feed/docs/rss2.html"
+generator: "Shokunin 🦀 (version 0.0.14)"
 item_description: "Leverage the simplicity and power of Shokunin, a cutting-edge Static Site Generator (SSG) created for speed and flexibility."
-item_guid: https://shokunin.one/installation/
-item_link: https://shokunin.one/installation/rss.xml
-item_pub_date: "Fri, 02 June 2023 23:23:23 BST"
-item_title: "Shokunin installation - RSS Feed"
-last_build_date: "Fri, 02 June 2023 23:23:23 BST"
-pub_date: "Fri, 02 June 2023 23:23:23 BST"
+item_guid: "https://shokunin.one/documentation/rss.xml"
+item_link: "https://shokunin.one/documentation/rss.xml"
+item_pub_date: "Wed, 12 Jul 2023 12:12:12 GMT"
+item_title: "Shokunin - RSS Feed"
+last_build_date: "Wed, 12 Jul 2023 12:12:12 GMT"
+managing_editor: "contact@shokunin.one"
+pub_date: "Wed, 12 Jul 2023 12:12:12 GMT"
+ttl: "60"
+type: "website"
+webmaster: "contact@shokunin.one"
+
+# Apple - The Apple front matter (YAML).
+
+apple_mobile_web_app_orientations: "portrait"
+apple_touch_icon_sizes: "192x192"
+apple-mobile-web-app-capable: "yes"
+apple-mobile-web-app-status-bar-inset: "black"
+apple-mobile-web-app-status-bar-style: "black-translucent"
+apple-mobile-web-app-title: "Shokunin, a powerful, Rust-based Static Site Generator"
+apple-touch-fullscreen: "yes"
 
 # MS Application - The MS Application front matter (YAML).
 
-## msapplication - The MS Application config of the page.
-msapplication_config: /browserconfig.xml
-## msapplication_tap_highlight - The MS Application tap highlight of the page.
-msapplication_tap_highlight: no
-## msapplication - The MS Application tile color of the page.
-msapplication_tile_color: "#7ce846"
-## msapplication_tile_image - The MS Application tile image of the page.
-msapplication_tile_image: https://kura.pro/shokunin/images/logos/shokunin.webp
-
-# Open Graph - The Open Graph front matter (YAML).
-
-## og - The Open Graph description of the page.
-og_description: "Leverage the simplicity and power of Shokunin, a cutting-edge Static Site Generator (SSG) created for speed and flexibility."
-## og - The Open Graph image of the page.
-og_image: https://kura.pro/shokunin/images/logos/shokunin.webp
-## og:image:alt - The Open Graph image alt of the page.
-og_image_alt: Shokunin Logo
-## og - The Open Graph locale of the page.
-og_locale: en_GB
-## og - The Open Graph site name of the page.
-og_site_name: shokunin.com
-## og - The Open Graph title of the page.
-og_title: Shokunin, a powerful, Rust-based Static Site Generator
-## og - The Open Graph type of the page.
-og_type: website
-## og - The Open Graph url of the page.
-og_url: https://shokunin.com
+msapplication-config: "/browserconfig.xml"
+msapplication-tap-highlight: "no"
+msapplication-TileColor: "rgb(181, 0, 0)"
+msapplication_tile_image: "https://kura.pro/shokunin/images/logos/shokunin.svg"
 
 # Twitter Card - The Twitter Card front matter (YAML).
 
-## twitter_card - The Twitter Card type of the page.
-twitter_card: summary
-## twitter_creator - The Twitter Card creator of the page.
-twitter_creator: wwdseb
-## twitter_description - The Twitter Card description of the page.
+twitter_card: "summary"
+twitter_creator: "@wwdseb"
 twitter_description: "Leverage the simplicity and power of Shokunin, a cutting-edge Static Site Generator (SSG) created for speed and flexibility."
-## twitter_image - The Twitter Card image of the page.
-twitter_image: https://kura.pro/shokunin/images/logos/shokunin.webp
-## twitter_image:alt - The Twitter Card image alt of the page.
-twitter_image_alt: Shokunin Logo
-## twitter_site - The Twitter Card site of the page.
-twitter_site: wwdseb
-## twitter_title - The Twitter Card title of the page.
-twitter_title: Shokunin, a Static Site Generator (SSG) written in Rust
-## twitter_url - The Twitter Card url of the page.
-twitter_url: https://shokunin.com
+twitter_image: "https://kura.pro/shokunin/images/logos/shokunin.svg"
+twitter_image_alt: "Logo of Shokunin, a powerful, Rust-based Static Site Generator"
+twitter_site: "@wwdseb"
+twitter_title: "Shokunin - Installation Guide"
+twitter_url: "https://shokunin.one/documentation/index.html"
+
+# Humans.txt - The Humans.txt front matter (YAML).
+
+author_website: "https://shokunin.one"
+author_twitter: "@wwdseb"
+author_location: "London, UK"
+thanks: "Thanks for reading!"
+site_last_updated: "2023-07-05"
+site_standards: "HTML5, CSS3, RSS, Atom, JSON, XML, YAML, Markdown, TOML"
+site_components: "Shokunin SSG, Shokunin CLI, Shokunin Templates, Shokunin Themes, Kaishi SSG, Kaishi CLI, Kaishi Templates, Kaishi Themes"
+site_software: "Shokunin, Rust"
 
 ---
 
-## Overview
+## Welcome to Shokunin
 
- This guide provides step-by-step instructions for installing and using Shokunin. It includes details about prerequisites, supported platforms, installation, basic usage, and examples.
+We are delighted that you have decided to try Shokunin, and are sure that you
+will find that Shokunin Static Site Generator (SSG) is unique.
 
-## The Basics
+The Shokunin Installation Guide provides step-by-step instructions for
+installing and using Shokunin. It includes details about prerequisites,
+supported platforms, installation, basic usage, and examples.
 
-You can install Shokunin on macOS, Linux, Windows, BSD, and on any machine that can run Rust and Cargo. Shokunin is a command-line tool that you install on your local system. It is not a web application that you run on a web server.
+## System Requirements
+
+This section contains information about what hardware you need to get started
+with Shokunin. It also lists the operating systems that Shokunin supports.
+
+### Supported Hardware
+
+You can install Shokunin on macOS, Linux, Windows, BSD, and on any machine that
+can run Rust and Cargo. Shokunin is a command-line tool that you install on
+your local system. It is not a web application that you run on a web server.
+
+## Before Installing Shokunin
+
+This chapter deals with the preparation for installing Shokunin. This includes
+backing up your data, and installing the prerequisites.
 
 ### Prerequisites
 
-To build Shokunin from source, you will need to have [Git](https://git-scm.com/downloads "Git"), [Rust](https://www.rust-lang.org/tools/install "Rust") and [Cargo](https://github.com/rust-lang/cargo "Cargo") installed.
+To build Shokunin from source, you will need to have
+[Git ⧉](https://git-scm.com/downloads "Git"),
+[Rust ⧉](https://www.rust-lang.org/tools/install "Rust") and
+[Cargo ⧉](https://github.com/rust-lang/cargo "Cargo") installed.
 
-The minimum supported Rust toolchain version is currently Rust **1.69.0** or later (stable). It is recommended that you install the latest stable version of Rust.
+The minimum supported Rust toolchain version is currently Rust `1.70.0` or
+later (stable). It is recommended that you install the latest stable version of
+Rust.
 
 ### Platform support
 
@@ -129,23 +169,23 @@ Shokunin is supported and tested on the following platforms:
 | Passed | macOS   | aarch64-apple-darwin | 64-bit macOS (10.7 Lion or later) |
 | Passed | Windows | aarch64-pc-windows-msvc | 64-bit Windows (7 or later) |
 
-The [GitHub Actions](https://github.com/sebastienrousseau/shokunin/actions "Actions") shows the platforms in which the Shokunin library tests are run.
+The [GitHub Actions ⧉](https://github.com/sebastienrousseau/shokunin/actions "Actions") shows the platforms in which the Shokunin library tests are run.
 
 ### Installing Shokunin Static Site Generator
 
 Once you have the Rust toolchain installed, you can install Shokunin using the following command in your terminal:
 
-```shell
+```
 cargo install ssg
 ```
 
-For simplicity, we have given Shokunin a simple alias `ssg` which can stand for `Shokunin (職人) Site Generator` or `Static Site Generator`.
+For simplicity, we have given Shokunin a simple alias `ssg` which can stand for `Shokunin Site Generator` or `Static Site Generator`.
 
 ## Build Shokunin from source
 
 To build from source, use the following commands:
 
-```bash
+```
 git clone https://github.com/sebastienrousseau/shokunin.git
 cd shokunin
 cargo install --path .
@@ -158,7 +198,7 @@ This will clone the repository, build the binary and install it in your Cargo bi
 
 Shokunin is a command-line tool. You can see the available commands by entering:
 
-```bash
+```
 ssg --help
 ```
 
@@ -166,15 +206,16 @@ ssg --help
 
 Run:
 
-```shell
+```
 ssg  --new=mysite --content=content --template=template --output=output --serve=public
 ```
 
 or
 
-```shell
+```
 ssg  -n=mysite -c=content -t=template -o=output -s=public
 ```
+
 
 This command will create a new website with the name `mysite` in the current directory. It will use the `content` directory to gather the website content and the `template` directory to generate the website files. It will serve the website directly from the `mysite` directory.
 
@@ -190,14 +231,14 @@ This command will create a new website with the name `mysite` in the current dir
 
 To use the Shokunin library in your project, add the following to your `Cargo.toml` file:
 
-```toml
+```
 [dependencies]
-ssg = "0.0.13"
+ssg = "0.0.14"
 ```
 
 Add the following to your `main.rs` file:
 
-```rust
+```
 extern crate ssg;
 use ssg::*;
 ```
@@ -208,13 +249,13 @@ then you can use the Shokunin functions in your application code.
 
 Explore the examples directory of the project to get started with Shokunin. To run an example, clone the repository and run the following command from the project root directory:
 
-```shell
+```
 cargo run --example example
 ```
 
 The command will generate a static website based on the configuration details in the `examples` directory.
 
-```shell
+```
 use ssg::compiler::compile;
 use std::path::Path;
 
@@ -239,7 +280,3 @@ The main() function in this code compiles a website from the `content` directory
 - `content_path:` The path to the directory containing the website content.
 - `site_path:` The path to the directory where the generated website files will be served from.
 - `template_path:` The path to the directory containing the website templates.
-
-#### Return value
-
-The main() function returns a Result. If the compilation is successful, the Result will be Ok(()). If there is an error, the Result will be Err(e), where e is a `Box<dyn std::error::Error>`.
