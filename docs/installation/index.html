@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta itemprop="datePublished" content="2023-10-24T20:24:20+00:00" id="date">
+    <meta itemprop="dateModified" content="2023-10-24T20:24:20+00:00" id="last-modified">
+    <title>Shokunin Installation Prerequisites: Get the Fastest SSG</title>
+
+    <!-- # Start Primary Meta Tags -->
+    <meta content="Sebastien Rousseau" name="author"><meta content="Install Shokunin on macOS, Linux, Windows, and leverage its simplicity and power to create static websites, blogs and microsites with ease." name="description"><meta content="telephone=no" name="format-detection"><meta content="Shokunin 🦀 (version 0.0.19)" name="generator"><meta content="Shokunin, installation, prerequisites, SSG, static site generator, Rust, macOS, Linux, Windows, fast, easy" name="keywords"><meta content="en-GB" name="language"><meta content="https://shokunin.one/installation/index.html" name="permalink"><meta content="general" name="rating"><meta content="no-referrer" name="referrer"><meta content="7 days" name="revisit-after"><meta content="index, follow" name="robots"><meta content="" name="theme-color"><meta content="Shokunin Installation Prerequisites: Get the Fastest SSG" name="title"><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <!-- # End Primary Meta Tags -->
+
+    <!-- # Start Open Graph / Facebook Meta Tags -->
+    <meta name="og:description" content="Install Shokunin on macOS, Linux, Windows, and leverage its simplicity and power to create static websites, blogs and microsites with ease.">
+<meta name="og:image" content="https://kura.pro/shokunin/images/logos/shokunin.webp">
+<meta name="og:image:alt" content="Logo of Shokunin, a powerful, Rust-based Static Site Generator">
+<meta name="og:image:height" content="630">
+<meta name="og:image:width" content="1200">
+<meta name="og:locale" content="en_GB">
+<meta name="og:title" content="Shokunin Installation Prerequisites: Get the Fastest SSG">
+<meta name="og:url" content="https://shokunin.one/installation/index.html">
+    <!-- # End Open Graph / Facebook Meta Tags -->
+
+    <!-- # Start Accessibility Meta Tags -->
+    <meta name="accessibility" content="ARIA, fullKeyboardControl, noFlashingHazard" />
+    <!-- # End Accessibility Meta Tags -->
+
+    <!-- # Start Apple Meta Tags -->
+    <meta content="portrait" name="apple_mobile_web_app_orientations"><meta content="192x192" name="apple_touch_icon_sizes"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-inset"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="Shokunin, a powerful, Rust-based Static Site Generator" name="apple-mobile-web-app-title"><meta content="yes" name="apple-touch-fullscreen">
+    <!-- # End Apple Meta Tags -->
+
+<!-- # Start Content Security Policy Meta Tags -->
+<meta http-equiv="Content-Security-Policy"
+content="default-src 'self';
+  script-src 'self' 'unsafe-inline' 'unsafe-eval' *.google-analytics.com https://cdn.jsdelivr.net unpkg.com www.googletagmanager.com x.clarity.ms https://www.googletagmanager.com;
+  connect-src 'self' www.googletagmanager.com https://region1.google-analytics.com;
+  img-src 'self' data: https: kura.pro www.googletagmanager.com;
+  style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com;
+  font-src 'self' https://fonts.gstatic.com;
+  media-src 'self';" />
+<!-- # End Content Security Policy Meta Tags -->
+
+
+
+    <!-- # Start Microsoft Meta Tags -->
+    <meta content="" name="msapplication-navbutton-color">
+    <!-- # End Microsoft Meta Tags -->
+
+    <!-- # Start Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@wwdseb">
+<meta name="twitter:description" content="Install Shokunin on macOS, Linux, Windows, and leverage its simplicity and power to create static websites, blogs and microsites with ease.">
+<meta name="twitter:image" content="https://kura.pro/shokunin/images/logos/shokunin.webp">
+<meta name="twitter:image:alt" content="Logo of Shokunin, a powerful, Rust-based Static Site Generator">
+<meta name="twitter:image:height" content="630">
+<meta name="twitter:image:width" content="1200">
+<meta name="twitter:site" content="https://shokunin.one">
+<meta name="twitter:title" content="Shokunin Installation Prerequisites: Get the Fastest SSG">
+<meta name="twitter:url" content="https://shokunin.one">
+    <!-- # End Twitter Meta Tags -->
+
+    <!-- # Start Links -->
+    <link rel="alternate" href="https://shokunin.one" hreflang="en" />
+    <link rel="preload" as="image" href="https://kura.pro/unsplash/images/banners/masaaki-komori-3SWDMwyBFLI-unsplash.jpg">
+    <link rel="canonical" href="https://shokunin.one" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://kura.pro/shokunin/images/favicon.ico"
+      sizes="16x16 32x32"
+    />
+    <link
+      as="style"
+      crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      onload="this.onload=null;this.rel='stylesheet'"
+      rel="preload"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://kura.pro/shokunin/images/icons/192x192.png"
+      sizes="192x192"
+    />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+    <!-- # End Links -->
+
+    <!-- # Start Styles -->
+    <style>
+      @keyframes dropDown{from{transform:translateY(-.618rem)}to{transform:translateY(0)}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.active,h1,h2,h3,h4,h5,h6,strong{font-weight:400}.article-info{color:var(--theme-color);font-weight:400}.blur-light{backdrop-filter:saturate(180%) blur(20px);background-color:rgba(255,255,255,.618)}.card{overflow:hidden}.drop-down,.fade-in{animation-fill-mode:forwards}.drop-down{animation:dropDown 1.618s ease}.fade-in{animation:fadeIn 3s ease}h1,h2,h3,h4,h5,h6{color:var(--theme-color)}:root{--theme-color:rgb(255, 39, 34)}}*{font-weight:300}a{color:#2897ff;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f9f9f9;border:1px solid #ddd;border-left:3px solid var(--theme-color);color:#666;display:block;font-family:monospace;font-size:15px;line-height:1.618;margin-bottom:1.618em;max-width:100%;overflow:auto;padding:1em 1.618em;page-break-inside:avoid;word-wrap:break-word}.zoom-in{transition:transform .618s cubic-bezier(.618,1,.618,1)}.zoom-in:hover{transform:scale(1.0618)}
+      table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    margin-bottom: 26.18px;
+    width: 100%
+}
+
+td,
+th,
+thead {
+    vertical-align: top
+}
+
+thead {
+    background-color: #f1f1f1;
+    text-align: left;
+    border-bottom: 1px solid black
+}
+
+td,
+th {
+    background-color: transparent;
+    border-left: 1px solid black;
+    border-width: 0 0 0 1px;
+    margin: 0;
+    overflow: visible;
+    padding: 6.18px 12px
+}
+      .content .container{
+    padding-top: 30px;
+    padding-bottom: 20px;
+    box-shadow: 2px 15px 20px #1f1f1f10,-2px -8px 20px #1f1f1f1a;
+}
+
+
+.container .rollers{
+    flex: 0 0 230px;
+}
+
+.container .start-roller{
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(to right, white 30%, #ffffff00);
+}
+
+.container .start-roller,
+.container .end-roller{
+    height: 100%;
+    width: 40px;
+    position: absolute;
+    z-index: 1;
+}
+
+.container .end-roller{
+    right: 0;
+    top: 0;
+    background-image: linear-gradient(to left, white 30%, rgba(255, 255, 255, 0));
+}
+
+.container .rollers .wrapper{
+    position: relative;
+    width: 1400px;
+    height: 100px;
+    margin: 0 0 20px 0;
+    flex: 0 0 auto;
+}
+
+.container .rollers .wrapper .items-container{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+.container .rollers .wrapper .items-container.roll-LL{
+    animation-name: roll;
+}
+.container .rollers .wrapper .items-container.roll-RL{
+    animation-name: roll-reverse;
+    left: 100%;
+}
+.container .rollers .wrapper .items-container.reverse-roll-LL{
+    animation-name: roll-clockwise;
+    left: -100%;
+}
+.container .rollers .wrapper .items-container.reverse-roll-RL{
+    animation-name: roll-reverse-clockwise;
+    left: 100%;
+}
+
+@keyframes roll {
+    0%{
+        left: 0%;
+    }
+    100%{
+        left: -100%;
+    }
+}
+@keyframes roll-reverse {
+    0%{
+        left: 100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+@keyframes roll-clockwise {
+    0%{
+        left: -100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+@keyframes roll-reverse-clockwise {
+    0%{
+        left: 0%;
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+
+.container .rollers .wrapper .items-container .item{
+    flex: 1 1 200px;
+    min-width: 0;
+    margin: 20px;
+}
+
+.container .rollers .wrapper .items-container .item .company{
+    filter: grayscale(100%);
+    opacity: 0.2;
+    width: 100%;
+    object-fit: contain;
+}
+
+.container .rollers .wrapper .items-container .item .company:hover{
+    filter: grayscale(0%);
+    opacity: 1;
+    cursor: pointer;
+}
+
+.container img{
+    vertical-align: middle;
+}
+
+@media (max-width: 575.5px) {
+    .content{
+        padding: 20px;
+    }
+    .content .container{
+        padding: 20px;
+    }
+    .h3{
+        font-size: calc(1.1rem + .6vw);
+    }
+    .fs-5 {
+        font-size: 0.9rem!important;
+    }
+    .container .rollers .wrapper .items-container .item .company{
+        opacity: 0.4;
+    }
+}
+    </style>
+    <!-- # End Styles -->
+  </head>
+  <body
+    id="page-top"
+    itemscope
+    itemtype="http://schema.org/WebPage"
+    class="fw-light text-center bg-white text-start fs-6"
+  >
+    <!-- # Start Responsive navbar -->
+    <nav
+      class="navbar navbar-expand-lg bd-navbar sticky-top shadow-small border-bottom blur-light"
+      id="mainNav"
+      itemscope
+      itemtype="http://schema.org/SiteNavigationElement"
+    >
+      <div class="container-xxl p-3">
+        <figure class="py-0 mb-0">
+        <a href="/" tabindex="0" class="navbar-brand">
+          <img
+            alt="Logo of Shokunin, a powerful, Rust-based Static Site Generator"
+            title="Logo of Shokunin, a powerful, Rust-based Static Site Generator"
+            height="33"
+            id="Installation"
+            src="https://kura.pro/shokunin/images/titles/title-shokunin.webp"
+            width="181"
+          />
+        </a>
+        <figcaption class="visually-hidden">Installation instructions, and documentation for Shokunin Static Site Generator (SSG)</figcaption>
+      </figure><button
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="navbar-toggler"
+          data-bs-target="#navbarSupportedContent"
+          data-bs-toggle="collapse"
+          type="button"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="/index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle active"
+                id="navbarDropdown"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Documentation</a
+              >
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="supportDropdown"
+              >
+                <li class="nav-item">
+                  <a
+                    class="dropdown-item"
+                    href="/installation/index.html">Installation</a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="dropdown-item"
+                    href="/quick-start/index.html">Quick start</a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="dropdown-item"
+                    href="/contribute/index.html">Contribute</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                id="navbarDropdown"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Resources</a
+              >
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="supportDropdown"
+              >
+                <li>
+                  <a class="dropdown-item" href="/contact/index.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="dropdown-item"
+                    target="_blank"
+                    href="https://github.com/sebastienrousseau/shokunin">GitHub ⧉</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/privacy/index.html">Privacy & Cookie Policy</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/tags/index.html">Tags</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/terms/index.html">Terms of Use</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a
+                aria-pressed="false"
+                class="btn btn-dark rounded-pill px-3"
+                href="/contact/index.html"
+                >Get in touch
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- # End Responsive navbar -->
+
+    <!-- Main content-->
+    <main id="main" class="bd-masthead container fs-5 p-5" aria-label="main">
+      <div class="text-start justify-content-between"><h1 id="h1-shokunin" tabindex="0" itemprop="headline" id="" tabindex="0" itemprop="headline" class="shokunin">Shokunin Installation Prerequisites: Get the Fastest SSG</h1><p>Install Shokunin on macOS, Linux, Windows, and leverage its simplicity and power to create static websites, blogs and microsites with ease.</p><p></p><p><img src="https://kura.pro/common/images/elements/divider.svg" alt="Divider" title="Horizontal Line"  class="m-10 w-100"/></p>
+<h2 id="h2-installation" tabindex="0" itemprop="subheadline" class="installation">Installation</h2>
+<p>It takes just a few minutes to get up and running with Shokunin Static Site Generator (SSG).</p>
+<p>To install Shokunin Static Site Generator (SSG), you need to have the Rust toolchain installed on your machine. You can install the Rust toolchain by following the instructions on the <a href="https://www.rust-lang.org/learn/get-started" title="Rust">Rust website</a>.</p>
+<p>Once you have the Rust toolchain installed, you can install Shokunin Static Site Generator (SSG) using the following command:</p>
+<pre lang="shell"><code>cargo install ssg
+</code></pre>
+<p>For simplicity, we have given Shokunin Static Site Generator (SSG) a simple alias <code>ssg</code> which can stand for <code>Shokunin Site Generator</code> or <code>Static Site Generator</code>.</p>
+<p>You can then run the help command to see the available options and commands:</p>
+<pre lang="shell"><code>ssg --help
+</code></pre>
+<h3 id="h3-requirements" tabindex="0" itemprop="subheadline" class="requirements">Requirements</h3>
+<p>The minimum supported Rust toolchain version is currently Rust
+<strong>1.72.0</strong> or later (stable). It is recommended that you install the
+latest stable version of Rust.</p>
+<h3 id="h3-platform" tabindex="0" itemprop="subheadline" class="platform">Platform support</h3>
+<p>Shokunin Static Site Generator (SSG) is supported and tested on the following
+platforms and architectures as part of our <a href="https://github.com/sebastienrousseau/shokunin/actions" title="Actions">CI/CD pipeline</a>.</p>
+<p>This list is based on the <a href="https://forge.rust-lang.org/release/platform-support.html" title="Rust Platform Support">Rust Platform Support</a> list.</p>
+<h4 id="h4-tier" tabindex="0" itemprop="subheadline" class="tier">Tier 1 platforms</h4>
+<p>Rust Tier 1 targets are officially supported and guaranteed to work.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Operating System</th>
+<th>Target</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>✅</td>
+<td>Linux</td>
+<td>aarch64-unknown-linux-gnu</td>
+<td>64-bit Linux systems on ARM architecture</td>
+</tr>
+<tr>
+<td>✅</td>
+<td>Linux</td>
+<td>i686-unknown-linux-gnu</td>
+<td>32-bit Linux (kernel 3.2+, glibc 2.17+)</td>
+</tr>
+<tr>
+<td>✅</td>
+<td>Linux</td>
+<td>x86_64-unknown-linux-gnu</td>
+<td>64-bit Linux (kernel 2.6.32+, glibc 2.11+)</td>
+</tr>
+<tr>
+<td>✅</td>
+<td>macOS</td>
+<td>x86_64-apple-darwin</td>
+<td>64-bit macOS (10.7 Lion or later)</td>
+</tr>
+<tr>
+<td>✅</td>
+<td>Windows</td>
+<td>i686-pc-windows-gnu</td>
+<td>32-bit Windows (7 or later)</td>
+</tr>
+<tr>
+<td>✅</td>
+<td>Windows</td>
+<td>i686-pc-windows-msvc</td>
+<td>32-bit Windows (7 or later)</td>
+</tr>
+<tr>
+<td>✅</td>
+<td>Windows</td>
+<td>x86_64-pc-windows-gnu</td>
+<td>64-bit Windows (7 or later)</td>
+</tr>
+<tr>
+<td>✅</td>
+<td>Windows</td>
+<td>x86_64-pc-windows-msvc</td>
+<td>64-bit Windows (7 or later)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="h4-tier" tabindex="0" itemprop="subheadline" class="tier">Tier 2 platforms</h4>
+<p>Rust Tier 2 targets are supported for building, but not necessarily running.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Operating System</th>
+<th>Target</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>✅</td>
+<td>Linux</td>
+<td>aarch64-unknown-linux-musl</td>
+<td>64-bit Linux systems on ARM architecture</td>
+</tr>
+<tr>
+<td>✅</td>
+<td>Linux</td>
+<td>arm-unknown-linux-gnueabi</td>
+<td>ARMv6 Linux (kernel 3.2, glibc 2.17)</td>
+</tr>
+<tr>
+<td>✅</td>
+<td>Linux</td>
+<td>arm-unknown-linux-gnueabihf</td>
+<td>ARMv7 Linux, hardfloat (kernel 3.2, glibc 2.17)</td>
+</tr>
+<tr>
+<td>✅</td>
+<td>Linux</td>
+<td>armv7-unknown-linux-gnueabihf</td>
+<td>ARMv7 Linux, hardfloat (kernel 3.2, glibc 2.17)</td>
+</tr>
+<tr>
+<td>✅</td>
+<td>macOS</td>
+<td>aarch64-apple-darwin</td>
+<td>64-bit macOS (10.7 Lion or later)</td>
+</tr>
+<tr>
+<td>✅</td>
+<td>Windows</td>
+<td>aarch64-pc-windows-msvc</td>
+<td>64-bit Windows (7 or later)</td>
+</tr>
+</tbody>
+</table>
+<p>The <a href="https://github.com/sebastienrousseau/shokunin/actions" title="Actions">GitHub Actions</a> shows the platforms in which the Shokunin Static Site Generator (SSG) library tests are run.</p>
+<h3 id="h3-documentation" tabindex="0" itemprop="subheadline" class="documentation">Documentation</h3>
+<p><strong>Info:</strong>
+You can find our documentation on <a href="https://docs.rs/crate/ssg/" title="Docs.rs">docs.rs</a>, <a href="https://lib.rs/crates/ssg" title="Lib.rs">lib.rs</a> and <a href="https://crates.io/crates/ssg" title="Crate.io">crates.io</a>.</p>
+<h2 id="h2-usage" tabindex="0" itemprop="subheadline" class="usage">Usage</h2>
+<h3 id="h3-command" tabindex="0" itemprop="subheadline" class="command">Command Line Interface (CLI)</h3>
+<p>The Shokunin Static Site Generator (SSG) library runs in a Terminal window and can be used to generate a static website.</p>
+<p>Here’s the first command you can enter in your Terminal window to run Shokunin Static Site Generator (SSG):</p>
+<pre lang="shell"><code>ssg  --new=docs --content=content --template=template --output=output --serve=public
+</code></pre>
+<p>or</p>
+<pre lang="shell"><code>ssg  -n=docs -c=content -t=template -o=output -s=public
+</code></pre>
+<p>This command will create a new website with the name <code>docs</code> in the current directory. It will use the <code>content</code> directory to gather the website content and the <code>template</code> directory to generate the website files. It will serve the website directly from the <code>docs</code> directory.</p>
+<h4 id="h4-arguments" tabindex="0" itemprop="subheadline" class="arguments">Arguments</h4>
+<ul>
+<li><code>-n</code>, <code>--new</code>: The name of the new website. (required)</li>
+<li><code>-c</code>, <code>--content</code>: The directory containing the website content. (required)</li>
+<li><code>-t</code>, <code>--template</code>: The directory containing the website templates. (required)</li>
+<li><code>-o</code>, <code>--output</code>: The directory where the generated website files will be saved temporarily. (required)</li>
+<li><code>-s</code>, <code>--serve</code>: Run the development server. (optional). The directory from which the website will be served.</li>
+</ul>
+<h3 id="h3-in" tabindex="0" itemprop="subheadline" class="in">In your project</h3>
+<p>To use the Shokunin Static Site Generator (SSG) library in your project, add the following to your <code>Cargo.toml</code> file:</p>
+<pre lang="toml"><code>[dependencies]
+shokunin = &quot;0.0.19&quot;
+</code></pre>
+<p>Add the following to your <code>main.rs</code> file:</p>
+<pre lang="rust"><code>extern crate ssg;
+use ssg::*;
+</code></pre>
+<p>then you can use the Shokunin Static Site Generator (SSG) functions in your application code.</p>
+<h3 id="h3-examples" tabindex="0" itemprop="subheadline" class="examples">Examples</h3>
+<p>To get started with Shokunin Static Site Generator (SSG), you can use the examples provided in the <code>examples</code> directory of the project.</p>
+<p>To run the examples, clone the repository and run the following command in your terminal from the project root directory.</p>
+<pre lang="shell"><code>cargo run --example example
+</code></pre>
+<p>The command will generate a static website based on the configuration details in the <code>examples</code> directory.</p>
+<pre lang="shell"><code>use ssg::compiler::compile;
+use std::path::Path;
+
+fn main() -&gt; Result&lt;(), Box&lt;dyn std::error::Error&gt;&gt; {
+    // Define the paths to the build, site, content and template directories.
+    let build_path = Path::new(&quot;examples/example.com/build&quot;);
+    let content_path = Path::new(&quot;examples/example.com/content&quot;);
+    let site_path = Path::new(&quot;examples/example.com/public&quot;);
+    let template_path = Path::new(&quot;examples/example.com/template&quot;);
+
+    compile(build_path, content_path, site_path, template_path)?;
+
+    Ok(())
+}
+</code></pre>
+<p>The main() function in this code compiles a website from the <code>content</code> directory, using the <code>template</code> directory to generate the website files. The compiled website is saved in the <code>build</code> directory and served directly from the <code>example.com</code> directory.</p>
+<h4 id="h4-args" tabindex="0" itemprop="subheadline" class="args">Args</h4>
+<ul>
+<li><code>build_path:</code> The path to the directory where the compiled website will be saved.</li>
+<li><code>content_path:</code> The path to the directory containing the website content.</li>
+<li><code>site_path:</code> The path to the directory where the generated website files will be served from.</li>
+<li><code>template_path:</code> The path to the directory containing the website templates.</li>
+</ul>
+<h2 id="h2-quick" tabindex="0" itemprop="subheadline" class="quick">Quick Start</h2>
+<p>You are now ready to use Shokunin and <a href="/quick-start/index.html">create amazing websites</a>!</p>
+</div>
+    </main>
+
+    <!-- Footer-->
+    <footer id="footer" aria-label="footer" class="footer border-top mt-auto py-3">
+      <img
+        alt="Logo of Shokunin, a powerful, Rust-based Static Site Generator"
+        height="33"
+        src="https://kura.pro/shokunin/images/logos/shokunin.webp"
+        title="Logo of Shokunin, a powerful, Rust-based Static Site Generator"
+        width="33"
+      />
+      <span class="px-2">© Copyright 2023 - Shokunin Static Site Generator. All rights reserved.</span>
+      <p class="mb-0">
+        <span class="px-2"><a href="/contact/index.html">Contact</a></span>
+        <span class="px-2"><a href="/privacy/index.html">Privacy & Cookie Policy</a></span>
+        <span class="px-2"><a href="/terms/index.html">Terms of Use</a></span>
+      </p>
+    </footer>
+    <script
+      async
+      crossorigin="anonymous"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "WebPage",
+        "author": {
+          "@type": "Person",
+          "@id": "Sebastien Rousseau"
+        },
+        "copyrightHolder": {
+          "@type": "Person",
+          "@id": "Sebastien Rousseau"
+        },
+        "copyrightYear": "© Copyright 2023 - Shokunin Static Site Generator. All rights reserved.",
+        "creator": {
+          "@type": "Person",
+          "@id": "Sebastien Rousseau"
+        },
+        "dateModified": "2023-10-24T20:24:20+00:00",
+        "datePublished": "2023-10-24T20:24:20+00:00",
+        "description": "Install Shokunin on macOS, Linux, Windows, and leverage its simplicity and power to create static websites, blogs and microsites with ease.",
+        "headline": "Installation instructions, and documentation for Shokunin Static Site Generator (SSG)",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://kura.pro/shokunin/images/logos/shokunin.webp"
+        },
+        "inLanguage": "en-GB",
+        "mainEntityOfPage": "https://shokunin.one/installation/index.html",
+        "name": "Installation",
+        "publisher": {
+          "@type": "Person",
+          "@id": "Sebastien Rousseau"
+        }
+      }
+    </script>
+    <script type="module" defer>
+      // This is an Immediately Invoked Function Expression (IIFE) which helps
+      // to avoid declaring any globals.
+      (function () {
+        // Create a new script element
+        var script = document.createElement("script");
+
+        // Set the source of the script element to "/main.js".
+        // A timestamp is appended as a query string to ensure the browser
+        // always fetches the latest version of the script, bypassing the
+        // cache.
+        script.src = "/main.js";
+
+        // The script is of type "text/javascript"
+
+        // The script is set to execute asynchronously as soon as it's
+        //available
+
+        // Append the script element to the head of the document
+        document.head.appendChild(script);
+      })(); // The function is immediately invoked
+    </script>
+    <script>
+      // JavaScript code
+      var dropDownElements = document.querySelectorAll('.drop-down');
+      dropDownElements.forEach(function(element) {
+        element.classList.add('animate');
+      });
+
+      window.addEventListener('scroll', function() {
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        dropDownElements.forEach(function(element) {
+          if (scrollTop === 0) {
+            element.classList.add('animate');
+          } else {
+            element.classList.remove('animate');
+          }
+        });
+      });
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8MGBE9BCZC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-8MGBE9BCZC');
+    </script>
+  </body>
+</html>

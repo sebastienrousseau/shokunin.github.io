@@ -2,58 +2,65 @@
 
 # Front Matter (YAML)
 
-author: "Shokunin Static Site Generator"
-banner_alt: "Black Stacking Stones On Gray Surface"
+author: "Sebastien Rousseau"
+banner_alt: "Canary wharf passage"
 banner_height: "100vh"
 banner_width: "100vw"
-banner: "https://kura.pro/unsplash/images/banners/di-maitland-lLDFfJ4caAU-unsplash.jpg"
+banner: "https://kura.pro/stock/images/banners/jez-timms-4xLteCXh6X0.webp"
 cdn: "https://kura.pro"
-charset: "utf-8"
-copyright: "© 2023 Shokunin Static Site Generator. All rights reserved."
-description: "This Terms of Use page provides the rules for using https://shokunin.one."
-download: ""
+changefreq: "weekly"
+charset: "UTF-8"
+cname: ""
+copyright: "© Copyright 2023 - Shokunin Static Site Generator. All rights reserved."
+date: "Oct 24, 2023"
+description: "By accessing this website, you acknowledge and agree to be bound by these Terms and Conditions of Use and all applicable laws and regulations."
 format-detection: "telephone=no"
-hreflang: "en-gb"
-icon: "https://kura.pro/shokunin/images/favicon.ico"
-id: "https://shokunin.one"
-image_alt: "Logo of Shokunin, a powerful, Rust-based Static Site Generator"
-image_height: "630"
-image_width: "1200"
-image: "https://kura.pro/shokunin/images/titles/title-shokunin.webp"
-keywords: "Shokunin Terms of Use, Shokunin Website Rules, Intellectual Property Rights, Third-party Links, User Responsibilities, Limitation of Liability, Website Use Agreement, Governing Laws for Online Use, Website Terms Changes, Contact Shokunin"
+form-id: ""
+hreflang: "en"
+icon: "https://kura.pro/shokunin/images/logos/shokunin.webp"
+id: "https://shokunin.one/terms/index.html"
+image_alt: "Logo of Shokunin, the fastest Rust-based Static Site Generator (SSG)"
+image_height: "161.8"
+image_width: "161.8"
+image: "https://kura.pro/shokunin/images/logos/shokunin.webp"
+keywords: "Terms of Use,Website Rules, Intellectual Property Rights, Third-party Links, User Responsibilities, Limitation of Liability, Website Use Agreement, Governing Laws for Online Use, Website Terms Changes, Contact"
 language: "en-GB"
-layout: "page"
+layout: "link"
 locale: "en_GB"
-logo_alt: "Logo of Shokunin, a powerful, Rust-based Static Site Generator"
+logo_alt: "Logo of Shokunin, the fastest Rust-based Static Site Generator (SSG)"
 logo_height: "33"
 logo_width: "181"
 logo: "https://kura.pro/shokunin/images/titles/title-shokunin.webp"
-name: "Terms"
+menu: "active"
+measurementID: "G-8MGBE9BCZC"
+name: "Shokunin"
 permalink: "https://shokunin.one/terms/index.html"
 rating: "general"
 referrer: "no-referrer"
 revisit-after: "7 days"
 robots: "index, follow"
-short_name: "shokunin"
-subtitle: "Guidelines and Legal Boundaries for Using Shokunin Website."
-theme_color: "rgb(181, 0, 0)"
-title: "Shokunin - Terms of Use"
+short_name: "Terms"
+subtitle: "Your privacy is important to us."
+tags: "agreement, copyright, intellectual property, liability, limitation, links, privacy, terms, trademark, use, website"
+theme-color: "rgb(255, 39, 34)"
+title: "Terms and Conditions of Use"
 url: "https://shokunin.one/terms/index.html"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 
+# RSS - The RSS feed front matter (YAML).
 
 atom_link: "https://shokunin.one/terms/rss.xml"
-category: "Software, Static Site Generator, Rust"
-docs: https://validator.w3.org/feed/docs/rss2.html
-generator: "Shokunin 🦀 (version 0.0.14)"
-item_description: "This Terms of Use page provides the rules for using https://shokunin.one."
+category: "Technology"
+docs: "https://validator.w3.org/feed/docs/rss2.html"
+generator: "Shokunin 🦀 (version 0.0.19)"
+item_description: "By accessing this website, you acknowledge and agree to be bound by these Terms and Conditions of Use and all applicable laws and regulations."
 item_guid: "https://shokunin.one/terms/rss.xml"
 item_link: "https://shokunin.one/terms/rss.xml"
-item_pub_date: "Wed, 12 Jul 2023 12:12:12 GMT"
-item_title: "Shokunin - Terms of Use"
-last_build_date: "Wed, 12 Jul 2023 12:12:12 GMT"
+item_pub_date: "2023-10-24T20:24:20+00:00"
+item_title: "Terms and Conditions of Use"
+last_build_date: "2023-10-24T20:24:20+00:00"
 managing_editor: "contact@shokunin.one"
-pub_date: "Wed, 12 Jul 2023 12:12:12 GMT"
+pub_date: "2023-10-24T20:24:20+00:00"
 ttl: "60"
 type: "website"
 webmaster: "contact@shokunin.one"
@@ -65,78 +72,74 @@ apple_touch_icon_sizes: "192x192"
 apple-mobile-web-app-capable: "yes"
 apple-mobile-web-app-status-bar-inset: "black"
 apple-mobile-web-app-status-bar-style: "black-translucent"
-apple-mobile-web-app-title: "Shokunin - Terms of Use"
+apple-mobile-web-app-title: "Terms and Conditions of Use"
 apple-touch-fullscreen: "yes"
 
 # MS Application - The MS Application front matter (YAML).
 
-msapplication-config: "/browserconfig.xml"
-msapplication-tap-highlight: "no"
-msapplication-TileColor: "rgb(181, 0, 0)"
-msapplication_tile_image: "https://kura.pro/shokunin/images/logos/shokunin.svg"
+msapplication-navbutton-color: "rgb(255, 39, 34)"
 
 # Twitter Card - The Twitter Card front matter (YAML).
 
 twitter_card: "summary"
-twitter_creator: "@wwdseb"
-twitter_description: "This Terms of Use page provides the rules for using https://shokunin.one."
-twitter_image_alt: "Logo of Shokunin, a powerful, Rust-based Static Site Generator"
+twitter_creator: "wwdseb"
+twitter_description: "By accessing this website, you acknowledge and agree to be bound by these Terms and Conditions of Use and all applicable laws and regulations."
 twitter_image: "https://kura.pro/shokunin/images/logos/shokunin.svg"
-twitter_site: "@wwdseb"
-twitter_title: "Shokunin - Terms of Use"
-twitter_url: "https://www.shokunin.one/terms/index.html"
+twitter_image_alt: "Logo of Sebastien Rousseau"
+twitter_site: "wwdseb"
+twitter_title: "Terms and Conditions of Use"
+twitter_url: "https://shokunin.one/terms/index.html"
 
 # Humans.txt - The Humans.txt front matter (YAML).
 
-author_website: "https://shokunin.one"
+author_website: "https://shokunin.one/terms/index.html"
 author_twitter: "@wwdseb"
 author_location: "London, UK"
-thanks: "Thanks for reading our Terms of Use page. We hope you enjoy using Shokunin Static Site Generator."
-site_last_updated: "2023-07-05"
+thanks: "Thanks for reading!"
+site_last_updated: "2023-10-24"
 site_standards: "HTML5, CSS3, RSS, Atom, JSON, XML, YAML, Markdown, TOML"
-site_components: "Shokunin SSG, Shokunin CLI, Shokunin Templates, Shokunin Themes, Shokunin SSG, Shokunin CLI, Shokunin Templates, Shokunin Themes"
+site_components: "Sebastien Rousseau, Sebastien Rousseau Builder, Sebastien Rousseau CLI, Sebastien Rousseau Templates, Sebastien Rousseau Themes"
 site_software: "Shokunin, Rust"
 
 ---
 
-*The Shokunin Terms of Use was last updated on Wed, 12 Jul 2023 12:12:12 GMT.*
-
 ## Agreement to Terms of Use
 
-These Terms and Conditions of Use (the "Shokunin - Terms of Use") apply to the Shokunin website located at <https://shokunin.one/> (the "Website").
+These Terms and Conditions of Use (the "Terms and Conditions of Use") apply to
+the website located at <https://shokunin.one/> (the "Website").
 
 BY USING THE SITE, YOU AGREE TO THESE TERMS OF USE; IF YOU DO NOT AGREE, DO NOT
 USE THE SITE.
 
-## Intellectual Property
+### Intellectual Property
 
 The Website and its original content, features, and functionality are and will
-remain the exclusive property of Shokunin. This Website is protected by
-United States and international copyright, trademark, and other laws.
+remain the exclusive property of Shokunin. This Website is protected
+by United States and international copyright, trademark, and other laws.
 
-## Links to Other Sites and to the Shokunin Site
+### Links to Other Sites and to the Shokunin Site
 
 Our Website may contain links to third-party Web sites ("Linked Sites") or
 services that are not owned or controlled by Shokunin. These Linked
 Sites are provided solely as a convenience to our visitors.
 
 Shokunin has no control over and assumes no responsibility for the
-content, privacy policies, or practices of any Linked Sites or services. We do
+content, privacy policies, or practises of any Linked Sites or services. We do
 not warrant the offerings of any of these entities/individuals, their
 websites or services.
 
-## Limitation of Liability
+### Limitation of Liability
 
-SHOKUNIN (職人) DOES NOT PROMISE THAT THE SITE OR ANY CONTENT, SERVICE OR
+SHOKUNIN DOES NOT PROMISE THAT THE SITE OR ANY CONTENT, SERVICE OR
 FEATURE OF THE SITE WILL BE ERROR-FREE OR UNINTERRUPTED, OR THAT ANY DEFECTS
 WILL BE CORRECTED, OR THAT YOUR USE OF THE SITE WILL PROVIDE SPECIFIC RESULTS.
 THE SITE AND ITS CONTENT ARE DELIVERED ON AN "AS-IS" AND "AS-AVAILABLE" BASIS.
 ALL INFORMATION PROVIDED ON THE SITE IS SUBJECT TO CHANGE WITHOUT NOTICE.
-SHOKUNIN (職人) CANNOT ENSURE THAT ANY FILES OR OTHER DATA YOU DOWNLOAD FROM
+SHOKUNIN CANNOT ENSURE THAT ANY FILES OR OTHER DATA YOU DOWNLOAD FROM
 THE SITE WILL BE FREE OF VIRUSES OR CONTAMINATION OR DESTRUCTIVE FEATURES.
-SHOKUNIN (職人) ANY AND ALL LIABILITY FOR THE ACTS, OMISSIONS AND CONDUCT OF
+SHOKUNIN ANY AND ALL LIABILITY FOR THE ACTS, OMISSIONS AND CONDUCT OF
 ANY THIRD PARTIES IN CONNECTION WITH OR RELATED TO YOUR USE OF THE SITE AND/OR
-ANY SHOKUNIN (職人) SERVICES. IN NO EVENT SHALL SHOKUNIN (職人), NOR ITS
+ANY SHOKUNIN SERVICES. IN NO EVENT SHALL SHOKUNIN, NOR ITS
 DIRECTORS, EMPLOYEES, PARTNERS, AGENTS, SUPPLIERS, OR AFFILIATES, BE LIABLE FOR
 ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES,
 INCLUDING WITHOUT LIMITATION, LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER
@@ -167,4 +170,5 @@ revised terms.
 
 ## Contact Us
 
-[Contact us](/contact/index.html) if you have any questions, comments, or concerns regarding these terms.
+If you have any questions about these Terms, please
+[contact us](/contact/index.html)

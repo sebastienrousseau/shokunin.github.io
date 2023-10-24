@@ -2,25 +2,27 @@
 
 # Front Matter (YAML)
 
-author: "Shokunin Static Site Generator"
-banner_alt: "Woman In White Elbow-Sleeved Shirt Standing Near White Train In Subway"
-banner_height: "100vh"
-banner_width: "100vw"
-banner: "https://kura.pro/unsplash/images/banners/eutah-mizushima-2TlAsvhqiL0-unsplash.jpg"
+author: "Sebastien Rousseau"
+banner_alt: ""
+banner_height: ""
+banner_width: ""
+banner: ""
 cdn: "https://kura.pro"
+changefreq: "weekly"
 charset: "utf-8"
 cname: "shokunin.one"
-copyright: "© 2023 Shokunin Static Site Generator. All rights reserved."
+copyright: "© Copyright 2023 - Shokunin Static Site Generator. All rights reserved."
+date: "Oct 24, 2023"
 description: "Would you like to join the project? We're always looking for people with skills in both developing and using open source software."
 format-detection: "telephone=no"
-form-id: "https://formspree.io/f/xknlnblp"
-hreflang: "en-gb"
-icon: "https://kura.pro/shokunin/images/logos/shokunin.svg"
-id: "https://shokunin.one"
+form-id: ""
+hreflang: "en"
+icon: "https://kura.pro/shokunin/images/logos/shokunin.webp"
+id: "https://shokunin.one/contribute/index.html"
 image_alt: "Logo of Shokunin, a powerful, Rust-based Static Site Generator"
 image_height: "630"
 image_width: "1200"
-image: "https://kura.pro/shokunin/images/titles/title-shokunin.webp"
+image: "https://kura.pro/shokunin/images/logos/shokunin.webp"
 keywords: "Contribute, developer, developer us form"
 language: "en-GB"
 layout: "page"
@@ -29,32 +31,35 @@ logo_alt: "Logo of Shokunin, a powerful, Rust-based Static Site Generator"
 logo_height: "33"
 logo_width: "181"
 logo: "https://kura.pro/shokunin/images/titles/title-shokunin.webp"
+menu: "active"
+measurementID: "G-8MGBE9BCZC"
 name: "Contribute"
 permalink: "https://shokunin.one/contribute/index.html"
 rating: "general"
 referrer: "no-referrer"
 revisit-after: "7 days"
 robots: "index, follow"
-short_name: "shokunin"
+short_name: "Contribute"
 subtitle: "Be a part of something bigger"
-theme_color: "rgb(181, 0, 0)"
-title: "Shokunin - Get Involved"
+theme_color: "rgb(255, 39, 34)"
+title: "Share Your Skills and Expertise by Contributing to Shokunin"
 url: "https://shokunin.one"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 
 # RSS - The RSS feed front matter (YAML).
+
 atom_link: https://shokunin.one/contribute/rss.xml
 category: "Software, Static Site Generator, Rust"
-docs: https://validator.w3.org/feed/docs/rss2.html
-generator: "Shokunin 🦀 (version 0.0.14)"
+docs: "https://validator.w3.org/feed/docs/rss2.html"
+generator: "Shokunin 🦀 (version 0.0.19)"
 item_description: "Would you like to join the project? We're always looking for people with skills in both developing and using open source software."
 item_guid: https://shokunin.one/contribute/rss.xml
 item_link: https://shokunin.one/contribute/rss.xml
-item_pub_date: "Wed, 12 Jul 2023 12:12:12 GMT"
-item_title: "Shokunin - Get Involved"
-last_build_date: "Wed, 12 Jul 2023 12:12:12 GMT"
+item_pub_date: "2023-10-24T20:24:20+00:00"
+item_title: "Share Your Skills and Expertise by Contributing to Shokunin"
+last_build_date: "2023-10-24T20:24:20+00:00"
 managing_editor: "contact@shokunin.one"
-pub_date: "Wed, 12 Jul 2023 12:12:12 GMT"
+pub_date: "2023-10-24T20:24:20+00:00"
 ttl: "60"
 type: "website"
 webmaster: "contact@shokunin.one"
@@ -73,7 +78,7 @@ apple-touch-fullscreen: "yes"
 
 msapplication-config: "/browserconfig.xml"
 msapplication-tap-highlight: "no"
-msapplication-TileColor: "rgb(181, 0, 0)"
+msapplication-TileColor: "rgb(255, 39, 34)"
 msapplication_tile_image: "https://kura.pro/shokunin/images/logos/shokunin.svg"
 
 # Twitter Card - The Twitter Card front matter (YAML).
@@ -84,7 +89,7 @@ twitter_description: "Would you like to join the project? We're always looking f
 twitter_image: "https://kura.pro/shokunin/images/logos/shokunin.svg"
 twitter_image_alt: "Logo of Shokunin, a powerful, Rust-based Static Site Generator"
 twitter_site: "@wwdseb"
-twitter_title: "Shokunin - Get Involved"
+twitter_title: "Share Your Skills and Expertise by Contributing to Shokunin"
 twitter_url: "https://www.shokunin.one/contribute/index.html"
 
 # Humans.txt - The Humans.txt front matter (YAML).
@@ -93,17 +98,19 @@ author_website: "https://shokunin.one"
 author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thanks for reading!"
-site_last_updated: "2023-07-05"
+site_last_updated: "2023-10-24"
 site_standards: "HTML5, CSS3, RSS, Atom, JSON, XML, YAML, Markdown, TOML"
 site_components: "Shokunin SSG, Shokunin CLI, Shokunin Templates, Shokunin Themes, Kaishi SSG, Kaishi CLI, Kaishi Templates, Kaishi Themes"
 site_software: "Shokunin, Rust"
 
 ---
 
+<!-- markdownlint-disable MD033 MD041 -->
 <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
 <div class="p-3">
 <div class="card bg-light text-dark p-5 h-100">
 <div class="card-body">
+<!-- markdownlint-enable MD033 MD041 -->
 
 ## Financial help
 
@@ -127,13 +134,12 @@ time payment or set up recurring payments every month. Every little bit helps!
 
 [Use PayPal ⧉](https://paypal.me/wwdseb)
 
+<!-- markdownlint-disable MD033 MD041 -->
 </div></div></div>
-
-
 <div class="p-3">
 <div class="card bg-dark text-light p-5 h-100">
 <div class="card-body">
-
+<!-- markdownlint-enable MD033 MD041 -->
 
 ## Support and promotion
 
@@ -151,10 +157,8 @@ One way to help us is by telling people about Shokunin. A bigger community
 makes for a better framework, and a better framework makes the world a better
 place. If you know people who might use Shokunin, please let them know!
 
+<!-- markdownlint-disable MD033 MD041 -->
 </div></div></div>
-
-
-
 <div class="p-3">
 <div class="card bg-dark text-light p-5 h-100">
 <div class="card-body">
@@ -182,11 +186,12 @@ developer and would like to help out, please
 We're always looking for help translating Shokunin into different
 languages. If you'd like to help out, please [get in touch](/contact/index.html).
 
+<!-- markdownlint-disable MD033 MD041 -->
 </div></div></div>
-
 <div class="p-3">
 <div class="card bg-white text-dark p-5 h-100">
 <div class="card-body">
+<!-- markdownlint-enable MD033 MD041 -->
 
 ## Code contributions
 
@@ -194,7 +199,7 @@ languages. If you'd like to help out, please [get in touch](/contact/index.html)
 
 ### Develop
 
-All of our products are 100% [Open Source][0] and created through collaboration
+All of our products are 100% [Open Source ⧉][0] and created through collaboration
 from people around the world. You can find the source code for all of our
 projects on [GitHub ⧉][1].
 
@@ -203,13 +208,15 @@ projects on [GitHub ⧉][1].
 If you encounter a bug while using Shokunin, please let us know so we can
 fix it. Here's how you can submit a bug report:
 
-- Click [here][2] to submit a new issue.
+- Click [here ⧉][2] to submit a new issue.
 - Use a descriptive title that clearly summarizes the bug.
 - Provide a detailed description of the issue, including steps to reproduce it.
 - Be patient while we review and respond to your bug report.
 
+<!-- markdownlint-disable MD033 MD041 -->
 </div></div></div>
 </div>
+<!-- markdownlint-enable MD033 MD041 -->
 
 [0]: https://opensource.org/osd/
 [1]: https://github.com/sebastienrousseau/shokunin
