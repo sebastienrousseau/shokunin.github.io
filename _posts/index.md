@@ -120,7 +120,6 @@ be fast, secure, and reliable enough to meet your needs. Shokunin has everything
 to build your static site, and it is free to use. It's lightning fast, flexible,
 efficient, secure, scalable, and easy to use.
 
-
 ![Banner][06].class=\"w-50 p-3 me-3 img-thumbnail float-start\"
 
 ### 100% Free and Open Source
@@ -223,9 +222,9 @@ Shokunin has everything you need to build your static site
 
 ## Releases and Source Code
 
-Head on over to the [Releases page][11] to download the latest version. You can
-find the source code on the [GitHub repository][00], or get the most recent 
-binary from [crates.io][10].
+Head on over to the [Releases page ⧉][11] to download the latest version. You can
+find the source code on the [GitHub repository ⧉][00], or get the most recent
+binary from [crates.io ⧉][10].
 
 To install Shokunin using cargo, run the following command in your terminal:
 

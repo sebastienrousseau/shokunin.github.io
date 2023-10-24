@@ -193,6 +193,8 @@ server. You can also use a CI/CD pipeline to automate the deployment process.
 For example, you can use [GitHub Pages ⧉][05] to host your site for free.
 
 Congratulations! You have successfully created your first website with Shokunin.
+If you would like to contribute to Shokunin, please check out our
+[instructions on how to contribute][06].
 
 [00]: https://kura.pro/common/images/elements/divider.svg "Horizontal Line"
 [01]: https://kaishi.one "Website of Kaishi, a Starter Template for Shokunin"
@@ -200,3 +202,4 @@ Congratulations! You have successfully created your first website with Shokunin.
 [03]: https://github.com/sebastienrousseau/kaishi.github.io "Kaishi Starter Template on GitHub"
 [04]: https://getbootstrap.com/ "Bootstrap Website"
 [05]: https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site "GitHub Pages"
+[06]: /contribute/index.html "Contribute to Shokunin"
