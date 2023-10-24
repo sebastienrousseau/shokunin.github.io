@@ -15,7 +15,7 @@ copyright: "© Copyright 2023 - Shokunin Static Site Generator. All rights reser
 date: "Oct 24, 2023"
 description: "Shokunin is a blazing-fast Static Site Generator (SSG) built with Rust. Get answers to questions about Shokunin, support, training, services, and more."
 format-detection: "telephone=no"
-form-id: "https://formspree.io/f/mqkvgqpg"
+form-id: "mqkvgqpg"
 hreflang: "en"
 icon: "https://kura.pro/shokunin/images/logos/shokunin.webp"
 id: "https://shokunin.one/contact/index.html"
