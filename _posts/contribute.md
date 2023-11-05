@@ -51,7 +51,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: https://shokunin.one/contribute/rss.xml
 category: "Software, Static Site Generator, Rust"
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Shokunin 🦀 (version 0.0.19)"
+generator: "Shokunin 🦀 (version 0.0.20)"
 item_description: "Would you like to join the project? We're always looking for people with skills in both developing and using open source software."
 item_guid: https://shokunin.one/contribute/rss.xml
 item_link: https://shokunin.one/contribute/rss.xml

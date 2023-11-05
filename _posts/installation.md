@@ -52,7 +52,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://shokunin.one/installation/rss.xml"
 category: "Software, Static Site Generator, Rust"
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Shokunin 🦀 (version 0.0.19)"
+generator: "Shokunin 🦀 (version 0.0.20)"
 item_description: "Install Shokunin on macOS, Linux, Windows, and leverage its simplicity and power to create static websites, blogs and microsites with ease."
 item_guid: "https://shokunin.one/installation/rss.xml"
 item_link: "https://shokunin.one/installation/rss.xml"
@@ -210,7 +210,7 @@ To use the Shokunin Static Site Generator (SSG) library in your project, add the
 
 ```toml
 [dependencies]
-shokunin = "0.0.19"
+shokunin = "0.0.20"
 ```
 
 Add the following to your `main.rs` file:

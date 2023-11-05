@@ -50,7 +50,7 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: https://shokunin.one/contact/rss.xml
 category: "Software, Static Site Generator, Rust"
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Shokunin 🦀 (version 0.0.19)"
+generator: "Shokunin 🦀 (version 0.0.20)"
 item_description: "Shokunin is a blazing-fast Static Site Generator (SSG) built with Rust. Get answers to questions about Shokunin, support, training, services, and more."
 item_guid: https://shokunin.one/contact/rss.xml
 item_link: https://shokunin.one/contact/rss.xml
