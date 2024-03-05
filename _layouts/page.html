@@ -72,7 +72,7 @@ content="default-src 'self';
 
     <!-- # Start Styles -->
     <style>
-      @keyframes dropDown{from{transform:translateY(-.618rem)}to{transform:translateY(0)}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.active,h1,h2,h3,h4,h5,h6,strong{font-weight:400}.article-info{color:var(--theme-color);font-weight:400}.blur-light{backdrop-filter:saturate(180%) blur(20px);background-color:rgba(255,255,255,.618)}.card{overflow:hidden}.drop-down,.fade-in{animation-fill-mode:forwards}.drop-down{animation:dropDown 1.618s ease}.fade-in{animation:fadeIn 3s ease}h1,h2,h3,h4,h5,h6{color:var(--theme-color)}:root{--theme-color:{{theme_color}}}}*{font-weight:300}a{color:#2897ff;text-decoration:none}a:hover{text-decoration:underline}pre{background:#f9f9f9;border:1px solid #ddd;border-left:3px solid var(--theme-color);color:#666;display:block;font-family:monospace;font-size:15px;line-height:1.618;margin-bottom:1.618em;max-width:100%;overflow:auto;padding:1em 1.618em;page-break-inside:avoid;word-wrap:break-word}.zoom-in{transition:transform .618s cubic-bezier(.618,1,.618,1)}.zoom-in:hover{transform:scale(1.0618)}
+      @keyframes dropDown{from{transform:translateY(-.618rem)}to{transform:translateY(0)}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.active,h1,h2,h3,h4,h5,h6,strong{font-weight:400}a{color: rgb(var(--theme-color)); text-decoration:none;} a { color: rgb(var(--theme-color)); text-decoration: none}.article-info{color:var(--theme-color);font-weight:400}.blur-light{backdrop-filter:saturate(180%) blur(20px);background-color:rgba(255,255,255,.618)}.card{overflow:hidden}.drop-down,.fade-in{animation-fill-mode:forwards}.drop-down{animation:dropDown 1.618s ease}.fade-in{animation:fadeIn 3s ease}h1,h2,h3,h4,h5,h6{color: rgb(var(--theme-color))}:root{--theme-color: {{theme_color}}}*{font-weight:300}a:hover{text-decoration:underline}pre{background:#f9f9f9;border:1px solid #ddd;border-left:3px solid var(--theme-color);color:#666;display:block;font-family:monospace;font-size:15px;line-height:1.618;margin-bottom:1.618em;max-width:100%;overflow:auto;padding:1em 1.618em;page-break-inside:avoid;word-wrap:break-word}.zoom-in{transition:transform .618s cubic-bezier(.618,1,.618,1)}.zoom-in:hover{transform:scale(1.0618)}
       table {
     border: 1px solid black;
     border-collapse: collapse;
@@ -304,7 +304,7 @@ th {
               >
               <ul
                 class="dropdown-menu dropdown-menu-end"
-                aria-labelledby="supportDropdown"
+                aria-labelledby="navbarDropdown"
               >
                 <li class="nav-item">
                   <a
@@ -323,46 +323,11 @@ th {
                 </li>
               </ul>
             </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                id="navbarDropdown"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                >Resources</a
-              >
-              <ul
-                class="dropdown-menu dropdown-menu-end"
-                aria-labelledby="supportDropdown"
-              >
-                <li>
-                  <a class="dropdown-item" href="/contact/index.html">Contact</a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="dropdown-item"
-                    target="_blank"
-                    href="https://github.com/sebastienrousseau/shokunin">GitHub ⧉</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="/privacy/index.html">Privacy & Cookie Policy</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="/tags/index.html">Tags</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="/terms/index.html">Terms of Use</a>
-                </li>
-              </ul>
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" href="https://github.com/sebastienrousseau/shokunin">GitHub</a>
             </li>
             <li class="nav-item">
-              <a
-                aria-pressed="false"
-                class="btn btn-dark rounded-pill px-3"
-                href="/contact/index.html"
-                >Get in touch
+              <a aria-pressed="false" class="btn btn-dark rounded-pill px-3" href="/contact/index.html">Get in touch
               </a>
             </li>
           </ul>

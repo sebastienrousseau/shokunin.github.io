@@ -11,8 +11,8 @@ cdn: "https://kura.pro"
 changefreq: "weekly"
 charset: "utf-8"
 cname: ""
-copyright: "© Copyright 2023 - Shokunin Static Site Generator. All rights reserved."
-date: "Oct 24, 2023"
+copyright: "© Copyright 2024 - Shokunin Static Site Generator. All rights reserved."
+date: "Mar 04, 2024"
 description: "Install Shokunin on macOS, Linux, Windows, and leverage its simplicity and power to create static websites, blogs and microsites with ease."
 download: "https://github.com/sebastienrousseau/shokunin/archive/refs/tags/v0.0.14.zip"
 format-detection: "telephone=no"
@@ -42,7 +42,7 @@ robots: "index, follow"
 short_name: "shokunin"
 subtitle: "Installation instructions, and documentation for Shokunin Static Site Generator (SSG)"
 tags: "Shokunin, SSG, installation, prerequisites, Rust, macOS, Linux, Windows, fast, easy"
-theme_color: "rgb(255, 39, 34)"
+theme_color: "181, 0, 0"
 title: "Shokunin Installation Prerequisites: Get the Fastest SSG"
 url: "https://shokunin.one"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -52,15 +52,15 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://shokunin.one/installation/rss.xml"
 category: "Software, Static Site Generator, Rust"
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Shokunin 🦀 (version 0.0.20)"
+generator: "Shokunin SSG (version 0.0.26)"
 item_description: "Install Shokunin on macOS, Linux, Windows, and leverage its simplicity and power to create static websites, blogs and microsites with ease."
 item_guid: "https://shokunin.one/installation/rss.xml"
 item_link: "https://shokunin.one/installation/rss.xml"
-item_pub_date: "2023-10-24T20:24:20+00:00"
+item_pub_date: "Mon, 04 Mar 2024 06:06:06 +0100"
 item_title: "Shokunin Installation Prerequisites: Get the Fastest SSG"
-last_build_date: "2023-10-24T20:24:20+00:00"
+last_build_date: "Mon, 04 Mar 2024 06:06:06 +0100"
 managing_editor: "contact@shokunin.one"
-pub_date: "2023-10-24T20:24:20+00:00"
+pub_date: "Mon, 04 Mar 2024 06:06:06 +0100"
 ttl: "60"
 type: "website"
 webmaster: "contact@shokunin.one"
@@ -79,7 +79,7 @@ apple-touch-fullscreen: "yes"
 
 msapplication-config: "/browserconfig.xml"
 msapplication-tap-highlight: "no"
-msapplication-TileColor: "rgb(255, 39, 34)"
+msapplication-TileColor: "181, 0, 0"
 msapplication_tile_image: "https://kura.pro/shokunin/images/logos/shokunin.svg"
 
 # Twitter Card - The Twitter Card front matter (YAML).
@@ -99,14 +99,14 @@ author_website: "https://shokunin.one"
 author_twitter: "@wwdseb"
 author_location: "London, UK"
 thanks: "Thanks for reading!"
-site_last_updated: "2023-10-24"
+site_last_updated: "2024-03-04"
 site_standards: "HTML5, CSS3, RSS, Atom, JSON, XML, YAML, Markdown, TOML"
 site_components: "Shokunin SSG, Shokunin CLI, Shokunin Templates, Shokunin Themes, Kaishi SSG, Kaishi CLI, Kaishi Templates, Kaishi Themes"
 site_software: "Shokunin, Rust"
 
 ---
 
-![Divider][00].class=\"m-10 w-100\"
+![divider][divider].class=\"m-10 w-100\"
 
 ## Installation
 
@@ -140,34 +140,6 @@ Shokunin Static Site Generator (SSG) is supported and tested on the following
 platforms and architectures as part of our [CI/CD pipeline][05].
 
 This list is based on the [Rust Platform Support][06] list.
-
-#### Tier 1 platforms
-
-Rust Tier 1 targets are officially supported and guaranteed to work.
-
-| | Operating System | Target | Description |
-| --- | --- | --- | --- |
-| ✅ | Linux   | aarch64-unknown-linux-gnu | 64-bit Linux systems on ARM architecture |
-| ✅ | Linux   | i686-unknown-linux-gnu | 32-bit Linux (kernel 3.2+, glibc 2.17+) |
-| ✅ | Linux   | x86_64-unknown-linux-gnu | 64-bit Linux (kernel 2.6.32+, glibc 2.11+) |
-| ✅ | macOS   | x86_64-apple-darwin | 64-bit macOS (10.7 Lion or later) |
-| ✅ | Windows | i686-pc-windows-gnu | 32-bit Windows (7 or later) |
-| ✅ | Windows | i686-pc-windows-msvc | 32-bit Windows (7 or later) |
-| ✅ | Windows | x86_64-pc-windows-gnu | 64-bit Windows (7 or later) |
-| ✅ | Windows | x86_64-pc-windows-msvc | 64-bit Windows (7 or later) |
-
-#### Tier 2 platforms
-
-Rust Tier 2 targets are supported for building, but not necessarily running.
-
-| | Operating System | Target | Description |
-| --- | --- | --- | --- |
-| ✅ | Linux   | aarch64-unknown-linux-musl | 64-bit Linux systems on ARM architecture |
-| ✅ | Linux   | arm-unknown-linux-gnueabi | ARMv6 Linux (kernel 3.2, glibc 2.17) |
-| ✅ | Linux   | arm-unknown-linux-gnueabihf | ARMv7 Linux, hardfloat (kernel 3.2, glibc 2.17) |
-| ✅ | Linux   | armv7-unknown-linux-gnueabihf | ARMv7 Linux, hardfloat (kernel 3.2, glibc 2.17) |
-| ✅ | macOS   | aarch64-apple-darwin | 64-bit macOS (10.7 Lion or later) |
-| ✅ | Windows | aarch64-pc-windows-msvc | 64-bit Windows (7 or later) |
 
 The [GitHub Actions][05] shows the platforms in which the Shokunin Static Site Generator (SSG) library tests are run.
 
@@ -210,7 +182,7 @@ To use the Shokunin Static Site Generator (SSG) library in your project, add the
 
 ```toml
 [dependencies]
-shokunin = "0.0.20"
+shokunin = "0.0.26"
 ```
 
 Add the following to your `main.rs` file:
@@ -264,7 +236,7 @@ The main() function in this code compiles a website from the `content` directory
 
 You are now ready to use Shokunin and [create amazing websites][07]!
 
-[00]: https://kura.pro/common/images/elements/divider.svg "Horizontal Line"
+[divider]: https://kura.pro/common/images/elements/divider.svg "Divider"
 [01]: https://www.rust-lang.org/learn/get-started "Rust"
 [02]: https://crates.io/crates/ssg "Crate.io"
 [03]: https://docs.rs/crate/ssg/ "Docs.rs"
@@ -272,3 +244,4 @@ You are now ready to use Shokunin and [create amazing websites][07]!
 [05]: https://github.com/sebastienrousseau/shokunin/actions "Actions"
 [06]: https://forge.rust-lang.org/release/platform-support.html "Rust Platform Support"
 [07]: /quick-start/index.html
+[divider]: https://kura.pro/common/images/elements/divider.svg "Divider"

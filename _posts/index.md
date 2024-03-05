@@ -13,13 +13,13 @@ cdn: "https://kura.pro"
 changefreq: "weekly"
 charset: "utf-8"
 cname: "shokunin.one"
-copyright: "© Copyright 2023 - Shokunin Static Site Generator. All rights reserved."
-date: "Oct 24, 2023"
+copyright: "© Copyright 2024 - Shokunin Static Site Generator. All rights reserved."
+date: "Mar 04, 2024"
 description: "Shokunin is a lightning-fast static site generator (SSG) that is optimised for Search Engine Optimisation (SEO) and fully aligned with Accessibility Standards."
 doc_url: "/installation/index.html"
 doc_title: "Installation Guide"
-download_url: "https://github.com/sebastienrousseau/shokunin/archive/refs/tags/v0.0.20.zip"
-download_title: "Download Shokunin v0.0.20"
+quick_start_url: "/quick-start/index.html"
+quick_start_title: "Quick start"
 format-detection: "telephone=no"
 hreflang: "en"
 icon: "https://kura.pro/shokunin/images/favicon.ico"
@@ -38,15 +38,15 @@ logo_width: "181"
 logo: "https://kura.pro/shokunin/images/titles/title-shokunin.webp"
 menu: "active"
 measurementID: "G-8MGBE9BCZC"
-name: "Shokunin"
+name: "Shokunin Static Site Generator (SSG)"
 permalink: "https://shokunin.one"
 rating: "general"
 referrer: "no-referrer"
 revisit-after: "7 days"
 robots: "index, follow"
 short_name: "shokunin"
-subtitle: "Discover the Next-Level Static Site Generator. Enabling Faster, More Secure, and Reliable Websites for Everyone."
-theme_color: "rgb(255, 39, 34)"
+subtitle: "The fastest Rust-based Static Site Generator (SSG) for building professional websites and blogs"
+theme_color: "181, 0, 0"
 title: "Shokunin, the fastest Rust-based Static Site Generator (SSG)"
 url: "https://shokunin.one"
 viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -56,15 +56,15 @@ viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
 atom_link: "https://shokunin.one/rss.xml"
 category: "Software, Static Site Generator, Rust"
 docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Shokunin 🦀 (version 0.0.20)"
+generator: "Shokunin SSG (version 0.0.26)"
 item_description: "Shokunin is a lightning-fast static site generator (SSG) that is optimised for Search Engine Optimisation (SEO) and fully aligned with Accessibility Standards."
 item_guid: "https://shokunin.one/rss.xml"
 item_link: "https://shokunin.one/rss.xml"
-item_pub_date: "2023-10-24T20:24:20+00:00"
+item_pub_date: "Mon, 04 Mar 2024 06:06:06 +0100"
 item_title: "Shokunin - RSS Feed"
-last_build_date: "2023-10-24T20:24:20+00:00"
+last_build_date: "Mon, 04 Mar 2024 06:06:06 +0100"
 managing_editor: "contact@shokunin.one"
-pub_date: "2023-10-24T20:24:20+00:00"
+pub_date: "Mon, 04 Mar 2024 06:06:06 +0100"
 ttl: "60"
 type: "website"
 webmaster: "contact@shokunin.one"
@@ -83,7 +83,7 @@ apple-touch-fullscreen: "yes"
 
 msapplication-config: "/browserconfig.xml"
 msapplication-tap-highlight: "no"
-msapplication-TileColor: "rgb(255, 39, 34)"
+msapplication-TileColor: "181, 0, 0"
 msapplication_tile_image: "https://kura.pro/shokunin/images/logos/shokunin.svg"
 
 # Twitter Card - The Twitter Card front matter (YAML).
@@ -110,152 +110,92 @@ site_software: "Shokunin, Rust"
 
 ---
 
-It generates clean and valid HTML code. You can add keywords and metadata, to
-improve search engine rankings and boost your website's visibility.
 
-## Why Choose Shokunin?
+## Why Choose Shokunin Static Site Generator?
 
-Building a website does not have to be complex, costly, or lengthy. But it must
-be fast, secure, and reliable enough to meet your needs. Shokunin has everything
-to build your static site, and it is free to use. It's lightning fast, flexible,
-efficient, secure, scalable, and easy to use.
+![a woman near subway train][06].class=\"fade-in w-25 m-3 rounded-circle float-start\"
 
-![Banner][06].class=\"w-50 p-3 me-3 img-thumbnail float-start\"
+Building a website doesn't have to be complex or costly. Shokunin is the fast, flexible, and free static site generator that has everything you need to build your static site.
 
-### 100% Free and Open Source
+- **Lightning-fast** build times and page loads in microseconds
+- **Simple** and easy to use, even for beginners
+- **Flexible** and customisable with HTML themes, templates and access to live websites
+- **100% free** and open source ([**MIT ⧉**][04] and [**Apache 2.0 ⧉**][05] licenses)
 
-Shokunin is distributed free of charge and fully open source. It is
-licenced under the terms of both the [MIT Licence ⧉][04] and the
-[Apache Licence (Version 2.0) ⧉][05]. You can use it for any purpose, without
-any restrictions.
+![divider][divider].class=\"m-10 w-100\"
 
-### Incredibly Fast and Reliable
+## Powerful Features for Static Sites
 
-Get ready for lightning-fast build time and impressive page-load speed. With
-Shokunin, you can build your static website in milliseconds and deploy it in
-minutes.
+![a vintage toy plane][07].class=\"fade-in w-25 m-3 rounded-circle float-end\"
 
-### Super Simple and Easy To Use
+Shokunin is loaded with features to create stunning static websites:
 
-Loaded with features, Shokunin is a one-stop solution for all your web
-development needs. It supports GitHub Flavoured Markdown, Google Analytics, RSS,
-and Minification.
+- Full [GitHub Flavoured Markdown ⧉][01] support
+- Google Analytics and structured data integration
+- Automated sitemaps, robots.txt, CNAME records, custom 404 pages
+- RSS feeds, code minification, PWA support, accessibility compliance
+- Built-in Rust development server for local testing
 
-![Divider][09].class=\"m-10 w-100\"
+![divider][divider].class=\"m-10 w-100\"
 
-![Banner][07].class=\"w-50 p-3 ms-3 img-thumbnail float-end\"
+## Content-First Workflow
 
-### Content-First Approach
+![a woman walking in city][08].class=\"fade-in w-25 m-3 rounded-circle float-start\"
 
-Shokunin puts your content at the forefront. It lets you create HTML pages from
-different formats like Markdown, YAML, JSON, and TOML. So you can focus on your
-content and let Shokunin do the rest.
+Focus on your content while Shokunin handles the rest. Import from Markdown, YAML, JSON, TOML, and more. Clean, SEO-friendly URLs are generated automatically.
 
-### Flexible and Customisable
+![divider][divider].class=\"m-10 w-100\"
 
-Shokunin has HTML theme support, templates, and a Rust development server for
-local testing. It automates sitemaps, robots.txt, CNAME records, and custom 404
-pages. It also supports Progressive Web Apps (PWAs) for offline browsing.
+## Built with Rust for Speed and Reliability
 
-### Multilingual Support
+![a woman in a field][09].class=\"fade-in w-25 m-3 rounded-circle float-end\"
 
-Shokunin is available in over 30 languages, including English, French, German,
-Spanish, Italian, Portuguese, Chinese, Japanese and many more. You can also add
-your language very easily.
+Shokunin harnesses the power of Rust, a fast and secure programming language built for performance. Create your static site in seconds and deploy in minutes.
 
-![Divider][09].class=\"m-10 w-100\"
+![divider][divider].class=\"m-10 w-100\"
 
-![Banner][12].class=\"w-50 p-3 me-3 img-thumbnail float-start\"
+## Get Started in 30+ Languages
 
-### A Commitment to Accessibility and SEO
+![white stairs][10].class=\"fade-in w-25 m-3 rounded-circle float-start\"
 
-Embedded with SEO best practices, Shokunin helps your website rank higher in
-search engine results pages (SERPs). It also ensures that your website is
-accessible to everyone.
+Shokunin is translated into over 30 languages, from English and French to Chinese and Japanese. Reach a global audience with ease.
 
-### Clean, Readable, Search-Engine Friendly URLs
+![divider][divider].class=\"m-10 w-100\"
 
-Shokunin automatically uses Pretty URLS (also known as clean URLs, user-friendly
-URLs, or search engine-friendly URLs) for your pages. It makes your URLs
-readable and easy to remember.
+## Showcase Your Site Today
 
-### Automated Structured Data Markup
+![idole in japan][11].class=\"fade-in w-25 m-3 rounded-circle float-end\"
 
-Shokunin makes your website more accessible by adding microdata to your pages.
-Microdata help browsers build a data structure that machines can understand.
+Create beautiful blogs, landing pages, and websites with Shokunin's clean designs and flexible themes. The only limit is your creativity.
 
-![Divider][09].class=\"m-10 w-100\"
+From simple Markdown to full HTML layouts, Shokunin has you covered. [Start building your dream static website today!][02]
 
-![Banner][08].class=\"w-50 p-3 me-3 img-thumbnail float-end\"
+![divider][divider].class=\"m-10 w-100\"
 
-### Experience Shokunin for Yourself
+## Get Shokunin
 
-This fast static site generator (SSG) is easy to use. You can create landing
-pages, blogs, microsites, and complex websites with your own designs and themes.
-Endless possibilities.
-
-### Built with Rust
-
-Shokunin is built with Rust, a fast, reliable, and secure programming language.
-It is designed for performance, safety, and concurrency. Rust is also
-memory-efficient and easy to use.
-
-![Divider][09].class=\"m-10 w-100\"
-
-## Features
-
-Shokunin has everything you need to build your static site
-
-- Comprehensive [GitHub Flavoured Markdown ⧉][01] (GFM) support
-- Google and Bing Analytics integration
-- Compatibility with diverse HTML themes and premium templates
-- Atom and RSS feeds generation for blogs
-- Source code minification for performance and SEO enhancement
-- Built-in Rust development server for local testing and development
-- Support for multiple content formats (Markdown, YAML, JSON, TOML, XML)
-- Automatic generation of sitemaps, robots.txt, CNAME records, and custom 404 pages
-- Progressive web apps (PWAs) support for offline browsing
-- Custom templates and HTML themes support
-- Structured Data Markup
-- Accessibility compliance
-- SEO best practices
-
-## Releases and Source Code
-
-Head on over to the [Releases page ⧉][11] to download the latest version. You can
-find the source code on the [GitHub repository ⧉][00], or get the most recent
-binary from [crates.io ⧉][10].
-
-To install Shokunin using cargo, run the following command in your terminal:
+[**Download the latest release ⧉**][12], view the [**source code ⧉**][00], or simply install Shokunin with Cargo:
 
 ```bash
 cargo install ssg
 ```
 
-Have questions or need assistance? Don't hesitate to [reach out][03]; we're
-always here to help!
+Have questions? [Contact us anytime][03] for expert help.
 
-## Get Started with Shokunin Today
+[Start using Shokunin now and experience the difference in static site generators →][02]
 
-Build a fast, secure, and reliable static website with Shokunin, the
-lightning-fast Rust-based static site generator.
-
-Shokunin is easy to use and perfect for beginners and experienced developers
-alike. With Shokunin, you can create a beautiful and functional website in
-minutes, without having to write any code.
-
-[Start your site today and see the difference Shokunin can make for your website!][02]
-
-[00]: https://github.com/sebastienrousseau/shokunin "GitHub Repository for Shokunin"
+[00]: https://github.com/sebastienrousseau/shokunin "Shokunin GitHub repo"
 [01]: https://github.github.com/gfm/ "GitHub Flavoured Markdown"
 [02]: /installation/index.html "Install Shokunin"
 [03]: /contact/index.html "Contact Shokunin"
 [04]: https://opensource.org/licenses/MIT "MIT License"
-[05]: https://opensource.org/license/apache-2-0/ "Apache License (Version 2.0)"
-[06]: https://kura.pro/stock/images/banners/eutah-mizushima-2TlAsvhqiL0.webp "Woman in white elbow-sleeved shirt standing near white train in subway"
-[07]: https://kura.pro/stock/images/banners/matias-luge-l8AC4_hDidY.webp "White and red jet plane on brown ground. The Junkers F.13 in 1:72 Scale from Revell"
-[08]: https://kura.pro/stock/images/banners/jack-dong-YRoJea0xGVY.webp "A woman walking in front of a cityscape"
-[09]: https://kura.pro/common/images/elements/divider.svg "Horizontal Line"
-[10]: https://crates.io/crates/ssg "Shokunin on crates.io"
-[11]: https://github.com/sebastienrousseau/shokunin/releases "Releases page for Shokunin"
-[12]: https://kura.pro/stock/images/banners/pixabay-434645.webp "White Stairs"
+[05]: https://opensource.org/license/apache-2-0/ "Apache License 2.0"
+[06]: https://kura.pro/stock/images/banners/eutah-mizushima-2TlAsvhqiL0.webp "image of a woman near subway train"
+[07]: https://kura.pro/stock/images/banners/matias-luge-l8AC4_hDidY.webp "image of a vintage toy plane"
+[08]: https://kura.pro/stock/images/banners/jack-dong-YRoJea0xGVY.webp "image of a woman walking in city"
+[09]: https://kura.pro/stock/images/banners/quang-nguyen-vinh-aFPKPreW76g.webp "image of a woman in a field"
+[10]: https://kura.pro/stock/images/banners/pixabay-434645.webp "image of white stairs"
+[11]: https://kura.pro/stock/images/banners/ryoma-onita-YbrLAqh3Ssc.webp "image of an idole in japan"
+[12]: https://github.com/sebastienrousseau/shokunin/releases/tag/    "Shokunin releases"
+
+[divider]: https://kura.pro/common/images/elements/divider.svg "Divider"
