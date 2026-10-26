@@ -1,10 +1,10 @@
-# Site configuration for shokunin.one, built with `make build`.
+# Site configuration for static-site-generator.com, built with `make build`.
 # The paths are relative to the repository root.
 
-site_name = "Shokunin"
-site_title = "Shokunin is now Static Site Generator (ssg)"
-site_description = "Shokunin, the Rust static site generator, was renamed Static Site Generator (ssg) in version 0.0.36. This site explains the rename and how to install, build and check a site with ssg 0.0.69."
-base_url = "https://shokunin.one"
+site_name = "Static Site Generator"
+site_title = "Static Site Generator (ssg): a Rust static site generator that checks what it builds"
+site_description = "Static Site Generator (ssg) is an open-source static site generator written in Rust. It builds a site from Markdown and templates, scores it on a ten-pillar quality gate and audits the output on fifteen gates."
+base_url = "https://static-site-generator.com"
 language = "en-GB"
 
 content_dir = "_posts"

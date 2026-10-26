@@ -1,8 +1,8 @@
 ---
-name: "shokunin"
-short_name: "shokunin"
-title: "Features: quality gate, audit gates, CSP, schemas and deploys | Shokunin"
-description: "What Static Site Generator (ssg, formerly Shokunin) does: a quality gate on every build, fifteen audit gates, CSP and Subresource Integrity, content schemas, feeds and search, and one-command deploys."
+name: "ssg"
+short_name: "ssg"
+title: "Features: quality gate, audit gates, CSP, schemas and deploys | Static Site Generator"
+description: "What Static Site Generator (ssg) does: a quality gate on every build, fifteen audit gates, CSP and Subresource Integrity, content schemas, feeds and search, and one-command deploys."
 keywords: "ssg features, static site generator audit, wcag, csp sri, content schema, rss atom, deploy netlify vercel"
 author: "Sebastien Rousseau"
 date: "2026-10-26"
@@ -74,9 +74,17 @@ tokens read from environment variables such as `SSG_NETLIFY_TOKEN`. The
 **`ssg dev` builds the site and serves it** on `http://127.0.0.1:8000`,
 rebuilding when a file changes and pushing the change to the browser.
 
+## Themes
+
+**A theme is a directory of layouts.** Name one with `--theme <name>` on
+the command line or `theme =` in `ssg.toml`, and ssg uses it as the
+template directory. The published themes, including Prism, which this site
+uses, are on
+[themes.static-site-generator.com](https://themes.static-site-generator.com/).
+
 ## Where it stops
 
 The project's README is plain about the limits: ssg compiles ahead of time,
 so it does not suit pages that must be rendered per request; its theme
-ecosystem is small; and its plugin API is pre-1.0 and may change between
+ecosystem is small next to older generators; and its plugin API is pre-1.0 and may change between
 releases.

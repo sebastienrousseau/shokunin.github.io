@@ -1,9 +1,9 @@
 ---
-name: "shokunin"
-short_name: "shokunin"
-title: "About Static Site Generator, formerly Shokunin | Shokunin"
-description: "Who builds Static Site Generator (ssg, formerly Shokunin), and the facts about the project: its crate, licence, minimum Rust version, latest release and where its source and security policy live."
-keywords: "ssg author, sebastien rousseau, shokunin author, ssg licence"
+name: "ssg"
+short_name: "ssg"
+title: "About Static Site Generator | Static Site Generator"
+description: "Who builds Static Site Generator (ssg), and the facts about the project: its crate, licence, minimum Rust version, latest release and where its source and security policy live."
+keywords: "ssg author, sebastien rousseau, ssg licence"
 author: "Sebastien Rousseau"
 date: "2026-10-26"
 news_publication_date: "2026-10-26"
@@ -13,7 +13,7 @@ schema: "page"
 changefreq: "monthly"
 eyebrow: "About"
 headline: "About the project"
-lead: "Static Site Generator, formerly Shokunin, is an open-source project by Sebastien Rousseau."
+lead: "Static Site Generator is an open-source project by Sebastien Rousseau."
 ---
 ## Who builds it?
 
@@ -34,7 +34,8 @@ until version 0.0.36, released in April 2026.
 | **Licence** | MIT or Apache-2.0, at your option |
 | **Latest release** | [0.0.69](https://github.com/sebastienrousseau/static-site-generator/releases/tag/v0.0.69), published 23 October 2026 |
 | **Source** | [github.com/sebastienrousseau/static-site-generator](https://github.com/sebastienrousseau/static-site-generator) |
-| **API reference** | [docs.rs/ssg](https://docs.rs/ssg) |
+| **API reference** | [docs.static-site-generator.com](https://docs.static-site-generator.com/) |
+| **Themes** | [themes.static-site-generator.com](https://themes.static-site-generator.com/) |
 | **Security policy** | [SECURITY.md](https://github.com/sebastienrousseau/static-site-generator/security/policy) |
 
 ## How is it versioned?
@@ -44,6 +45,7 @@ receives security fixes. Read the [changelog](/changelog/) before upgrading.
 
 ## What is this website?
 
-shokunin.one was the project's website under its old name. It now explains
-the rename and points to the current documentation, and it is built with
-ssg itself.
+static-site-generator.com is the project's homepage. It is built with ssg
+itself, from the
+[shokunin.github.io](https://github.com/sebastienrousseau/shokunin.github.io)
+repository, which held the site under the project's old name.

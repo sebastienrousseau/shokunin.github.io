@@ -2,9 +2,9 @@
 
 # Security Policy
 
-This repository holds the source of shokunin.one. Report a vulnerability
-in the website, or in Static Site Generator (ssg, formerly Shokunin), which
-it describes, privately to **sebastian.rousseau@gmail.com**, the address in
+This repository holds the source of static-site-generator.com. Report a
+vulnerability in the website, or in Static Site Generator (ssg), which it
+describes, privately to **sebastian.rousseau@gmail.com**, the address in
 ssg's [security policy](https://github.com/sebastienrousseau/static-site-generator/security/policy).
 Machine-readable disclosure metadata lives at
 [`/.well-known/security.txt`](.well-known/security.txt) per

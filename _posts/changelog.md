@@ -1,7 +1,7 @@
 ---
-name: "shokunin"
-short_name: "shokunin"
-title: "Changelog: recent ssg releases | Shokunin"
+name: "ssg"
+short_name: "ssg"
+title: "Changelog: recent ssg releases | Static Site Generator"
 description: "What changed in recent Static Site Generator (ssg) releases, from the project's CHANGELOG: security fixes, minified inline stylesheets, SRI on highlighting stylesheets and more."
 keywords: "ssg changelog, ssg 0.0.69, ssg release notes"
 author: "Sebastien Rousseau"

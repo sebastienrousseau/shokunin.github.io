@@ -1,9 +1,9 @@
 ---
-name: "shokunin"
-short_name: "shokunin"
-title: "Contributing to Static Site Generator | Shokunin"
-description: "How to report a bug, suggest a feature or send a change to Static Site Generator (ssg, formerly Shokunin): setting up, running the tests and opening a pull request."
-keywords: "contribute to ssg, ssg development, shokunin contribute"
+name: "ssg"
+short_name: "ssg"
+title: "Contributing to Static Site Generator | Static Site Generator"
+description: "How to report a bug, suggest a feature or send a change to Static Site Generator (ssg): setting up, running the tests and opening a pull request."
+keywords: "contribute to ssg, ssg development"
 author: "Sebastien Rousseau"
 date: "2026-10-26"
 news_publication_date: "2026-10-26"
@@ -41,6 +41,6 @@ and describes the checks CI runs.
 
 ## What about this website?
 
-The site's source is in
+The source of static-site-generator.com is in
 [shokunin.github.io](https://github.com/sebastienrousseau/shokunin.github.io).
 Corrections are welcome as issues or pull requests there.

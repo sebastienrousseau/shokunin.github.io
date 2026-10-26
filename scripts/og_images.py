@@ -3,7 +3,7 @@
 """Give every built page its own Open Graph image.
 
 For each page in the output it renders a 1200x630 card (the page title
-and description on the Shokunin (ssg) palette, with the logo) through headless
+and description on the Static Site Generator palette, with the logo) through headless
 Chrome into og/<slug>.png, then points the page's og:image and
 twitter:image at that file. Run after post-build.py. The build fails if
 Chrome is missing or any page is left without its image, so CI enforces
@@ -54,7 +54,7 @@ h1{{font-size:68px;line-height:1.1;margin:56px 0 24px;font-weight:700;letter-spa
 p{{font-size:30px;line-height:1.4;margin:0;color:#d6d3d1;max-width:1000px}}
 .url{{margin-top:auto;font-size:26px;color:#d6d3d1}}
 </style></head><body><div class="card">
-<div class="brand">{logo}<span>Shokunin</span></div>
+<div class="brand">{logo}<span>Static Site Generator</span></div>
 <h1>{title}</h1><p>{description}</p><div class="url">{host}</div>
 </div></body></html>"""
 
