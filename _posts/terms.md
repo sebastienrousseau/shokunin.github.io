@@ -28,7 +28,7 @@ licence, which come with no warranty.
 The source of static-site-generator.com is available under Apache-2.0 or MIT, at your
 option, in the
 [shokunin.github.io repository](https://github.com/sebastienrousseau/shokunin.github.io).
-Its theme, Prism, is MIT-licensed.
+Its theme, Velocity, is MIT-licensed.
 
 ## Anything else?
 

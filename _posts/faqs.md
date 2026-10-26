@@ -55,7 +55,7 @@ See [the audit gates](/features/#fifteen-audit-gates).
 ssg resolves a theme by name with `--theme` or `theme =` in `ssg.toml`. The
 published themes are on
 [themes.static-site-generator.com](https://themes.static-site-generator.com/);
-this site uses one of them, Prism. See [themes](/features/#themes).
+this site uses one of them, Velocity. See [themes](/features/#themes).
 
 ## Can it deploy for me?
 

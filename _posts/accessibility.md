@@ -17,12 +17,13 @@ lead: "static-site-generator.com aims to be usable by everyone, with any input d
 ---
 ## How is the site built for accessibility?
 
-- The site uses the Prism theme with colours taken from the ssg logo.
+- The site uses the Velocity theme, with its accent colour taken from the
+  ssg logo.
   Every text colour pair is checked at a contrast ratio of at least 7:1, and
   borders and focus rings at 3:1, in light and dark mode; the build fails if
   one falls short.
-- Navigation works without JavaScript; the menus are disclosure buttons with
-  their expanded state announced, and Escape closes them.
+- Navigation works without JavaScript; on small screens the menu is a
+  disclosure button with its expanded state announced, and Escape closes it.
 - Every page has a skip link, one level-one heading and a language attribute.
 - Light, dark and system themes are available from the header.
 

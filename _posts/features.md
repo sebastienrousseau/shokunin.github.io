@@ -78,7 +78,7 @@ rebuilding when a file changes and pushing the change to the browser.
 
 **A theme is a directory of layouts.** Name one with `--theme <name>` on
 the command line or `theme =` in `ssg.toml`, and ssg uses it as the
-template directory. The published themes, including Prism, which this site
+template directory. The published themes, including Velocity, which this site
 uses, are on
 [themes.static-site-generator.com](https://themes.static-site-generator.com/).
 

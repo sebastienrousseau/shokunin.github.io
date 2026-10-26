@@ -14,7 +14,7 @@ changefreq: "monthly"
 eyebrow: "Reference"
 headline: "Command reference"
 lead: "The ssg 0.0.69 command line, as printed by ssg --help."
-nav_docs: "true"
+nav_reference: "true"
 ---
 ## Subcommands
 

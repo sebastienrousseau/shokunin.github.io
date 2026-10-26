@@ -1,27 +1,13 @@
 /*!
- * Prism — financial-infrastructure marketing theme for Static Site Generator (SSG).
+ * Velocity — product and starter theme for Static Site Generator (SSG).
  *
  * Token contract
  * --------------
  * Every colour below is gated by `scripts/contrast.py`, which parses the
- * `:root` blocks and asserts the pairs it declares. Text tokens clear
+ * two `:root` blocks and asserts the pairs it declares. Text tokens clear
  * WCAG 1.4.6 (AAA, 7:1); borders and the focus ring clear WCAG 1.4.11
  * (3:1). Change a value and the gate re-checks it — do not hand-tune a
  * colour without running `make check`.
- *
- * Besides the shared vocabulary (`--ink`, `--surface`, `--accent`, ...)
- * this theme carries three more sets, each gated under its own name:
- *
- *   --hero-*   the navy masthead, the hero band and the developer panel,
- *              which are dark in both colour schemes
- *   --code-*   the syntax colours in the developer panel's code window
- *   --green/--clay/--gold/--burgundy  the four semantic tints, each a
- *              text token on a soft ground
- *
- * The category this theme belongs to — enterprise fintech marketing —
- * conventionally opens with a mesh gradient behind the hero copy. Here the
- * gradient sits behind the mock-ups only and the copy sits on solid navy,
- * because a gradient cannot be contrast-checked.
  *
  * Layers keep specificity flat so a site can override any component from
  * its own stylesheet without `!important`.
@@ -33,80 +19,33 @@
      light` viewer sees. */
   :root,
   :root[data-theme="light"] {
-    --bg: #fbf8f6;
-    --bg-soft: #f5efeb;
+    --bg: #ffffff;
+    --bg-soft: #f8fafc;
     --surface: #ffffff;
-    --surface-soft: #f5efeb;
+    --surface-soft: #f1f5f9;
 
-    --ink: #1c1917;
-    --ink-soft: #3f3a36;
-    --ink-muted: #4e4844;
+    --ink: #0f172a;
+    --ink-soft: #334155;
+    --ink-muted: #434e5d;
 
     --accent: #86301e;
     --accent-hover: #6c2616;
     --accent-ink: #ffffff;
     --accent-soft: #fbe8e2;
-    --on-accent-soft: #772a1a;
+    --on-accent-soft: #6c2616;
 
-    --line: #8a817a;
-    --line-soft: #ebe3dd;
-    --focus: #c0503a;
+    --line: #78849a;
+    --line-soft: #e2e8f0;
+    --focus: #1d4ed8;
 
-    /* Semantic tints: a text token on a soft ground, each pair gated. */
-    --green-text: #1b4332;
-    --green-soft: #e6f2ec;
-    --green: #2d6a4f;
-    --clay-text: #7d3119;
-    --clay-soft: #f6e7e1;
-    --gold-text: #5e420b;
-    --gold-soft: #f7f0e1;
-    --burgundy-text: #6b1d2f;
-    --burgundy-soft: #f8ecef;
+    --shadow-sm: 0 1px 3px rgb(15 23 42 / 7%);
+    --shadow-md: 0 8px 24px -10px rgb(15 23 42 / 18%);
 
-    /* The dark surfaces, the same in both schemes. */
-    --hero-bg: #1c1917;
-    --hero-surface: #292524;
-    --hero-ink: #ffffff;
-    --hero-ink-soft: #d6d3d1;
-    --hero-line: #78716c;
-    --hero-accent: #f4a28f;
-    --hero-clay: #fbc9bc;
-    --hero-gold: #f4a28f;
-    --hero-stage: rgb(41 37 36 / 55%);
-
-    /* Icon-badge gradient stops. Tokens rather than literals inside the
-       component rule, so `scripts/contrast.py` can hold the white glyph
-       they carry to WCAG 1.4.11 (3:1) against the *lightest* stop — the
-       one that decides whether the icon is visible. Two of these were
-       hand-picked at 2.5:1 before the gate covered them. */
-    --badge-ink: #ffffff;
-    --badge-blue-from: #86301e;
-    --badge-blue-to: #b04129;
-    --badge-clay-from: #b05a3f;
-    --badge-clay-to: #cf7e66;
-    --badge-green-from: #2d6a4f;
-    --badge-green-to: #40916c;
-    --badge-gold-from: #8f7036;
-    --badge-gold-to: #af8e4f;
-    --badge-burgundy-from: #6b1d2f;
-    --badge-burgundy-to: #8d2840;
-    --badge-navy-from: #1c1917;
-    --badge-navy-to: #44403c;
-
-    /* Code window. */
-    --code-bg: #0f0d0c;
-    --code-bar: #1c1917;
-    --code-plain: #f5f5f4;
-    --code-keyword: #f4a28f;
-    --code-function: #fdba74;
-    --code-string: #fde68a;
-    --code-comment: #b4ada6;
-    --code-property: #fcd0c4;
-    --code-number: #86efac;
-
-    --shadow-sm: 0 1px 3px rgb(28 25 23 / 8%);
-    --shadow-md: 0 12px 32px -12px rgb(28 25 23 / 22%);
-    --shadow-lg: 0 30px 60px -24px rgb(28 25 23 / 35%);
+    /* The generator's search trigger is `position: fixed` over the page,
+       not a child of the header, so it cannot inherit the header's
+       vertical centring — it sat 4px below every other header control.
+       Centre it against this theme's own header height. */
+    --ssg-search-top: calc((4.25rem - 2.75rem) / 2);
 
     color-scheme: light;
   }
@@ -115,197 +54,83 @@
      still wins on a dark OS. */
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --bg: #0f0d0c;
-      --bg-soft: #151210;
-      --surface: #1c1917;
-      --surface-soft: #262220;
+      --bg: #090d16;
+      --bg-soft: #0e131f;
+      --surface: #111827;
+      --surface-soft: #1f2937;
 
-      --ink: #fafaf9;
-      --ink-soft: #d6d3d1;
-      --ink-muted: #bab3ad;
+      --ink: #f9fafb;
+      --ink-soft: #e5e7eb;
+      --ink-muted: #adb4bf;
 
       --accent: #f4a28f;
       --accent-hover: #fcd0c4;
-      --accent-ink: #1c1917;
+      --accent-ink: #090d16;
       --accent-soft: #3d2018;
-      --on-accent-soft: #fde4dc;
+      --on-accent-soft: #fcd0c4;
 
-      --line: #7c746d;
-      --line-soft: #2e2926;
-      --focus: #e8826b;
+      --line: #6b7688;
+      --line-soft: #1f2937;
+      --focus: #7dd3fc;
 
-      --green-text: #a7dcc1;
-      --green-soft: #173628;
-      --green: #6cc39a;
-      --clay-text: #f4b39a;
-      --clay-soft: #3d2418;
-      --gold-text: #e6cb8b;
-      --gold-soft: #3a2f14;
-      --burgundy-text: #f0a9b8;
-      --burgundy-soft: #3d1a23;
-
-      --hero-bg: #1c1917;
-      --hero-surface: #292524;
-      --hero-ink: #ffffff;
-      --hero-ink-soft: #d6d3d1;
-      --hero-line: #78716c;
-      --hero-accent: #f4a28f;
-      --hero-clay: #fbc9bc;
-      --hero-gold: #f4a28f;
-      --hero-stage: rgb(41 37 36 / 55%);
-
-      /* Icon-badge gradient stops. Tokens rather than literals inside the
-         component rule, so `scripts/contrast.py` can hold the white glyph
-         they carry to WCAG 1.4.11 (3:1) against the *lightest* stop — the
-         one that decides whether the icon is visible. Two of these were
-         hand-picked at 2.5:1 before the gate covered them. */
-      --badge-ink: #ffffff;
-      --badge-blue-from: #86301e;
-      --badge-blue-to: #b04129;
-      --badge-clay-from: #b05a3f;
-      --badge-clay-to: #cf7e66;
-      --badge-green-from: #2d6a4f;
-      --badge-green-to: #40916c;
-      --badge-gold-from: #8f7036;
-      --badge-gold-to: #af8e4f;
-      --badge-burgundy-from: #6b1d2f;
-      --badge-burgundy-to: #8d2840;
-      --badge-navy-from: #1c1917;
-      --badge-navy-to: #44403c;
-
-      --code-bg: #0f0d0c;
-      --code-bar: #1c1917;
-      --code-plain: #f5f5f4;
-      --code-keyword: #f4a28f;
-      --code-function: #fdba74;
-      --code-string: #fde68a;
-      --code-comment: #b4ada6;
-      --code-property: #fcd0c4;
-      --code-number: #86efac;
-
-      --shadow-sm: 0 1px 3px rgb(0 0 0 / 55%);
-      --shadow-md: 0 12px 32px -12px rgb(0 0 0 / 70%);
-      --shadow-lg: 0 30px 60px -24px rgb(0 0 0 / 80%);
+      --shadow-sm: 0 1px 3px rgb(0 0 0 / 45%);
+      --shadow-md: 0 8px 24px -10px rgb(0 0 0 / 70%);
 
       color-scheme: dark;
     }
   }
 
-  /* The toggle wins in both directions. */
+  /* Same tokens again so the in-page toggle wins in both directions. */
   :root[data-theme="dark"] {
-    --bg: #0f0d0c;
-    --bg-soft: #151210;
-    --surface: #1c1917;
-    --surface-soft: #262220;
+    --bg: #090d16;
+    --bg-soft: #0e131f;
+    --surface: #111827;
+    --surface-soft: #1f2937;
 
-    --ink: #fafaf9;
-    --ink-soft: #d6d3d1;
-    --ink-muted: #bab3ad;
+    --ink: #f9fafb;
+    --ink-soft: #e5e7eb;
+    --ink-muted: #adb4bf;
 
     --accent: #f4a28f;
     --accent-hover: #fcd0c4;
-    --accent-ink: #1c1917;
+    --accent-ink: #090d16;
     --accent-soft: #3d2018;
-    --on-accent-soft: #fde4dc;
+    --on-accent-soft: #fcd0c4;
 
-    --line: #7c746d;
-    --line-soft: #2e2926;
-    --focus: #e8826b;
+    --line: #6b7688;
+    --line-soft: #1f2937;
+    --focus: #7dd3fc;
 
-    --green-text: #a7dcc1;
-    --green-soft: #173628;
-    --green: #6cc39a;
-    --clay-text: #f4b39a;
-    --clay-soft: #3d2418;
-    --gold-text: #e6cb8b;
-    --gold-soft: #3a2f14;
-    --burgundy-text: #f0a9b8;
-    --burgundy-soft: #3d1a23;
-
-    --hero-bg: #1c1917;
-    --hero-surface: #292524;
-    --hero-ink: #ffffff;
-    --hero-ink-soft: #d6d3d1;
-    --hero-line: #78716c;
-    --hero-accent: #f4a28f;
-    --hero-clay: #fbc9bc;
-    --hero-gold: #f4a28f;
-    --hero-stage: rgb(41 37 36 / 55%);
-
-    /* Icon-badge gradient stops. Tokens rather than literals inside the
-       component rule, so `scripts/contrast.py` can hold the white glyph
-       they carry to WCAG 1.4.11 (3:1) against the *lightest* stop — the
-       one that decides whether the icon is visible. Two of these were
-       hand-picked at 2.5:1 before the gate covered them. */
-    --badge-ink: #ffffff;
-    --badge-blue-from: #86301e;
-    --badge-blue-to: #b04129;
-    --badge-clay-from: #b05a3f;
-    --badge-clay-to: #cf7e66;
-    --badge-green-from: #2d6a4f;
-    --badge-green-to: #40916c;
-    --badge-gold-from: #8f7036;
-    --badge-gold-to: #af8e4f;
-    --badge-burgundy-from: #6b1d2f;
-    --badge-burgundy-to: #8d2840;
-    --badge-navy-from: #1c1917;
-    --badge-navy-to: #44403c;
-
-    --code-bg: #0f0d0c;
-    --code-bar: #1c1917;
-    --code-plain: #f5f5f4;
-    --code-keyword: #f4a28f;
-    --code-function: #fdba74;
-    --code-string: #fde68a;
-    --code-comment: #b4ada6;
-    --code-property: #fcd0c4;
-    --code-number: #86efac;
-
-    --shadow-sm: 0 1px 3px rgb(0 0 0 / 55%);
-    --shadow-md: 0 12px 32px -12px rgb(0 0 0 / 70%);
-    --shadow-lg: 0 30px 60px -24px rgb(0 0 0 / 80%);
+    --shadow-sm: 0 1px 3px rgb(0 0 0 / 45%);
+    --shadow-md: 0 8px 24px -10px rgb(0 0 0 / 70%);
 
     color-scheme: dark;
   }
 
   :root {
-    /* A fluid scale, so 200% zoom and 320px both stay on the ramp. */
-    --step--1: clamp(0.86rem, 0.83rem + 0.16vw, 0.95rem);
-    --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.13rem);
-    --step-1: clamp(1.2rem, 1.12rem + 0.4vw, 1.45rem);
-    --step-2: clamp(1.5rem, 1.34rem + 0.8vw, 2rem);
-    --step-3: clamp(1.9rem, 1.6rem + 1.5vw, 2.9rem);
-    --step-4: clamp(2.3rem, 1.8rem + 2.6vw, 4rem);
-
-    --measure: 68ch;
-    --radius: 12px;
-    --radius-lg: 18px;
-    --gap: clamp(1rem, 0.8rem + 1vw, 1.75rem);
-    --section-y: clamp(3rem, 2rem + 5vw, 6.5rem);
-
-    /* skeletonic's topbar: the navy masthead, in both schemes. */
-    --topbar-height: 4.25rem;
-    --topbar-max-width: 78rem;
-    --topbar-gutter: 1rem;
-    --topbar-bg: var(--hero-bg);
-    --topbar-fg: var(--hero-ink);
-    --topbar-line: var(--hero-line);
-    --topbar-muted: var(--hero-ink-soft);
-    --topbar-link-color: var(--hero-ink-soft);
-    --topbar-link-hover: var(--hero-ink);
-    --topbar-brand-weight: 800;
-    --topbar-font: var(--font-sans);
-    --topbar-font-size: var(--step--1);
-    --topbar-font-weight: 600;
-    --topbar-radius: 10px;
-    --topbar-control-bg: var(--hero-surface);
-    --topbar-control-fg: var(--hero-ink);
-    --topbar-control-border: var(--hero-line);
-
-    --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    --font-sans: system-ui, -apple-system, "Segoe UI", Roboto,
       "Helvetica Neue", Arial, sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
-      "Liberation Mono", monospace;
+      monospace;
+
+    --step--1: clamp(0.83rem, 0.8rem + 0.15vw, 0.9rem);
+    --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.09rem);
+    --step-1: clamp(1.2rem, 1.13rem + 0.36vw, 1.42rem);
+    --step-2: clamp(1.44rem, 1.32rem + 0.6vw, 1.85rem);
+    --step-3: clamp(1.73rem, 1.53rem + 0.98vw, 2.4rem);
+    --step-4: clamp(2.07rem, 1.75rem + 1.6vw, 3.13rem);
+
+    --space-2xs: 0.375rem;
+    --space-xs: 0.625rem;
+    --space-s: 1rem;
+    --space-m: 1.5rem;
+    --space-l: 2.5rem;
+    --space-xl: 4rem;
+    --space-2xl: 6rem;
+
+    --radius: 10px;
+    --radius-sm: 6px;
+    --measure: 68ch;
   }
 }
 
@@ -316,11 +141,6 @@
     box-sizing: border-box;
   }
 
-  html {
-    -webkit-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-  }
-
   body,
   h1,
   h2,
@@ -329,10 +149,7 @@
   p,
   ul,
   ol,
-  figure,
-  blockquote,
-  dl,
-  dd {
+  figure {
     margin: 0;
   }
 
@@ -343,21 +160,28 @@
   }
 
   img,
-  svg,
-  video {
+  picture,
+  svg {
     display: block;
     max-width: 100%;
     height: auto;
   }
 
-  button,
   input,
-  select,
-  textarea {
+  button,
+  textarea,
+  select {
     font: inherit;
     color: inherit;
   }
 
+  [hidden] {
+    display: none !important;
+  }
+
+  /* WCAG 2.3.3 — honour a reduced-motion preference everywhere rather
+     than per-component. Transitions are decorative in this theme, so
+     removing them costs nothing. */
   @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -372,34 +196,41 @@
 
 @layer base {
   body {
-    background: var(--bg);
+    /* The generator pins a floating search trigger to the bottom-right on
+       phones; this keeps it from resting over the final control. */
+    padding-block-end: 4.5rem;
+    background-color: var(--bg);
     color: var(--ink);
     font-family: var(--font-sans);
     font-size: var(--step-0);
     line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
 
   h1,
   h2,
-  h3 {
-    line-height: 1.12;
+  h3,
+  h4 {
+    line-height: 1.15;
+    letter-spacing: -0.021em;
     text-wrap: balance;
-    letter-spacing: -0.025em;
-    font-weight: 800;
+    color: var(--ink);
   }
 
   h1 {
     font-size: var(--step-4);
-    letter-spacing: -0.035em;
+    font-weight: 800;
   }
 
   h2 {
     font-size: var(--step-3);
+    font-weight: 750;
   }
 
   h3 {
     font-size: var(--step-1);
-    letter-spacing: -0.015em;
+    font-weight: 700;
   }
 
   p {
@@ -408,66 +239,67 @@
 
   a {
     color: var(--accent);
-    text-underline-offset: 0.2em;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
   }
 
   a:hover {
     color: var(--accent-hover);
   }
 
+  /* WCAG 2.4.13 — a focus indicator that is visible on every ground and
+     never clipped by an ancestor's overflow. */
   :focus-visible {
     outline: 3px solid var(--focus);
     outline-offset: 2px;
-    border-radius: 4px;
+    border-radius: 2px;
+  }
+
+  :focus:not(:focus-visible) {
+    outline: none;
   }
 
   code,
-  pre {
+  kbd {
     font-family: var(--font-mono);
-    font-size: 0.92em;
+    font-size: 0.9em;
   }
 
-  /* Wrapped rather than scrolled: a code block that never overflows needs
-     no scroll region, so there is nothing to make focusable and nothing
-     to reflow. */
+  /* A fenced block cannot reflow — its lines have a fixed width — so it
+     scrolls inside its own box rather than widening the page (WCAG 1.4.10).
+     Focusable for the same reason the table wrapper is: a scroll region a
+     keyboard user cannot reach holds unreachable content. */
   pre {
-    white-space: pre-wrap;
-    overflow-wrap: anywhere;
-    padding: 1rem;
-    border: 1px solid var(--line-soft);
-    border-radius: var(--radius);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: var(--space-s);
     background: var(--surface-soft);
+    border: 1px solid var(--line-soft);
+    border-radius: var(--radius-sm);
   }
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
+  pre:focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 2px;
   }
 
-  th,
-  td {
-    padding: 0.7rem 0.8rem;
-    border-block-end: 1px solid var(--line-soft);
-    text-align: start;
-  }
-
-  th {
-    font-weight: 700;
+  pre code {
+    background: none;
+    padding: 0;
+    white-space: pre;
   }
 }
 
 @layer layout {
   .container {
-    width: min(100% - 2rem, 76rem);
+    width: 100%;
+    max-width: 1140px;
     margin-inline: auto;
+    padding-inline: var(--space-m);
   }
 
-  .section {
-    padding-block: var(--section-y);
-  }
-
-  .stack > * + * {
-    margin-block-start: var(--gap);
+  .container.narrow {
+    max-width: 780px;
   }
 
   .prose {
@@ -475,13 +307,16 @@
   }
 
   .prose > * + * {
-    margin-block-start: 1em;
+    margin-block-start: var(--space-s);
   }
 
   /* 1.4.8 Visual Presentation (AAA): paragraph spacing at least 1.5x line
-     spacing. `lh` states the requirement exactly; the em value is the
-     fallback. The generator wraps rendered Markdown in its own element, so
-     this must match inside that wrapper, not only direct children. */
+     spacing. The `> * + *` rule above cannot deliver it - ssg wraps rendered
+     Markdown in its own element, so that selector matches the wrapper and
+     every paragraph inside it stays at 0. Lucid hit this first; these are the
+     same themes' version of it, found when the browser gate was widened from
+     three themes to nine. `lh` states the requirement exactly; the em value is
+     the fallback and clears 1.5x line-height for this theme's own metrics. */
   .prose :where(p, ul, ol, pre, blockquote, table, dl, figure)
     + :where(p, ul, ol, pre, blockquote, table, dl, figure) {
     margin-block-start: 2.7em;
@@ -489,47 +324,574 @@
   }
 
   .prose h2 {
-    margin-block-start: 1.8em;
+    margin-block-start: var(--space-l);
   }
 
-  .prose h2 + p {
-    margin-block-start: 0.6em;
+  .prose h3 {
+    margin-block-start: var(--space-m);
   }
 
+  .prose ul,
+  .prose ol {
+    padding-inline-start: 1.25rem;
+  }
+
+  .prose li + li {
+    margin-block-start: var(--space-2xs);
+  }
+
+  .stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+  }
+
+  .section {
+    padding-block: var(--space-xl);
+  }
+
+  .section-soft {
+    background: var(--surface-soft);
+    border-block: 1px solid var(--line-soft);
+  }
+
+  /* Auto-fitting grids: no breakpoint needed, and they reflow rather than
+     overflow at 320px (WCAG 1.4.10). */
   .grid {
     display: grid;
-    gap: var(--gap);
+    gap: var(--space-m);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
   }
 
-  /* auto-fit + minmax keeps every grid single-column at 320px without a
-     media query, which is what makes the 320px reflow check pass. */
-  .grid-2 {
+  .grid-wide {
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
   }
 
-  .grid-3 {
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  .skip-link {
+    position: absolute;
+    inset-inline-start: -9999px;
+    top: 0;
+    z-index: 1000;
   }
 
-  .grid-4 {
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
-  }
-
-  .section-head {
-    max-width: 48rem;
-  }
-
-  .section-head-centred {
-    margin-inline: auto;
-    text-align: center;
-  }
-
-  .section-head > * + * {
-    margin-block-start: 0.75rem;
+  .skip-link:focus {
+    inset-inline-start: var(--space-s);
+    top: var(--space-s);
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    background: var(--accent);
+    color: var(--accent-ink);
+    padding: 0.6rem 1rem;
+    border-radius: var(--radius-sm);
+    font-weight: 700;
   }
 }
 
 @layer components {
+  /* ---------- header + navigation ---------- */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--surface);
+    border-block-end: 1px solid var(--line-soft);
+  }
+
+  .header-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2xs) var(--space-s);
+    min-height: 4.25rem;
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    min-width: 0;
+    min-height: 2.75rem;
+    gap: 0.6rem;
+    font-weight: 700;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .brand-mark {
+    background: var(--accent);
+    color: var(--accent-ink);
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+    font-size: var(--step--1);
+    font-weight: 800;
+    letter-spacing: 0.02em;
+  }
+
+  .site-nav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2xs);
+    min-width: 0;
+  }
+
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: var(--space-m);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* A nav link is a target in its own right, so it gets the same 44px box
+     as the toggles beside it. Padding alone left it 32px tall on tablets —
+     under the theme's own claim, and too close to the neighbouring control
+     to qualify for 2.5.8's spacing exception. */
+  .nav-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    color: var(--ink-soft);
+    font-weight: 600;
+    font-size: var(--step--1);
+    text-decoration: none;
+    padding-block: 0.5rem;
+  }
+
+  .nav-link:hover,
+  .nav-link[aria-current="page"] {
+    color: var(--accent);
+  }
+
+  .nav-link[aria-current="page"] {
+    text-decoration: underline;
+    text-underline-offset: 0.4em;
+    text-decoration-thickness: 2px;
+  }
+
+  /* WCAG 2.5.8 — every control clears the 24x24 CSS px minimum target. */
+  .nav-toggle,
+  .theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.75rem;
+    min-height: 2.75rem;
+    padding: 0;
+    background: var(--surface-soft);
+    color: var(--ink);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    cursor: pointer;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-toggle:hover,
+  .theme-toggle:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .nav-toggle svg,
+  .theme-toggle svg {
+    width: 1.15rem;
+    height: 1.15rem;
+    fill: none;
+    stroke: currentcolor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  /* The icon shown depends on state, so the toggle never needs its
+     accessible name rewritten by script. */
+  .theme-toggle .icon-dark,
+  :root[data-theme="dark"] .theme-toggle .icon-light {
+    display: none;
+  }
+
+  :root[data-theme="dark"] .theme-toggle .icon-dark {
+    display: block;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .theme-toggle .icon-light {
+      display: none;
+    }
+
+    :root:not([data-theme="light"]) .theme-toggle .icon-dark {
+      display: block;
+    }
+  }
+
+  .nav-toggle[aria-expanded="true"] .icon-open,
+  .nav-toggle .icon-close {
+    display: none;
+  }
+
+  .nav-toggle[aria-expanded="true"] .icon-close {
+    display: block;
+  }
+
+  /* ---------- hero ---------- */
+  .hero {
+    padding-block: var(--space-xl);
+  }
+
+  .hero-grid {
+    display: grid;
+    gap: var(--space-l);
+    align-items: center;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 48rem) {
+    .hero-grid {
+      grid-template-columns: 5fr 7fr;
+    }
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1200 / 742;
+    object-fit: cover;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+  }
+
+  .eyebrow {
+    font-size: var(--step--1);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: var(--accent);
+  }
+
+  .lead {
+    font-size: var(--step-1);
+    color: var(--ink-soft);
+    max-width: var(--measure);
+  }
+
+  .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+  }
+
+  /* ---------- buttons ---------- */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 2.75rem;
+    padding-inline: 1.25rem;
+    border-radius: var(--radius-sm);
+    font-weight: 650;
+    font-size: var(--step--1);
+    text-decoration: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: var(--accent-ink);
+  }
+
+  .btn-primary:hover {
+    background: var(--accent-hover);
+    color: var(--accent-ink);
+  }
+
+  .btn-secondary {
+    background: var(--surface-soft);
+    color: var(--ink);
+    border-color: var(--line);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .btn-secondary:hover,
+  .btn-outline:hover {
+    border-color: var(--accent-hover);
+    color: var(--accent-hover);
+  }
+
+  /* ---------- cards ---------- */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line-soft);
+    border-radius: var(--radius);
+    padding: var(--space-m);
+    box-shadow: var(--shadow-sm);
+    container-type: inline-size;
+  }
+
+  .card h3 {
+    font-size: var(--step-1);
+    margin-block-end: var(--space-2xs);
+  }
+
+  .card p {
+    color: var(--ink-muted);
+    font-size: var(--step--1);
+  }
+
+  /* Container query: a card laid out in a wide slot gets a roomier
+     interior without the page needing to know where it sits. */
+  @container (min-width: 26rem) {
+    .card {
+      padding: var(--space-l);
+    }
+  }
+
+  .metric {
+    text-align: center;
+  }
+
+  .metric-value {
+    font-size: var(--step-3);
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1.1;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .metric-title {
+    font-weight: 650;
+    margin-block-start: var(--space-2xs);
+  }
+
+  .badge {
+    display: inline-block;
+    background: var(--accent-soft);
+    color: var(--on-accent-soft);
+    font-size: var(--step--1);
+    font-weight: 700;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+  }
+
+  /* ---------- tables ---------- */
+  /* Emitted by the generator around every table. Focusable, because a
+     scrollable region a keyboard user cannot reach is not reachable
+     content — hence the visible ring when it takes focus. */
+  .table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--line-soft);
+    border-radius: var(--radius);
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .table-wrap:focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 2px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--surface);
+  }
+
+  th,
+  td {
+    text-align: start;
+    padding: 0.9rem 1rem;
+    border-block-end: 1px solid var(--line-soft);
+    font-size: var(--step--1);
+  }
+
+  th {
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  td {
+    color: var(--ink-soft);
+  }
+
+  tbody tr:last-child td {
+    border-block-end: none;
+  }
+
+  /* ---------- forms ---------- */
+  .field {
+    display: grid;
+    gap: var(--space-2xs);
+  }
+
+  .field label {
+    font-weight: 650;
+    font-size: var(--step--1);
+  }
+
+  .field input,
+  .field textarea {
+    width: 100%;
+    min-height: 2.75rem;
+    padding: 0.6rem 0.75rem;
+    background: var(--surface);
+    color: var(--ink);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+  }
+
+  .field textarea {
+    min-height: 9rem;
+    resize: vertical;
+  }
+
+  .hint {
+    font-size: var(--step--1);
+    color: var(--ink-muted);
+  }
+
+  /* ---------- footer ---------- */
+  .site-footer {
+    border-block-start: 1px solid var(--line-soft);
+    background: var(--surface);
+    padding-block: var(--space-l);
+    margin-block-start: var(--space-2xl);
+    color: var(--ink-muted);
+    font-size: var(--step--1);
+  }
+
+  .footer-cols {
+    display: grid;
+    gap: var(--space-m);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+  }
+
+  .footer-cols h2 {
+    font-size: var(--step--1);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink);
+    margin-block-end: var(--space-2xs);
+  }
+
+  .footer-cols ul {
+    display: grid;
+    gap: var(--space-2xs);
+  }
+
+  .footer-legal {
+    margin-block-start: var(--space-m);
+    padding-block-start: var(--space-s);
+    border-block-start: 1px solid var(--line-soft);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs) var(--space-m);
+    justify-content: space-between;
+  }
+
+  /* ---------- pricing island ---------- */
+  /* Rendered by islands/pricing-toggle.js after hydration. Styling it here
+     rather than in the module keeps the design system in one file. */
+  .billing-toggle {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-xs);
+    margin: 0 0 var(--space-s);
+    padding: var(--space-xs) var(--space-s);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface-soft);
+  }
+
+  .billing-toggle legend {
+    padding-inline: 0.35rem;
+    font-weight: 650;
+    font-size: var(--step--1);
+  }
+
+  .billing-toggle input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+
+  .billing-toggle label {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    padding-inline: 1rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--surface);
+    font-size: var(--step--1);
+    font-weight: 650;
+    cursor: pointer;
+  }
+
+  .billing-toggle input:checked + label {
+    background: var(--accent);
+    color: var(--accent-ink);
+    border-color: var(--accent);
+  }
+
+  /* The input is visually hidden, so its focus ring has to be drawn on the
+     label it controls or keyboard users lose the indicator entirely. */
+  .billing-toggle input:focus-visible + label {
+    outline: 3px solid var(--focus);
+    outline-offset: 2px;
+  }
+
+  .billing-note {
+    flex-basis: 100%;
+    margin: 0;
+    font-size: var(--step--1);
+    color: var(--ink-muted);
+  }
+
+  [data-pricing-table] .badge {
+    margin-inline-start: 0.4rem;
+  }/* ---------- generated language switcher ---------- */
+  
+
+  /* ---------- built-in search widget ---------- */
+  /* `ssg` injects #ssg-search-widget together with its own fingerprinted,
+     SRI-signed CSS and JS. That stylesheet owns the widget's layout and
+     positioning; overriding those here detaches the trigger from the
+     overlay it controls, so this block re-skins colour and border only. */
+  #ssg-search-btn {
+    background: var(--surface);
+    color: var(--ink);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    min-height: 2.75rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  #ssg-search-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+}
+
+@layer utilities {
+  .text-center {
+    text-align: center;
+  }
+
+  .mx-auto {
+    margin-inline: auto;
+  }
+
   .visually-hidden {
     position: absolute;
     width: 1px;
@@ -539,1158 +901,90 @@
     overflow: hidden;
     clip-path: inset(50%);
     white-space: nowrap;
-    border: 0;
-  }
-
-  /* Parked off-screen until focused — never `display: none`, which would
-     take it out of the tab order entirely. */
-  .skip-link {
-    position: absolute;
-    left: -9999px;
-    top: 0;
-    z-index: 999;
-  }
-
-  .skip-link:focus {
-    left: 1rem;
-    top: 1rem;
-    display: inline-flex;
-    align-items: center;
-    min-height: 2.75rem;
-    padding: 0.6rem 1.1rem;
-    border-radius: var(--radius);
-    background: var(--surface);
-    color: var(--ink);
-    border: 2px solid var(--focus);
-    text-decoration: none;
-  }
-
-  /* The masthead stays in view; skeletonic paints it from the tokens. */
-  .topbar {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-  }
-
-  .brand-word {
-    font-size: 1.5rem;
-    letter-spacing: -0.04em;
-  }
-
-  .brand-dot {
-    color: var(--hero-gold);
-  }
-
-  /* The mega-menu: an item with a panel holds its link, a disclosure
-     button and the panel, inside skeletonic's topbar list. The item is the
-     panel's containing block on the wide layout. */
-  .nav-item {
-    position: relative;
-  }
-
-  /* The disclosure beside a link. A control in its own right, so 44x44.
-     Its box must not overlap the link's: on touch a tap in the shared
-     strip lands on whichever is painted on top, which is a coin flip.
-     The pair is tightened with the link's padding instead of a negative
-     margin, so they meet without intersecting. */
-  .nav-disclosure {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 2.75rem;
-    min-height: 2.75rem;
-    border: 1px solid transparent;
-    border-radius: 10px;
-    background: transparent;
-    color: var(--hero-ink-soft);
-    cursor: pointer;
-  }
-
-  .nav-disclosure:hover,
-  .nav-disclosure[aria-expanded="true"] {
-    background: var(--hero-surface);
-    color: var(--hero-ink);
-  }
-
-  .nav-disclosure svg {
-    width: 16px;
-    height: 16px;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 2.25;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-
-  .nav-disclosure[aria-expanded="true"] svg {
-    transform: rotate(180deg);
-  }
-
-  /* The panel: a light surface in both schemes' own surface colour, so
-     its items use the ordinary --ink/--accent tokens. */
-  .nav-panel[hidden] {
-    display: none;
-  }
-
-  .nav-panel {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 60;
-    margin-block-start: 0.6rem;
-    width: max-content;
-    max-width: min(38rem, calc(100vw - 2rem));
-    padding: 1rem;
-    background: var(--surface);
-    color: var(--ink);
-    border: 1px solid var(--line);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-lg);
-  }
-
-  /* Bridges the gap between the item and the panel so a pointer crossing
-     it does not leave the item and dismiss the panel. */
-  .nav-panel::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: -0.6rem;
-    height: 0.6rem;
-  }
-
-  .panel-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.25rem 0.75rem;
-    margin: 0;
-  }
-
-  .panel-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-    min-height: 2.75rem;
-    padding: 0.6rem;
-    border-radius: var(--radius);
-    color: var(--ink);
-    text-decoration: none;
-  }
-
-  .panel-item:hover {
-    background: var(--surface-soft);
-    color: var(--ink);
-  }
-
-  .panel-icon {
-    display: grid;
-    place-items: center;
-    flex: 0 0 auto;
-    width: 2.25rem;
-    height: 2.25rem;
-    border-radius: 10px;
-    color: var(--badge-ink);
-  }
-
-  .panel-icon svg {
-    width: 16px;
-    height: 16px;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-
-  .panel-text {
-    display: grid;
-    gap: 0.15rem;
-  }
-
-  .panel-title {
-    font-weight: 700;
-    font-size: var(--step--1);
-  }
-
-  .panel-desc {
-    color: var(--ink-muted);
-    font-size: var(--step--1);
-    line-height: 1.4;
-  }
-
-  /* Header controls sit on navy, where the page focus colour is too dark
-     to be seen. The light accent clears 3:1 against the band. */
-  .topbar :focus-visible,
-  .hero :focus-visible,
-  .page-hero :focus-visible,
-  .section-dark :focus-visible {
-    outline-color: var(--hero-accent);
-  }
-
-  /* ---- buttons ---- */
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    min-height: 2.75rem;
-    padding: 0.7rem 1.35rem;
-    border-radius: 999px;
-    border: 1px solid transparent;
-    font-weight: 700;
-    font-size: var(--step--1);
-    text-decoration: none;
-    white-space: nowrap;
-    cursor: pointer;
-  }
-
-  .btn-primary {
-    background: var(--accent);
-    color: var(--accent-ink);
-    border-color: var(--accent);
-  }
-
-  .btn-primary:hover {
-    background: var(--accent-hover);
-    border-color: var(--accent-hover);
-    color: var(--accent-ink);
-  }
-
-  .btn-secondary {
-    background: var(--surface);
-    color: var(--ink);
-    border-color: var(--line);
-  }
-
-  .btn-secondary:hover {
-    background: var(--surface-soft);
-    color: var(--ink);
-  }
-
-  /* On the dark bands. */
-  .btn-hero-primary {
-    background: var(--hero-ink);
-    color: var(--hero-bg);
-    border-color: var(--hero-ink);
-  }
-
-  .btn-hero-primary:hover {
-    background: var(--hero-ink-soft);
-    border-color: var(--hero-ink-soft);
-    color: var(--hero-bg);
-  }
-
-  .btn-hero-secondary {
-    background: transparent;
-    color: var(--hero-ink);
-    border-color: var(--hero-line);
-  }
-
-  .btn-hero-secondary:hover {
-    background: var(--hero-surface);
-    color: var(--hero-ink);
-    border-color: var(--hero-ink-soft);
-  }
-
-  /* ---- eyebrow, tags, labels ---- */
-  .eyebrow {
-    color: var(--accent);
-    font-size: var(--step--1);
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-  }
-
-  .eyebrow-hero {
-    color: var(--hero-accent);
-  }
-
-  .eyebrow-clay {
-    color: var(--hero-clay);
-  }
-
-  .eyebrow-green {
-    color: var(--green-text);
-  }
-
-  .lead {
-    font-size: var(--step-1);
-    color: var(--ink-soft);
-    max-width: 44ch;
-  }
-
-  .tag {
-    display: inline-block;
-    padding: 0.3rem 0.75rem;
-    border-radius: 999px;
-    font-size: var(--step--1);
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    margin-block-end: 0.75rem;
-  }
-
-  .tag-blue {
-    background: var(--accent-soft);
-    color: var(--on-accent-soft);
-  }
-
-  .tag-green {
-    background: var(--green-soft);
-    color: var(--green-text);
-  }
-
-  .tag-gold {
-    background: var(--gold-soft);
-    color: var(--gold-text);
-  }
-
-  .tag-clay {
-    background: var(--clay-soft);
-    color: var(--clay-text);
-  }
-
-  .section-label {
-    font-size: var(--step--1);
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--ink-muted);
-    text-align: center;
-    margin-block-end: 1.5rem;
-  }
-
-  /* A single row that wraps, rather than a column that stacks: the CTA
-     pair reads as one decision. */
-  .cta-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    align-items: center;
-  }
-
-  /* ---- hero ----
-     Solid navy behind every word. The slope is a pseudo-element painted
-     in the page ground over the band's foot, so no text ever sits on a
-     clipped or gradient edge. */
-  .hero,
-  .page-hero {
-    position: relative;
-    background: var(--hero-bg);
-    color: var(--hero-ink);
-    padding-block: clamp(3rem, 2rem + 6vw, 7rem) clamp(5rem, 3rem + 9vw, 11rem);
-  }
-
-  .page-hero {
-    padding-block-end: clamp(4rem, 2rem + 8vw, 8rem);
-  }
-
-  /* The sloped foot of the dark band.
-   *
-   * A real element, not a `::after` on the section. axe abandons its
-   * contrast check for every text node under an ancestor carrying a
-   * pseudo-element that could paint a background — "Element's background
-   * color could not be determined due to a pseudo element" — and pa11y
-   * counts that as an error. So the slope reported 28 findings across the
-   * six pages against a hero measuring 17.65:1, because the ratio could
-   * not be computed rather than because it was wrong.
-   *
-   * As an ordinary element axe composites it normally, and since it sits
-   * below every line of text it never becomes their background. */
-  .hero-slope {
-    position: absolute;
-    inset-inline: 0;
-    bottom: -1px;
-    height: clamp(2rem, 6vw, 5.5rem);
-    background: var(--bg);
-    clip-path: polygon(0 100%, 100% 0, 100% 100%);
-    pointer-events: none;
-  }
-
-  .hero-inner {
-    display: grid;
-    gap: clamp(2rem, 1rem + 4vw, 4rem);
-    align-items: center;
-    position: relative;
-    z-index: 1;
-  }
-
-  .hero-copy {
-    display: grid;
-    gap: var(--gap);
-    max-width: 44rem;
-    position: relative;
-    z-index: 1;
-  }
-
-  .hero-copy h1 {
-    color: var(--hero-ink);
-  }
-
-  .hero-lead {
-    color: var(--hero-ink-soft);
-    max-width: 40ch;
-  }
-
-  /* ---- hero mock-ups ----
-     A grid, not a pile of absolute positions: at 320px it is one column
-     and nothing can escape the viewport. */
-  .hero-stage {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
-    gap: var(--gap);
-    align-items: start;
-    padding: clamp(1rem, 0.5rem + 2vw, 2rem);
-    border-radius: var(--radius-lg);
-    /* Translucent, because the mesh below sits *behind* this background
-       rather than on top of it — see `.hero-glow`. Carries no text of its
-       own; every word in the stage is on an opaque card. */
-    background: var(--hero-stage);
-    border: 1px solid var(--hero-line);
-    overflow: hidden;
-  }
-
-  .hero-stage-photo {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    width: 100%;
-    height: 100%;
-    /* This is the stage's decorative background, so it must fill the frame.
-       `contain` letterboxed the portrait asset and left navy gutters at both
-       inline edges on wide screens. */
-    object-fit: cover;
-    opacity: 0.28;
-    filter: saturate(0.55) contrast(1.1);
-  }
-
-  /* The mesh, confined to the stage. Behind the cards, which are solid. */
-  .hero-glow {
-    position: absolute;
-    inset: 6%;
-    border-radius: 45%;
-    background:
-      radial-gradient(at 15% 20%, #933521 0, transparent 50%),
-      radial-gradient(at 85% 15%, #e2725b 0, transparent 45%),
-      radial-gradient(at 20% 80%, #772a1a 0, transparent 45%),
-      radial-gradient(at 80% 80%, #f4a28f 0, transparent 50%),
-      radial-gradient(at 50% 50%, #b04129 0, transparent 40%);
-    filter: blur(40px);
-    pointer-events: none;
-    /* Behind the stage's own background, not among the cards.
-     *
-     * With the default `z-index: auto` this element shares a paint layer
-     * with the cards, and axe then refuses to compute a background colour
-     * for any text inside them — "could not be determined because it is
-     * overlapped by another element" — which pa11y counts as an error.
-     * That was 13 of the 28 findings this theme first produced, against
-     * card text measuring 16.65:1.
-     *
-     * A negative z-index puts it below the in-flow content of the nearest
-     * stacking context, so axe composites the cards normally and the mesh
-     * still shows through the translucent stage above it. */
-    z-index: -1;
-  }
-
-  .mock {
-    position: relative;
-    z-index: 1;
-    padding: 1.25rem;
-    border-radius: var(--radius-lg);
-    background: var(--surface);
-    color: var(--ink);
-    border: 1px solid var(--line-soft);
-    box-shadow: var(--shadow-lg);
-  }
-
-  .mock p {
-    margin: 0;
-  }
-
-  .mock-growth {
-    margin-block-start: clamp(0rem, 4vw, 3rem);
-  }
-
-  .mock-phone {
-    background: var(--hero-bg);
-    color: var(--hero-ink);
-    border: 4px solid var(--hero-line);
-    border-radius: 26px;
-    max-width: 16rem;
-    justify-self: end;
-  }
-
-  .mock-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-  }
-
-  .mock-row + .mock-label,
-  .mock-amount + .mock-row {
-    margin-block-start: 0.9rem;
-  }
-
-  .mock-chip {
-    display: block;
-    width: 36px;
-    height: 26px;
-    border-radius: 5px;
-    background: linear-gradient(135deg, #c5a059, #dfb86c);
-    border: 1px solid #a8843f;
-  }
-
-  .mock-icon {
-    width: 24px;
-    height: 24px;
-    fill: none;
-    stroke: var(--accent);
-    stroke-width: 2;
-  }
-
-  .mock-label {
-    font-size: var(--step--1);
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--ink-muted);
-  }
-
-  .mock-label-clay {
-    color: var(--clay-text);
-  }
-
-  .mock-amount {
-    display: block;
-    margin-block-start: 0.25rem;
-    font-size: var(--step-2);
-    font-weight: 800;
-    letter-spacing: -0.03em;
-    font-variant-numeric: tabular-nums;
-    overflow-wrap: anywhere;
-    display: flex;
-    align-items: baseline;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-  }
-
-  .mock-mono {
-    font-family: var(--font-mono);
-    font-size: var(--step--1);
-    color: var(--ink-muted);
-  }
-
-  .mock-pill {
-    display: inline-block;
-    padding: 0.25rem 0.55rem;
-    border-radius: 6px;
-    font-size: var(--step--1);
-    font-weight: 700;
-    letter-spacing: 0;
-    background: var(--green-soft);
-    color: var(--green-text);
-  }
-
-  .mock-chart {
-    width: 100%;
-    height: 95px;
-    margin-block-start: 1rem;
-  }
-
-  .mock-notch {
-    display: block;
-    width: 64px;
-    height: 6px;
-    margin: 0 auto 1rem;
-    border-radius: 3px;
-    background: var(--hero-line);
-  }
-
-  .mock-notice {
-    padding: 0.85rem;
-    border-radius: 10px;
-    background: var(--hero-surface);
-    border: 1px solid var(--hero-line);
-  }
-
-  .mock-notice-title {
-    font-size: var(--step--1);
-    font-weight: 700;
-    color: var(--hero-clay);
-  }
-
-  .mock-notice-amount {
-    display: block;
-    font-weight: 800;
-    margin-block-start: 0.2rem;
-  }
-
-  .mock-notice-meta {
-    font-size: var(--step--1);
-    color: var(--hero-ink-soft);
-    margin-block-start: 0.2rem;
-  }
-
-  /* ---- partners ---- */
-  .section-partners {
-    padding-block: clamp(2rem, 1rem + 3vw, 3.5rem);
-  }
-
-  .partners {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.75rem 1rem;
-    margin: 0;
-  }
-
-  .partner {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6rem;
-    padding: 0.55rem 1rem;
-    border-radius: var(--radius);
-    background: var(--surface);
-    border: 1px solid var(--line-soft);
-    color: var(--ink-muted);
-    font-size: var(--step--1);
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-  }
-
-  .partner svg {
-    width: 20px;
-    height: 20px;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-
-  /* ---- cards ---- */
-  .card {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: clamp(1.25rem, 1rem + 1vw, 2.25rem);
-    background: var(--surface);
-    border: 1px solid var(--line-soft);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-sm);
-  }
-
-  .card h3 {
-    margin-block-end: 0.5rem;
-  }
-
-  .card p {
-    color: var(--ink-muted);
-    font-size: var(--step--1);
-  }
-
-  .card .tag {
-    color: inherit;
-  }
-
-  .card-link {
-    display: inline-flex;
-    align-items: center;
-    min-height: 2.75rem;
-    margin-block-start: auto;
-    padding-block-start: 0.5rem;
-    font-weight: 700;
-    font-size: var(--step--1);
-  }
-
-  .card-link::after {
-    content: " \2192";
-    margin-inline-start: 0.35rem;
-  }
-
-  .icon-badge {
-    display: grid;
-    place-items: center;
-    width: 3rem;
-    height: 3rem;
-    margin-block-end: 1.25rem;
-    border-radius: 12px;
-    color: var(--badge-ink);
-  }
-
-  .icon-badge svg {
-    width: 22px;
-    height: 22px;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-
-  /* Icon grounds. Decorative gradients under a white glyph only — no
-     text is ever set on one. Both stops of each are tokens so the gate
-     can check the glyph against the lightest of them. */
-  .badge-blue {
-    background: linear-gradient(135deg, var(--badge-blue-from), var(--badge-blue-to));
-  }
-
-  .badge-clay {
-    background: linear-gradient(135deg, var(--badge-clay-from), var(--badge-clay-to));
-  }
-
-  .badge-green {
-    background: linear-gradient(135deg, var(--badge-green-from), var(--badge-green-to));
-  }
-
-  .badge-gold {
-    background: linear-gradient(135deg, var(--badge-gold-from), var(--badge-gold-to));
-  }
-
-  .badge-burgundy {
-    background: linear-gradient(135deg, var(--badge-burgundy-from), var(--badge-burgundy-to));
-  }
-
-  .badge-navy {
-    background: linear-gradient(135deg, var(--badge-navy-from), var(--badge-navy-to));
-  }
-
-  /* ---- developer panel ---- */
-  .section-dark {
-    background: var(--hero-bg);
-    color: var(--hero-ink-soft);
-    border-block: 1px solid var(--hero-line);
-  }
-
-  .section-dark h2 {
-    color: var(--hero-ink);
-  }
-
-  .dev-grid {
-    display: grid;
-    gap: clamp(2rem, 1rem + 4vw, 4.5rem);
-    align-items: center;
-  }
-
-  .dev-lead {
-    color: var(--hero-ink-soft);
-  }
-
-  .pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin: 0;
-  }
-
-  .pill {
-    padding: 0.35rem 0.9rem;
-    border-radius: 999px;
-    border: 1px solid var(--hero-line);
-    background: var(--hero-surface);
-    color: var(--hero-ink);
-    font-size: var(--step--1);
-    font-weight: 600;
-  }
-
-  .code-window {
-    min-width: 0;
-    border-radius: 14px;
-    border: 1px solid var(--hero-line);
-    background: var(--code-bg);
-    color: var(--code-plain);
-    box-shadow: var(--shadow-lg);
-    overflow: hidden;
-  }
-
-  .code-titlebar {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 0.75rem 1.1rem;
-    background: var(--code-bar);
-    border-block-end: 1px solid var(--hero-line);
-    font-family: var(--font-mono);
-    font-size: var(--step--1);
-    color: var(--code-comment);
-  }
-
-  .traffic {
-    display: inline-flex;
-    gap: 7px;
-  }
-
-  .traffic span {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: var(--hero-line);
-  }
-
-  .code-filename {
-    margin-inline: auto;
-  }
-
-  .code-body {
-    margin: 0;
-    padding: 1.25rem;
-    border: 0;
-    border-radius: 0;
-    background: transparent;
-    font-size: var(--step--1);
-    line-height: 1.7;
-    color: var(--code-plain);
-  }
-
-  .syn-keyword {
-    color: var(--code-keyword);
-    font-weight: 600;
-  }
-
-  .syn-function {
-    color: var(--code-function);
-  }
-
-  .syn-string {
-    color: var(--code-string);
-  }
-
-  .syn-comment {
-    color: var(--code-comment);
-    font-style: italic;
-  }
-
-  .syn-variable {
-    color: var(--code-plain);
-  }
-
-  .syn-property {
-    color: var(--code-property);
-  }
-
-  .syn-number {
-    color: var(--code-number);
-  }
-
-  /* ---- governance card ---- */
-  .governance-card {
-    display: grid;
-    gap: clamp(1.5rem, 1rem + 2vw, 3rem);
-    align-items: center;
-    padding: clamp(1.5rem, 1rem + 2vw, 3rem);
-  }
-
-  .governance-card p {
-    color: var(--ink-soft);
-    font-size: var(--step-0);
-  }
-
-  .governance-card .lead {
-    font-size: var(--step-1);
-  }
-
-  .metrics {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr));
-    gap: var(--gap);
-  }
-
-  /* The label is read first and the figure second (dt, dd); the figure is
-     shown first. Order is visual only. */
-  .metric,
-  .stat {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 0.25rem;
-    padding: 1.1rem 1.2rem;
-    border-radius: var(--radius);
-    background: var(--bg-soft);
-    border: 1px solid var(--line-soft);
-    border-inline-start: 3px solid var(--green);
-  }
-
-  .metric dd,
-  .stat dd {
-    font-size: var(--step-2);
-    font-weight: 800;
-    letter-spacing: -0.03em;
-    font-variant-numeric: tabular-nums;
-    color: var(--green-text);
-  }
-
-  .metric dt,
-  .stat dt {
-    color: var(--ink-muted);
-    font-size: var(--step--1);
-  }
-
-  .stat {
-    background: var(--surface);
-    border-inline-start-color: var(--accent);
-  }
-
-  .stat dd {
-    color: var(--ink);
-  }
-
-  /* ---- settlement stream ---- */
-  .stream {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.75rem;
-    margin: 0;
-  }
-
-  .stream-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6rem;
-    padding: 0.6rem 1.1rem;
-    border-radius: 999px;
-    background: var(--surface);
-    border: 1px solid var(--line-soft);
-    box-shadow: var(--shadow-sm);
-    font-size: var(--step--1);
-    font-weight: 600;
-    color: var(--ink);
-  }
-
-  .status-dot {
-    display: inline-block;
-    flex: 0 0 auto;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--green);
-  }
-
-  /* ---- footer ---- */
-  .site-footer {
-    padding-block: var(--section-y);
-    border-block-start: 1px solid var(--line-soft);
-    background: var(--bg-soft);
-  }
-
-  .footer-cols {
-    display: grid;
-    gap: var(--gap);
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
-  }
-
-  .footer-cols h2 {
-    font-size: var(--step--1);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--ink-muted);
-    margin-block-end: 0.6rem;
-  }
-
-  .footer-cols a {
-    display: inline-flex;
-    align-items: center;
-    min-height: 2.75rem;
-    color: var(--ink-soft);
-    text-decoration: none;
-  }
-
-  .footer-cols a:hover {
-    color: var(--accent);
-    text-decoration: underline;
-  }
-
-  .footer-bottom {
-    margin-block-start: var(--gap);
-    padding-block-start: var(--gap);
-    border-block-start: 1px solid var(--line-soft);
-    display: grid;
-    gap: 0.75rem;
-  }
-
-  .footer-status {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-weight: 600;
-    font-size: var(--step--1);
-    color: var(--green-text);
-  }
-
-  .footer-note {
-    color: var(--ink-muted);
-    font-size: var(--step--1);
-  }
-
-  /* ---- forms ---- */
-  .field {
-    display: grid;
-    gap: 0.35rem;
-  }
-
-  .field label {
-    font-weight: 700;
-    font-size: var(--step--1);
-  }
-
-  .field input,
-  .field textarea,
-  .field select {
-    min-height: 2.75rem;
-    padding: 0.6rem 0.8rem;
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    background: var(--surface);
-    color: var(--ink);
-  }
-
-  .field textarea {
-    min-height: 8rem;
-  }
-
-  .field .hint {
-    color: var(--ink-muted);
-    font-size: var(--step--1);
-  }
-
-  /* Without JavaScript the disclosure buttons cannot open anything: the
-     drawer is shown expanded and the chevrons withdrawn. The top-level
-     links still navigate, which is the whole menu without scripting. */
-  html.no-js .nav-disclosure {
-    display: none;
-  }
-
-  /* ---- wide layout: the full row ---- */
-  @media (min-width: 64rem) {
-    .hero-inner {
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-    }
-
-    .dev-grid {
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
-    }
-
-    .governance-card {
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-    }
-  }
-
-  /* ---- narrow layout: the drawer ---- */
-  @media (max-width: 63.999rem) {
-    .nav-item {
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    /* The link shares its row with the disclosure instead of taking the
-       full width the topbar gives a drawer link. */
-    .has-panel > .topbar-link {
-      flex: 1 1 0;
-      inline-size: auto;
-    }
-
-    .nav-disclosure {
-      margin-inline-start: 0;
-    }
-
-    /* The panel becomes an accordion body: in flow, full width, and in
-       the band's own colours rather than a floating card. */
-    .nav-panel {
-      position: static;
-      width: 100%;
-      max-width: none;
-      margin-block: 0.25rem 0.5rem;
-      padding: 0.5rem;
-      background: var(--hero-surface);
-      color: var(--hero-ink);
-      border-color: var(--hero-line);
-      box-shadow: none;
-    }
-
-    .nav-panel::before {
-      display: none;
-    }
-
-    .panel-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .panel-item,
-    .panel-item:hover {
-      color: var(--hero-ink);
-      background: transparent;
-    }
-
-    .panel-desc {
-      color: var(--hero-ink-soft);
-    }
-  }
-}
-
-@layer utilities {
-  .narrow {
-    width: min(100% - 2rem, 46rem);
-    margin-inline: auto;
-  }
-
-  .text-center {
-    text-align: center;
-  }
-
-  .mx-auto {
-    margin-inline: auto;
-  }
-
-  .muted {
-    color: var(--ink-muted);
-  }
-
-  .section-soft {
-    background: var(--bg-soft);
-  }
-
-  .cta-row-centred {
-    justify-content: center;
   }
 }
 
 /* ---------------------------------------------------------------------
-   Fenced code blocks from Markdown.
+   Mobile navigation.
 
-   The generator links its own `highlight.css`, which sets a grey ground
-   on `pre.highlight` and swaps it under `prefers-color-scheme` only —
-   ignoring the theme toggle. Two classes outrank it, so the block takes
-   the theme's surface in both schemes and follows the toggle.
+   The menu collapses behind a disclosure button below 48rem. The button
+   is rendered in the markup unconditionally and hidden with CSS above the
+   breakpoint, so the control that the stylesheet reveals always exists —
+   the previous release hid `.nav-menu` here and revealed a `.nav-toggle`
+   that no layout emitted, leaving phones with no navigation at all.
    --------------------------------------------------------------------- */
-.prose pre.highlight {
-  background: var(--surface-soft);
-  border: 1px solid var(--line-soft);
-  border-radius: var(--radius);
-  color: var(--ink);
-  font-size: 0.92em;
-  line-height: 1.6;
-}
+@layer components {
+  /* Without JavaScript the disclosure button cannot open anything, so the
+     menu is shown expanded and the button withdrawn. The alternative is a
+     control that does nothing guarding navigation that cannot be reached —
+     which is how the previous release shipped a site with no mobile nav at
+     all, by a different route. */
+  html.no-js .nav-toggle {
+    display: none;
+  }
 
-.prose pre.highlight code {
-  color: inherit;
-  background: none;
+  @media (max-width: 47.999rem) {
+    html.no-js .nav-menu {
+      display: flex;
+      position: static;
+      box-shadow: none;
+    }
+
+    .nav-toggle {
+      display: inline-flex;
+      order: 2;
+    }
+
+    .nav-menu {
+      display: none;
+      position: absolute;
+      inset-inline: 0;
+      top: 100%;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      padding: var(--space-xs);
+      background: var(--surface);
+      border-block-end: 1px solid var(--line-soft);
+      box-shadow: var(--shadow-md);
+    }
+
+    .nav-menu[data-open="true"] {
+      display: flex;
+    }
+
+    .nav-menu li {
+      border-block-end: 1px solid var(--line-soft);
+    }
+
+    .nav-menu li:last-child {
+      border-block-end: none;
+    }
+
+    .nav-link {
+      display: block;
+      padding: 0.75rem 0.5rem;
+    }
+
+    .site-header {
+      position: relative;
+    }
+  }
 }
 
 /* ---------------------------------------------------------------------
    Print.
 
    A sticky header and a fixed search trigger repeat on every sheet, and
-   the dark surfaces are a full cartridge.
+   the dark surfaces are a full cartridge. Measured by rendering each page
+   under `@media print` rather than by eyeballing a preview.
    --------------------------------------------------------------------- */
 @media print {
+  .site-header,
   #ssg-search-widget,
-  .skip-link,
-  .hero-stage,
-  .hero-glow,
-  .topbar {
+  .theme-toggle,
+  .nav-toggle,
+  .skip-link {
     display: none !important;
   }
 
@@ -1706,34 +1000,13 @@
     --accent: #000000;
     --line: #666666;
     --line-soft: #999999;
-    --hero-bg: #ffffff;
-    --hero-surface: #ffffff;
-    --hero-ink: #000000;
-    --hero-ink-soft: #1a1a1a;
-    --hero-line: #999999;
-    --hero-accent: #000000;
-    --hero-clay: #000000;
-    --code-bg: #ffffff;
-    --code-bar: #ffffff;
-    --code-plain: #000000;
-    --code-keyword: #000000;
-    --code-function: #000000;
-    --code-string: #000000;
-    --code-comment: #333333;
-    --code-property: #000000;
-    --code-number: #000000;
-    --green-text: #000000;
-    --green: #333333;
     color-scheme: light;
   }
 
   body {
+    padding-block-end: 0;
     background: #fff;
     color: #000;
-  }
-
-  .hero-slope {
-    display: none;
   }
 
   /* A link reading "here" is useless once the href is gone. */
@@ -1744,23 +1017,21 @@
   }
 
   .card,
-  .stat,
-  .metric,
-  .code-window {
-    box-shadow: none;
+  .table-wrap,
+  pre {
     break-inside: avoid;
+    box-shadow: none;
+  }
+
+  .site-footer {
+    margin-block-start: var(--space-m);
   }
 }
 
-/* Attribution link. The colour is inherited from the footer so the pair is one
-   the contrast gate already verifies, rather than a new literal that nothing
-   checks. The 44px box meets the AAA target-size minimum. */
-.made-with-ssg {
-  display: inline-flex;
-  align-items: center;
-  min-height: 2.75rem;
-  color: inherit;
-}
+/* Attribution link, set inline in the colophon sentence. Colour is inherited so
+   the contrast pair stays the verified one; target-size does not apply because
+   2.5.5 exempts a link inside a sentence. */
+.made-with-ssg { color: inherit; }
 
 /* ---------------------------------------------------------------------
    Increase Contrast (macOS / iOS "Increase Contrast", and the same user
@@ -1777,9 +1048,7 @@
   :root[data-theme="dark"] {
     --ink-soft: var(--ink);
     --ink-muted: var(--ink);
-    --hero-ink-soft: var(--hero-ink);
-    --line-soft: var(--line);
-    --hero-line: var(--hero-ink-soft);
+    --rule: var(--line);
   }
 }
 
@@ -1796,81 +1065,133 @@
     outline: 3px solid Highlight;
     outline-offset: 2px;
   }
-
   a {
     color: LinkText;
   }
-
   a:visited {
     color: VisitedText;
   }
-
   /* A button distinguished only by its background becomes invisible
      when the background is forced; give it an edge that is not. */
   .btn,
-  .btn-primary,
-  .nav-disclosure {
+  .btn-primary {
     border: 1px solid ButtonText;
     forced-color-adjust: none;
     background: ButtonFace;
     color: ButtonText;
   }
-
   .skip-link {
     background: Canvas;
     color: CanvasText;
     border: 1px solid CanvasText;
   }
-
-  .hero-glow {
-    display: none;
-  }
 }
 
+/* ---------------------------------------------------------------------
+   Wide colour (Display P3).
+
+   Every token above is sRGB and stays that way — this block only runs
+   where the display can actually show more, and only the chromatic
+   tokens are restated. Neutrals carry almost no chroma, so a wider
+   gamut has nothing to give them.
+
+   Each colour keeps its lightness and hue exactly and gains about a
+   fifth more chroma, which is the part sRGB was clipping. Because
+   lightness is unchanged, contrast is too: `scripts/contrast.py` checks
+   these P3 values against the same thresholds as the sRGB ones, via
+   their XYZ luminance.
+   --------------------------------------------------------------------- */
+@media (color-gamut: p3) {
+  :root,
+  :root[data-theme="light"] {
+    --accent: color(display-p3 0.4209 0.2731 0.0016);
+    --accent-hover: color(display-p3 0.3229 0.1827 0.0);
+    --focus: color(display-p3 0.118 0.2529 0.9035);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --accent: color(display-p3 0.9786 0.7468 0.0138);
+      --accent-hover: color(display-p3 0.9859 0.8275 0.2563);
+      --focus: color(display-p3 0.5344 0.8234 0.9985);
+    }
+  }
+  :root[data-theme="dark"] {
+    --accent: color(display-p3 0.9786 0.7468 0.0138);
+    --accent-hover: color(display-p3 0.9859 0.8275 0.2563);
+    --focus: color(display-p3 0.5344 0.8234 0.9985);
+  }
+}
 
 /* WCAG 2.5.5 Target Size (Enhanced, AAA) — 44x44 CSS px.
  *
  * Footer and navigation links are lists of controls, not running text, so
- * 2.5.5's "inline" exception does not cover them. */
+ * 2.5.5's "inline" exception does not cover them; a 17px-tall footer link is
+ * a real failure. The rules below are the same treatment Lucid has always
+ * used, applied here after the browser gate was widened from three themes to
+ * all nine and found these. */
 footer a,
-.made-with-ssg {
+.brand,
+.suite-link,
+.made-with-ssg,
+.taxonomy-page-list a,
+.taxonomy-term-list a {
   display: inline-flex;
   align-items: center;
-  min-height: 2.75rem;
+  /* min-width, not justify-content: centring would pull short labels like
+     "RSS" away from the left edge the rest of the column lines up on. The
+     target grows to the right; the text stays where it was. */
+  min-height: 44px;
   min-width: 44px;
+}
+
+.nav-link {
+  min-width: 44px;
+  justify-content: center;
 }
 
 .skip-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 2.75rem;
+  min-height: 44px;
   min-width: 44px;
 }
 
-/* A link that is the entire content of its paragraph is a control, not a
-   phrase inside a sentence, so 2.5.5's inline exception does not apply. */
-.container > p > a:only-child {
-  display: inline-flex;
-  align-items: center;
-  min-height: 2.75rem;
-}
-
-/* WCAG 2.4.11/2.4.12 Focus Not Obscured. The header is sticky, so scrolling
-   to a focused control - or to a fragment - can park it underneath. 6rem
-   clears this header at its tallest single row (68px) with room to spare. */
+/* WCAG 2.4.11/2.4.12 Focus Not Obscured. The header is sticky, so scrolling to
+   a focused control - or to a fragment - can park it underneath. Lucid, Quill
+   and Stablo have always set this; the browser gate only covered those three,
+   so the other six never showed the symptom. 5.5rem clears this header at its
+   tallest (69px, measured across the widths the reflow gate uses). */
 html {
-  scroll-padding-top: 6rem;
+  scroll-padding-top: 5.5rem;
 }
 
-/* Art-directed mobile hero.
-   The desktop file is a tall portrait; on a phone it would run to roughly
-   three screens of height and cost three times the bytes. A 3:2 crop is
-   served below 64rem, and the reserved box has to match it or the swap
-   shows up as layout shift. */
-@media (max-width: 64rem) {
-  .art-mobile-crop { aspect-ratio: 3 / 2; object-fit: cover; height: auto; }
+/* An inline `style="justify-content:center"` cannot survive `style-src 'self'`:
+   Chrome refuses to apply it and logs a CSP violation, which is what cost this
+   theme its Lighthouse best-practices score. Kinetic has the same class for the
+   same reason. */
+.cta-row-centred {
+  justify-content: center;
 }
+
+/* Stable, in-flow search trigger for both current and legacy SSG output. */
+.site-nav > [data-ssg-search] {
+  flex: 0 0 2.75rem;
+  width: 2.75rem;
+  height: 2.75rem;
+}
+.site-nav > #ssg-search-btn {
+  position: static;
+  inset: auto;
+  flex: 0 0 2.75rem;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+}
+.site-nav > #ssg-search-btn span,
+.site-nav > #ssg-search-btn kbd { display: none; }
 
 /* Bilingual safety net.
    A heading that cannot break pushes its grid past the viewport as soon as
@@ -1892,10 +1213,10 @@ h1, h2, h3, h4, p, li, dd, dt, figcaption { overflow-wrap: break-word; }
 /* `overflow-wrap: break-word` stops a long word painting outside its box but
    deliberately does not change the element's min-content size, so a grid
    track sized from that content is still as wide as the longest word —
-   which is why `min-width: 0` above was not enough on its own. `anywhere`
-   is the one that reduces min-content, and it still only breaks a word that
-   cannot otherwise fit. French "L'infrastructure" at hero size measures
-   254px against a 288px column here, and wider on CI's font metrics. */
+   which is why the rule above was not enough on its own. `anywhere` is the
+   one that reduces min-content, and it still only breaks a word that cannot
+   otherwise fit. French "L'infrastructure" at hero size is 254px against a
+   288px column here, and wider than that on CI's font metrics. */
 .hero-copy :is(h1, h2, p) { overflow-wrap: anywhere; }
 
 /* A sticky masthead can cover whatever the keyboard scrolls to, which is
@@ -1907,9 +1228,124 @@ html { scroll-padding-block-start: 5.5rem; }
   html { scroll-padding-block-start: 4.5rem; }
 }
 
+/* Language switcher.
+   One control on all twenty-two themes: a globe, the current locale code,
+   and a panel anchored under the button. It was a bare inline list before,
+   positioned differently in every header.
+
+   A <details> disclosure, not a scripted menu. The themes enforce
+   `script-src 'self'` and the semantics gate renders every page with
+   JavaScript blocked, so anything script-driven would be a dead control in
+   the one rendering that has to keep working.
+
+   Colours come from `currentColor` and the two tokens every theme defines,
+   so a theme needs no palette of its own for this and dark mode follows the
+   header it sits in. The panel is opaque on purpose: the reference design
+   blurs the backdrop, but translucent text surfaces are exactly what the
+   AAA contrast gate cannot measure. */
+.ap-lang { position: relative; }
+.ap-lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  min-height: 44px;
+  padding: .5rem 1rem;
+  border: 1px solid color-mix(in srgb, currentColor 30%, transparent);
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: .875rem;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  list-style: none;
+}
+/* Both spellings: Safari still ships the WebKit pseudo-element. */
+.ap-lang-toggle::-webkit-details-marker { display: none; }
+.ap-lang-toggle::marker { content: ""; }
+.ap-lang-toggle:hover { border-color: currentColor; }
+.ap-lang-globe { font-size: 1rem; line-height: 1; }
+.ap-lang-current { line-height: 1; font-variant-numeric: tabular-nums; }
+/* A closed <details> hides its children through a UA rule that an
+   absolutely positioned box escapes: the panel was still laid out, and the
+   layout gate caught it overlapping the theme toggle and the nav links on
+   every theme. Hiding it explicitly is what actually takes it out of flow. */
+.ap-lang:not([open]) .ap-lang-menu { display: none; }
+.ap-lang-menu {
+  position: absolute;
+  top: calc(100% + .375rem);
+  /* Anchored to the button's left edge, not its right. The reference puts
+     this control last in its header, where opening leftwards is the only
+     way it fits; here the search and theme buttons always follow it, so
+     there is room to its right and opening left ran off the viewport. */
+  left: 0;
+  z-index: 60;
+  width: max-content;
+  min-width: 100%;
+  padding: .375rem;
+  border: 1px solid color-mix(in srgb, currentColor 30%, transparent);
+  border-radius: .6rem;
+  background: var(--surface, var(--bg, #fff));
+  box-shadow: 0 8px 28px rgb(0 0 0 / .18);
+  /* The toggle inherits the header's colour, which on a theme with a dark
+     stage is not the page's. The panel sits on the page surface, so it has
+     to reset rather than inherit it. */
+  color: var(--ink, CanvasText);
+}
+.ap-lang-menu-grid { display: grid; gap: .125rem; }
+.ap-lang-item {
+  display: block;
+  min-height: 44px;
+  padding: .6rem .75rem;
+  border-radius: .35rem;
+  color: inherit;
+  font-size: .85rem;
+  line-height: 1.4;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.ap-lang-item:hover { background: color-mix(in srgb, currentColor 10%, transparent); }
+.ap-lang-item[aria-current] {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: .3em;
+  text-decoration-thickness: 2px;
+}
+
+/* Far enough along a narrow header that opening rightwards would overflow;
+   below this width the panel hangs from the button's right edge instead. */
+@media (max-width: 30rem) {
+  .ap-lang-menu { left: auto; right: 0; }
+}
+
 /* A consistent proportional rhythm below every heading level. */
 :where(h1, h2, h3, h4, h5, h6) { padding-block-end: 0.35em; }
 .site-footer .footer-credit a { display: inline; min-width: 0; min-height: 0; padding: 0; margin: 0; white-space: nowrap; }
+
+/* Voxt is the canonical three-state mode control for every theme. */
+#mode-toggle.theme-toggle {
+  appearance: none;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  border: 1px solid #5d6375;
+  border-radius: 50%;
+  background: #151928;
+  color: #ffffff;
+  box-shadow: none;
+  cursor: pointer;
+  display: flex;
+  flex: 0 0 44px;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  line-height: 1;
+}
 #mode-toggle .visually-hidden {
   position: absolute;
   width: 1px;
@@ -1923,5 +1359,17 @@ html { scroll-padding-block-start: 5.5rem; }
 }
 #mode-toggle .theme-icon { line-height: 1; }
 #mode-toggle .theme-icon::before { content: "🖥️"; font-size: 1.2rem; }
+:root[data-theme="light"] #mode-toggle.theme-toggle {
+  border-color: #878d9b;
+  background: #f3f4f6;
+  color: #090a0f;
+}
 :root[data-theme="light"] #mode-toggle .theme-icon::before { content: "☀️"; }
 :root[data-theme="dark"] #mode-toggle .theme-icon::before { content: "🌙"; }
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) #mode-toggle.theme-toggle {
+    border-color: #878d9b;
+    background: #f3f4f6;
+    color: #090a0f;
+  }
+}

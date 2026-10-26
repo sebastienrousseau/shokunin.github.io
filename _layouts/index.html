@@ -1,252 +1,137 @@
 {{#extends "base"}}
 {{#block "main"}}
-<section class="hero" aria-labelledby="hero-heading">
-  <div class="container hero-inner">
-    <div class="hero-copy">
-      <p class="eyebrow eyebrow-hero">{{eyebrow}}</p>
+<section class="section" aria-labelledby="hero-heading">
+  <div class="container hero-grid">
+    <div class="stack">
+      <p><span class="badge">{{eyebrow}}</span></p>
       <h1 id="hero-heading">{{headline}}</h1>
-      <p class="lead hero-lead">{{lead}}</p>
+      <p class="lead">{{lead}}</p>
       <div class="cta-row">
         <a class="btn btn-primary" href="{{site_path}}getting-started/">Get started</a>
-        <a class="btn btn-hero-secondary" href="{{site_path}}features/">See what it does</a>
+        <a class="btn btn-secondary" href="{{site_path}}features/">See what it does</a>
       </div>
     </div>
     <!--
-      Three cards, each a fact from ssg 0.0.69: the quality gate this
-      site passes on every build, the fifteen gates `ssg audit` runs, and
-      the OpenPGP signature on every release package. Decorative, so
-      hidden from assistive technology: the same facts are in the page
-      text below.
+      The commands this site documents, each run with the ssg 0.0.69
+      release binary: install, scaffold, build, audit.
     -->
-    <div class="hero-stage" aria-hidden="true">
-      <div class="hero-glow"></div>
-      <div class="mock mock-treasury">
-        <div class="mock-row">
-          <svg class="mock-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" /></svg>
-        </div>
-        <p class="mock-label">Quality gate pillars passing</p>
-        <strong class="mock-amount">10 / 10</strong>
-        <div class="mock-row">
-          <span class="mock-mono">ssg build</span>
-          <span class="mock-pill">0 issues</span>
-        </div>
-      </div>
-      <div class="mock mock-growth">
-        <p class="mock-label mock-label-clay">Audit</p>
-        <strong class="mock-amount">15 gates <span class="mock-pill">WCAG</span></strong>
-        <div class="mock-row">
-          <span class="mock-mono">ssg audit</span>
-          <span class="mock-pill">CSP · SRI · feeds</span>
-        </div>
-      </div>
-      <div class="mock mock-phone">
-        <span class="mock-notch"></span>
-        <div class="mock-notice">
-          <p class="mock-notice-title">gpg --verify</p>
-          <strong class="mock-notice-amount">Good signature</strong>
-          <p class="mock-notice-meta">ssg 0.0.69, signed and attested</p>
-        </div>
-      </div>
-    </div>
+    <figure class="card stack">
+      <figcaption class="eyebrow">From nothing to a built site</figcaption>
+      <pre><code>cargo install ssg
+
+# Scaffold a project (legacy form, still supported)
+ssg -n mysite
+cd mysite
+
+# Build into public/, then audit it
+ssg build -f config.toml
+ssg audit -o public -f config.toml</code></pre>
+    </figure>
   </div>
-  <div class="hero-slope" aria-hidden="true"></div>
 </section>
 
-<section class="section section-partners" aria-labelledby="targets-heading">
-  <div class="container">
-    <h2 class="section-label" id="targets-heading">Release builds for</h2>
-    <ul class="partners">
-      <li class="partner"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg><span>Linux</span></li>
-      <li class="partner"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg><span>macOS</span></li>
-      <li class="partner"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg><span>Windows</span></li>
-      <li class="partner"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2" /><rect x="9" y="9" width="6" height="6" /></svg><span>x86_64 and arm64</span></li>
-      <li class="partner"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></svg><span>crates.io</span></li>
-    </ul>
+<section class="section section-soft" aria-labelledby="numbers-heading">
+  <div class="container stack">
+    <h2 id="numbers-heading" class="text-center">What ssg 0.0.69 ships</h2>
+    <p class="lead text-center mx-auto">Counted from the 0.0.69 binary and its GitHub release.</p>
+    <div class="grid">
+      <div class="card metric"><div class="metric-value">10 / 10</div><div class="metric-title">Quality-gate pillars this site passes</div></div>
+      <div class="card metric"><div class="metric-value">15</div><div class="metric-title">Audit gates</div></div>
+      <div class="card metric"><div class="metric-value">6</div><div class="metric-title">Subcommands</div></div>
+      <div class="card metric"><div class="metric-value">1.89</div><div class="metric-title">Minimum Rust version</div></div>
+    </div>
   </div>
 </section>
 
 <section class="section" id="features" aria-labelledby="features-heading">
   <div class="container stack">
-    <div class="section-head">
-      <p class="eyebrow">What it does</p>
-      <h2 id="features-heading">A generator that checks the site it builds</h2>
-      <p class="lead">Each card opens its section on the features page.</p>
-    </div>
-    <div class="grid grid-3">
-      <article class="card">
-        <span class="icon-badge badge-green" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" /></svg></span>
+    <p class="eyebrow">What it does</p>
+    <h2 id="features-heading">A generator that checks the site it builds</h2>
+    <p class="lead">Each card opens its section on the features page.</p>
+    <div class="grid">
+      <div class="card">
         <h3>A quality gate on every build</h3>
         <p>Every build scores the site on ten pillars and reports each issue it finds, page by page.</p>
-        <a class="card-link" href="{{site_path}}features/#a-quality-gate-on-every-build">What the gate checks</a>
-      </article>
-      <article class="card">
-        <span class="icon-badge badge-blue" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg></span>
+        <p><a href="{{site_path}}features/#a-quality-gate-on-every-build">What the gate checks</a></p>
+      </div>
+      <div class="card">
         <h3>Fifteen audit gates</h3>
         <p>ssg audit checks the built files: WCAG, structured data, CSP and SRI, links, metadata, feeds, images and more.</p>
-        <a class="card-link" href="{{site_path}}features/#fifteen-audit-gates">See the gates</a>
-      </article>
-      <article class="card">
-        <span class="icon-badge badge-clay" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg></span>
+        <p><a href="{{site_path}}features/#fifteen-audit-gates">See the gates</a></p>
+      </div>
+      <div class="card">
         <h3>CSP and Subresource Integrity</h3>
         <p>Inline styles and scripts move to hashed files, and every local stylesheet and script carries an integrity hash.</p>
-        <a class="card-link" href="{{site_path}}features/#csp-and-subresource-integrity">How pages are hardened</a>
-      </article>
-      <article class="card">
-        <span class="icon-badge badge-gold" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /></svg></span>
+        <p><a href="{{site_path}}features/#csp-and-subresource-integrity">How pages are hardened</a></p>
+      </div>
+      <div class="card">
         <h3>Content schemas</h3>
         <p>Declare the front matter each page must carry, and the build stops with a named error when a field is missing.</p>
-        <a class="card-link" href="{{site_path}}features/#content-schemas">How schemas work</a>
-      </article>
-      <article class="card">
-        <span class="icon-badge badge-burgundy" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 11a9 9 0 0 1 9 9" /><path d="M4 4a16 16 0 0 1 16 16" /><circle cx="5" cy="19" r="1" /></svg></span>
+        <p><a href="{{site_path}}features/#content-schemas">How schemas work</a></p>
+      </div>
+      <div class="card">
         <h3>Feeds, sitemaps and search</h3>
         <p>RSS, Atom and JSON feeds, sitemaps, a search index and llms.txt come out of the same build.</p>
-        <a class="card-link" href="{{site_path}}features/#what-a-build-produces">What a build writes</a>
-      </article>
-      <article class="card">
-        <span class="icon-badge badge-navy" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></svg></span>
+        <p><a href="{{site_path}}features/#what-a-build-produces">What a build writes</a></p>
+      </div>
+      <div class="card">
         <h3>One-command deploys</h3>
         <p>ssg deploy builds and ships to Netlify, Vercel, Cloudflare Pages, GitHub Pages or S3.</p>
-        <a class="card-link" href="{{site_path}}features/#one-command-deploys">Deploy targets</a>
-      </article>
+        <p><a href="{{site_path}}features/#one-command-deploys">Deploy targets</a></p>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="section section-soft" id="commands" aria-labelledby="commands-heading">
   <div class="container stack">
-    <div class="section-head">
-      <p class="eyebrow">Commands</p>
-      <h2 id="commands-heading">Build, check, audit</h2>
-      <p class="lead">Three of the six subcommands in ssg 0.0.69.</p>
-    </div>
-    <div class="grid grid-3">
-      <article class="card">
-        <p class="tag tag-green">ssg build</p>
+    <p class="eyebrow">Commands</p>
+    <h2 id="commands-heading">Build, check, audit</h2>
+    <p class="lead">Three of the six subcommands in ssg 0.0.69.</p>
+    <div class="grid">
+      <div class="card">
+        <p><span class="badge">ssg build</span></p>
         <h3>Build the site</h3>
         <p>Compiles Markdown content with templates into the output directory and runs the quality gate.</p>
-        <a class="card-link" href="{{site_path}}documentation/#subcommands">All subcommands</a>
-      </article>
-      <article class="card">
-        <p class="tag tag-blue">ssg check</p>
+        <p><a href="{{site_path}}documentation/#subcommands">All subcommands</a></p>
+      </div>
+      <div class="card">
+        <p><span class="badge">ssg check</span></p>
         <h3>Validate without writing</h3>
         <p>Runs the content, accessibility, SEO, JSON-LD and CSP checks and writes no output.</p>
-        <a class="card-link" href="{{site_path}}documentation/#subcommands">All subcommands</a>
-      </article>
-      <article class="card">
-        <p class="tag tag-clay">ssg audit</p>
+        <p><a href="{{site_path}}documentation/#subcommands">All subcommands</a></p>
+      </div>
+      <div class="card">
+        <p><span class="badge">ssg audit</span></p>
         <h3>Audit the result</h3>
         <p>Runs the fifteen gates against the built files and exits non-zero on an error.</p>
-        <a class="card-link" href="{{site_path}}features/#fifteen-audit-gates">The fifteen gates</a>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section section-dark" id="developers" aria-labelledby="dev-heading">
-  <div class="container dev-grid">
-    <div class="dev-copy stack">
-      <p class="eyebrow eyebrow-clay">Install</p>
-      <h2 id="dev-heading">From nothing to a built site</h2>
-      <p class="lead dev-lead">Install the crate, scaffold a project, build it and audit the output. Building from source needs Rust 1.89 or newer; release archives need nothing.</p>
-      <ul class="pills" aria-label="Ways to install ssg">
-        <li class="pill">cargo install ssg</li>
-        <li class="pill">GitHub release archives</li>
-      </ul>
-      <div class="cta-row">
-        <a class="btn btn-hero-primary" href="{{site_path}}getting-started/">Read the getting started guide</a>
+        <p><a href="{{site_path}}features/#fifteen-audit-gates">The fifteen gates</a></p>
       </div>
     </div>
-
-    <figure class="code-window">
-      <figcaption class="code-titlebar">
-        <span class="traffic" aria-hidden="true"><span></span><span></span><span></span></span>
-        <span class="code-filename">terminal</span>
-      </figcaption>
-      <pre class="code-body"><code><span class="syn-function">cargo</span> install ssg
-
-<span class="syn-comment"># Scaffold a project (legacy form, still supported)</span>
-<span class="syn-function">ssg</span> -n mysite
-<span class="syn-keyword">cd</span> mysite
-
-<span class="syn-comment"># Build into public/, then audit it</span>
-<span class="syn-function">ssg</span> build -f config.toml
-<span class="syn-function">ssg</span> audit -o public -f config.toml</code></pre>
-    </figure>
   </div>
 </section>
 
 <section class="section" id="trust" aria-labelledby="trust-heading">
-  <div class="container">
-    <div class="card governance-card">
-      <div class="stack">
-        <div class="eyebrow eyebrow-green">Security</div>
-        <h2 id="trust-heading">Releases you can verify</h2>
-        <p class="lead">Every release package comes with a SHA-256 sum, an OpenPGP signature and a build provenance attestation.</p>
-        <p>The signing key is in KEYS.asc in the repository. The security page shows how to check an archive before you run it, and how to report a vulnerability.</p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="{{site_path}}security/">Read the security page</a>
-        </div>
-      </div>
-      <dl class="metrics">
-        <div class="metric">
-          <dt>Checksums</dt>
-          <dd>SHA-256</dd>
-        </div>
-        <div class="metric">
-          <dt>Signatures</dt>
-          <dd>OpenPGP</dd>
-        </div>
-        <div class="metric">
-          <dt>Build provenance</dt>
-          <dd>SLSA</dd>
-        </div>
-        <div class="metric">
-          <dt>Licence</dt>
-          <dd>MIT or Apache-2.0</dd>
-        </div>
-      </dl>
+  <div class="container stack">
+    <p class="eyebrow">Security</p>
+    <h2 id="trust-heading">Releases you can verify</h2>
+    <p class="lead">Every release package comes with a SHA-256 sum, an OpenPGP signature and a build provenance attestation.</p>
+    <p>The signing key is in KEYS.asc in the repository. Release packages are built for Linux and macOS on x86_64 and arm64 and for Windows on x86_64: .tar.gz archives, a .zip and an .msi, .deb and .rpm packages and a macOS .pkg. The crate is on crates.io. The security page shows how to check an archive before you run it, and how to report a vulnerability.</p>
+    <div class="grid">
+      <div class="card metric"><div class="metric-value">SHA-256</div><div class="metric-title">Checksums</div></div>
+      <div class="card metric"><div class="metric-value">OpenPGP</div><div class="metric-title">Signatures</div></div>
+      <div class="card metric"><div class="metric-value">SLSA</div><div class="metric-title">Build provenance</div></div>
+      <div class="card metric"><div class="metric-value">MIT or Apache-2.0</div><div class="metric-title">Licence</div></div>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="{{site_path}}security/">Read the security page</a>
     </div>
   </div>
 </section>
 
-<section class="section section-soft" id="scale" aria-labelledby="scale-heading">
-  <div class="container stack">
-    <div class="section-head section-head-centred">
-      <p class="eyebrow">In numbers</p>
-      <h2 id="scale-heading">What ssg 0.0.69 ships</h2>
-      <p class="lead mx-auto">Counted from the 0.0.69 binary and its GitHub release.</p>
-    </div>
-    <dl class="grid grid-4 stats">
-      <div class="stat">
-        <dt>Subcommands</dt>
-        <dd>6</dd>
-      </div>
-      <div class="stat">
-        <dt>Audit gates</dt>
-        <dd>15</dd>
-      </div>
-      <div class="stat">
-        <dt>Quality-gate pillars</dt>
-        <dd>10</dd>
-      </div>
-      <div class="stat">
-        <dt>Minimum Rust version</dt>
-        <dd>1.89</dd>
-      </div>
-    </dl>
-    <ul class="stream" aria-label="Release formats for ssg 0.0.69">
-      <li class="stream-pill"><span class="status-dot" aria-hidden="true"></span>.tar.gz for Linux and macOS</li>
-      <li class="stream-pill"><span class="status-dot" aria-hidden="true"></span>.zip and .msi for Windows</li>
-      <li class="stream-pill"><span class="status-dot" aria-hidden="true"></span>.deb and .rpm</li>
-      <li class="stream-pill"><span class="status-dot" aria-hidden="true"></span>.pkg for macOS</li>
-    </ul>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container stack">
-    <div class="prose">{{!content}}</div>
+<section class="section section-soft">
+  <div class="container prose stack">
+    {{!content}}
     <div class="cta-row">
       <a class="btn btn-primary" href="{{site_path}}getting-started/">Get started</a>
       <a class="btn btn-secondary" href="https://github.com/sebastienrousseau/static-site-generator">Source on GitHub</a>
