@@ -1,16 +1,11 @@
 {{#extends "base"}}
 {{#block "main"}}
-<section class="page-hero">
-  <div class="container hero-copy">
-    <p class="eyebrow eyebrow-hero">{{eyebrow}}</p>
-    <h1>{{headline}}</h1>
-    <p class="lead hero-lead">{{lead}}</p>
-  </div>
-    <div class="hero-slope" aria-hidden="true"></div>
-</section>
-
 <article class="section">
   <div class="container narrow stack">
+    <p class="eyebrow">{{eyebrow}}</p>
+    <h1>{{headline}}</h1>
+    <p class="lead">{{lead}}</p>
+
     <div class="prose">{{!content}}</div>
 
     <!--
@@ -23,16 +18,16 @@
         <input id="cf-name" name="name" type="text" autocomplete="name" required />
       </div>
       <div class="field">
-        <label for="cf-email">Email</label>
-        <input id="cf-email" name="email" type="email" autocomplete="email" required aria-describedby="cf-email-hint" />
-        <p class="hint" id="cf-email-hint">Used only to reply to you.</p>
+        <label for="cf-email">Email address</label>
+        <input id="cf-email" name="email" type="email" autocomplete="email" required />
+        <p class="hint" id="cf-email-hint">Used only to reply to this enquiry.</p>
       </div>
       <div class="field">
         <label for="cf-message">Message</label>
         <textarea id="cf-message" name="message" required></textarea>
       </div>
       <div class="cta-row">
-        <button class="btn btn-primary" type="submit">Send message</button>
+        <button class="btn btn-primary" type="submit">Send enquiry</button>
       </div>
     </form>
   </div>

@@ -44,15 +44,15 @@ OG_HEIGHT = re.compile(r'(<meta property="og:image:height" content=")[^"]*(")')
 TWITTER_IMAGE = re.compile(r'(<meta name="twitter:image" content=")[^"]*(")')
 
 CARD = """<!doctype html><html><head><meta charset="utf-8"><style>
-html,body{{margin:0;width:{w}px;height:{h}px;background:#1c1917;color:#fafafa;
+html,body{{margin:0;width:{w}px;height:{h}px;background:#090d16;color:#f9fafb;
 font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}}
 .card{{box-sizing:border-box;height:100%;padding:72px 80px;display:flex;flex-direction:column;
 border-top:12px solid #f4a28f}}
 .brand{{display:flex;align-items:center;gap:20px;font-size:34px;font-weight:600;color:#f4a28f}}
 .brand svg{{width:72px;height:72px}}
 h1{{font-size:68px;line-height:1.1;margin:56px 0 24px;font-weight:700;letter-spacing:-0.02em}}
-p{{font-size:30px;line-height:1.4;margin:0;color:#d6d3d1;max-width:1000px}}
-.url{{margin-top:auto;font-size:26px;color:#d6d3d1}}
+p{{font-size:30px;line-height:1.4;margin:0;color:#e5e7eb;max-width:1000px}}
+.url{{margin-top:auto;font-size:26px;color:#adb4bf}}
 </style></head><body><div class="card">
 <div class="brand">{logo}<span>Static Site Generator</span></div>
 <h1>{title}</h1><p>{description}</p><div class="url">{host}</div>

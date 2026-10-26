@@ -11,7 +11,7 @@ Releases adhere strictly to https://github.com/sebastienrousseau/passmcp/release
 <h1 align="center">static-site-generator.com</h1>
 
 <p align="center">
-  The homepage of Static Site Generator (ssg), built with ssg itself and the Prism theme.
+  The homepage of Static Site Generator (ssg), built with ssg itself and the Velocity theme.
 </p>
 
 <p align="center">
@@ -107,7 +107,7 @@ by it:
 | :--- | :--- | :--- |
 | shokunin.github.io | This repository: content, layouts and build scripts | Changing the website |
 | static-site-generator | The generator the site documents; its source, README, CHANGELOG, SECURITY.md and release binaries are the source of every fact here | Using ssg |
-| Prism theme | The design, from ssg-themes.github.io (MIT, see `LICENSES/`), recoloured from the ssg logo | Restyling the site |
+| Velocity theme | The design, from ssg-themes.github.io (MIT, see `LICENSES/`), with its accent taken from the ssg logo | Restyling the site |
 | Static Site Generator | Builds and audits the site | Building locally and in CI |
 
 ---
@@ -226,7 +226,7 @@ release it builds with.
 ## License
 
 The site's source is available under [Apache-2.0](LICENSE-APACHE) or
-[MIT](LICENSE-MIT), at your option. The Prism theme files in `_layouts/` are
+[MIT](LICENSE-MIT), at your option. The Velocity theme files in `_layouts/` are
 MIT-licensed; see [`LICENSES/`](LICENSES/). ssg itself is MIT OR
 Apache-2.0. The logo in `static/logo.svg` is ssg's, from
 `cloudcdn.pro/static-site-generator/images/logos/static-site-generator.svg`,

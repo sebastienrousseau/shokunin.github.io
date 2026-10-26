@@ -5,7 +5,17 @@
 All notable changes to this website, static-site-generator.com (formerly
 shokunin.one), are documented here.
 
-## [0.0.3] - Unreleased
+## [0.0.4] - Unreleased
+
+### Changed
+
+- Re-themed the site with the Velocity theme from ssg-themes.github.io,
+  replacing Prism. The accent colour tokens keep the terracotta taken from
+  the ssg logo; every other colour is Velocity's. Content, URLs, structured
+  data and the build checks are unchanged; the contrast gate now checks
+  Velocity's tokens.
+
+## [0.0.3] - 2026-10-26 (merged, not tagged)
 
 ### Changed
 

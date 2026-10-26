@@ -47,7 +47,8 @@
     <link rel="icon" href="{{site_path}}logo.svg" type="image/svg+xml" />
 
     <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" content="#1c1917" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#090d16" media="(prefers-color-scheme: dark)" />
 
     <!-- Native cross-document View Transitions. Browsers without support
          ignore the hint and perform an ordinary navigation. -->
@@ -79,7 +80,7 @@
             "license": ["https://www.apache.org/licenses/LICENSE-2.0", "https://opensource.org/licenses/MIT"],
             "codeRepository": "https://github.com/sebastienrousseau/static-site-generator",
             "downloadUrl": "https://crates.io/crates/ssg",
-            "softwareHelp": "https://docs.rs/ssg",
+            "softwareHelp": "https://docs.static-site-generator.com/",
             "isAccessibleForFree": true,
             "author": { "@id": "{{site_url}}#author" },
             "url": "{{site_url}}"

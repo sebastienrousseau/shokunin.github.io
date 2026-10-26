@@ -1,15 +1,15 @@
 # Third-party licences
 
-`_layouts/` is adapted from the **Prism** theme in
-[ssg-themes.github.io](https://github.com/sebastienrousseau/ssg-themes.github.io)
-(MIT, see `PRISM-THEME-MIT.txt`), by way of the adaptations made for
-[corrallib.github.io](https://github.com/sebastienrousseau/corrallib.github.io),
-which took it from commit `99a3243` plus the uncommitted Prism changes in the
-`themes-27c` worktree on 2026-10-25, and then for
-[kyberlib.github.io](https://github.com/sebastienrousseau/kyberlib.github.io).
-`page.html`, `contact.html`, `404.html`, `main.js`, `skeletonic.min.css` and
-`theme-init.js` are Prism's; `base.html` and `styles.css` are Prism's with
-this site's metadata and colour tokens; `header.html`, `footer.html` and
-`index.html` are written for this site from Prism's markup and classes.
-`scripts/contrast.py` and `scripts/anchor_headings.py` are adapted from the
-same repository (MIT).
+`_layouts/` is the **Velocity** theme from
+[ssg-themes.github.io](https://github.com/sebastienrousseau/ssg-themes.github.io),
+copied from `themes/velocity/_layouts/` at commit `99a3243` (the theme is
+identical on that repository's `main`). Velocity's `theme.toml` declares
+`license = "MIT"` and links the repository's licence; the text is in
+`VELOCITY-THEME-MIT.txt`, a copy of that repository's `LICENSE-MIT`.
+
+`page.html`, `404.html`, `main.js`, `skeletonic.min.css`, `theme-init.js`
+and `styles.css` are Velocity's, with this site's accent colour tokens in
+`styles.css`; `base.html`, `header.html`, `footer.html`, `contact.html` and
+`index.html` are Velocity's markup with this site's metadata, navigation,
+form endpoint and content. `scripts/contrast.py` and
+`scripts/anchor_headings.py` are adapted from the same repository (MIT).

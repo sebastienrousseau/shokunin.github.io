@@ -3,7 +3,7 @@
 """WCAG contrast gate for static-site-generator.com's colour tokens.
 
 Adapted from scripts/contrast.py in github.com/sebastienrousseau/ssg-themes.github.io
-(MIT): the same ratios and the same token pairs as the Prism theme, read from
+(MIT): the same ratios and the same token pairs as the Velocity theme, read from
 this site's _layouts/styles.css in light mode and in both dark blocks (the
 prefers-color-scheme one and the explicit toggle). Text needs 7:1 (WCAG AAA),
 non-text UI 3:1.
@@ -84,68 +84,15 @@ PAIRS = [
     ("--line", "--bg", UI_NONTEXT, "control border against ground"),
 ]
 
-PRISM_PAIRS = [
-    ("--hero-ink", "--hero-bg", AAA_TEXT, "masthead text on navy"),
-    ("--hero-ink-soft", "--hero-bg", AAA_TEXT, "masthead secondary text on navy"),
-    ("--hero-ink", "--hero-surface", AAA_TEXT, "masthead text on raised navy"),
-    ("--hero-ink-soft", "--hero-surface", AAA_TEXT, "masthead secondary text on raised navy"),
-    ("--hero-accent", "--hero-bg", AAA_TEXT, "eyebrow on navy"),
-    ("--hero-accent", "--hero-bg", UI_NONTEXT, "masthead focus ring against navy"),
-    ("--hero-accent", "--hero-surface", UI_NONTEXT, "masthead focus ring against raised navy"),
-    ("--hero-clay", "--hero-bg", AAA_TEXT, "developer eyebrow on navy"),
-    ("--hero-clay", "--hero-surface", AAA_TEXT, "notification title on raised navy"),
-    ("--hero-gold", "--hero-bg", AAA_TEXT, "wordmark dot on navy"),
-    ("--hero-line", "--hero-bg", UI_NONTEXT, "masthead border against navy"),
-    ("--hero-bg", "--hero-ink", AAA_TEXT, "hero button label on white"),
-    ("--code-plain", "--code-bg", AAA_TEXT, "code text"),
-    ("--code-keyword", "--code-bg", AAA_TEXT, "code keyword"),
-    ("--code-function", "--code-bg", AAA_TEXT, "code function"),
-    ("--code-string", "--code-bg", AAA_TEXT, "code string"),
-    ("--code-comment", "--code-bg", AAA_TEXT, "code comment"),
-    ("--code-comment", "--code-bar", AAA_TEXT, "code window title"),
-    ("--code-property", "--code-bg", AAA_TEXT, "code property"),
-    ("--code-number", "--code-bg", AAA_TEXT, "code number"),
-    ("--green-text", "--green-soft", AAA_TEXT, "green tag text on tint"),
-    ("--green-text", "--surface", AAA_TEXT, "green text on surface"),
-    ("--green-text", "--bg-soft", AAA_TEXT, "metric figure on soft ground"),
-    ("--green", "--surface", UI_NONTEXT, "green rule against surface"),
-    ("--green", "--bg-soft", UI_NONTEXT, "green rule against soft ground"),
-    ("--clay-text", "--clay-soft", AAA_TEXT, "clay tag text on tint"),
-    ("--clay-text", "--surface", AAA_TEXT, "clay label on surface"),
-    ("--gold-text", "--gold-soft", AAA_TEXT, "gold tag text on tint"),
-    ("--burgundy-text", "--burgundy-soft", AAA_TEXT, "burgundy tag text on tint"),
-    ("--ink-soft", "--bg-soft", AAA_TEXT, "secondary text on soft ground"),
-    ("--ink", "--bg-soft", AAA_TEXT, "body text on soft ground"),
-    ("--accent", "--bg-soft", AAA_TEXT, "link on soft ground"),
-    ("--ink-muted", "--bg-soft", AAA_TEXT, "muted text on soft ground"),
-    ("--line", "--bg-soft", UI_NONTEXT, "control border against soft ground"),
-    # The white glyph on each icon badge, against the *lightest* stop of
-    # that badge's gradient — the stop that decides whether the icon can
-    # be seen. WCAG 1.4.11 (3:1). These were literals inside the
-    # component rule until the gate could reach them, and two of them
-    # sat at 2.5:1.
-    ("--badge-ink", "--badge-blue-to", UI_NONTEXT, "glyph on the blue badge"),
-    ("--badge-ink", "--badge-clay-to", UI_NONTEXT, "glyph on the clay badge"),
-    ("--badge-ink", "--badge-green-to", UI_NONTEXT, "glyph on the green badge"),
-    ("--badge-ink", "--badge-gold-to", UI_NONTEXT, "glyph on the gold badge"),
-    ("--badge-ink", "--badge-burgundy-to", UI_NONTEXT, "glyph on the burgundy badge"),
-    ("--badge-ink", "--badge-navy-to", UI_NONTEXT, "glyph on the navy badge"),
-    ("--badge-ink", "--badge-blue-from", UI_NONTEXT, "glyph on the blue badge, dark stop"),
-    ("--badge-ink", "--badge-clay-from", UI_NONTEXT, "glyph on the clay badge, dark stop"),
-    ("--badge-ink", "--badge-green-from", UI_NONTEXT, "glyph on the green badge, dark stop"),
-    ("--badge-ink", "--badge-gold-from", UI_NONTEXT, "glyph on the gold badge, dark stop"),
-    ("--badge-ink", "--badge-burgundy-from", UI_NONTEXT, "glyph on the burgundy badge, dark stop"),
-    ("--badge-ink", "--badge-navy-from", UI_NONTEXT, "glyph on the navy badge, dark stop"),
-]
-
 HOVER_PAIRS = [
     ("--accent-ink", "--accent-hover", AAA_TEXT, "button label on hovered accent"),
     ("--ink", "--surface-soft", AAA_TEXT, "body text on soft surface (code, hovered items)"),
     ("--ink-soft", "--surface-soft", AAA_TEXT, "secondary text on soft surface"),
-    ("--hero-bg", "--hero-ink-soft", AAA_TEXT, "hero button label on hover"),
-    ("--hero-ink-soft", "--hero-surface", AAA_TEXT, "masthead menu text on raised navy"),
-    ("--hero-accent", "--hero-surface", AAA_TEXT, "masthead accent text on raised navy"),
-    ("--code-plain", "--code-bar", AAA_TEXT, "code text on the window title bar"),
+    ("--ink", "--bg-soft", AAA_TEXT, "body text on soft section ground"),
+    ("--ink-soft", "--bg-soft", AAA_TEXT, "secondary text on soft section ground"),
+    ("--ink-muted", "--bg-soft", AAA_TEXT, "muted text on soft section ground"),
+    ("--accent", "--bg-soft", AAA_TEXT, "link on soft section ground"),
+    ("--line", "--bg-soft", UI_NONTEXT, "control border against soft section ground"),
 ]
 
 RULE = re.compile(r"([^{}]+)\{([^{}]*)\}")
@@ -180,7 +127,7 @@ def main() -> int:
         if not tokens:
             failures.append(f"{mode}: no tokens found for `{selector}`")
             continue
-        for fg, bg, target, label in PAIRS + PRISM_PAIRS + HOVER_PAIRS + rule_pairs(css):
+        for fg, bg, target, label in PAIRS + HOVER_PAIRS + rule_pairs(css):
             if fg not in tokens or bg not in tokens:
                 failures.append(f"{mode}: {fg} or {bg} not declared ({label})")
                 continue
