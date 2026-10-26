@@ -1,11 +1,6 @@
-*.DS_Store
-*.log
-*.profraw
-/.vscode/
-/output/
+_build/
+.DS_Store
+/docs/
 /public/
-/target/
-build
-Icon?
-src/.DS_Store
-tarpaulin-report.html
+node_modules/
+__pycache__/

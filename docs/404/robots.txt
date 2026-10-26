@@ -1,2 +1,0 @@
-User-agent: *
-Sitemap: https://shokunin.one/404/index.html/sitemap.xml
