@@ -40,9 +40,9 @@
 
     <link rel="canonical" href="{{permalink}}" />
 
-    <link rel="alternate" type="application/rss+xml" title="Shokunin - RSS" href="{{site_path}}rss.xml" />
-    <link rel="alternate" type="application/atom+xml" title="Shokunin - Atom" href="{{site_path}}atom.xml" />
-    <link rel="alternate" type="application/feed+json" title="Shokunin - JSON Feed" href="{{site_path}}feed.json" />
+    <link rel="alternate" type="application/rss+xml" title="Static Site Generator - RSS" href="{{site_path}}rss.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Static Site Generator - Atom" href="{{site_path}}atom.xml" />
+    <link rel="alternate" type="application/feed+json" title="Static Site Generator - JSON Feed" href="{{site_path}}feed.json" />
     <link rel="manifest" href="{{site_path}}manifest.json" />
     <link rel="icon" href="{{site_path}}logo.svg" type="image/svg+xml" />
 
@@ -62,7 +62,7 @@
             "@type": "WebSite",
             "@id": "{{site_url}}#website",
             "url": "{{site_url}}",
-            "name": "Shokunin",
+            "name": "Static Site Generator",
             "description": "{{description}}",
             "inLanguage": "{{language}}",
             "publisher": { "@id": "{{site_url}}#author" }
@@ -72,7 +72,7 @@
             "@id": "{{site_url}}#ssg",
             "name": "Static Site Generator (ssg)",
             "alternateName": "Shokunin",
-            "description": "A static site generator written in Rust, formerly named Shokunin, that builds a site and checks it: accessibility, structured data, content security policy and Subresource Integrity.",
+            "description": "A static site generator written in Rust that builds a site and checks it: accessibility, structured data, content security policy and Subresource Integrity.",
             "applicationCategory": "DeveloperApplication",
             "operatingSystem": "Linux, macOS, Windows",
             "programmingLanguage": "Rust",

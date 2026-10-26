@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: MIT
-"""WCAG contrast gate for shokunin.one's colour tokens.
+"""WCAG contrast gate for static-site-generator.com's colour tokens.
 
 Adapted from scripts/contrast.py in github.com/sebastienrousseau/ssg-themes.github.io
 (MIT): the same ratios and the same token pairs as the Prism theme, read from

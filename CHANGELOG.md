@@ -2,9 +2,24 @@
 
 # Changelog
 
-All notable changes to shokunin.one are documented here.
+All notable changes to this website, static-site-generator.com (formerly
+shokunin.one), are documented here.
 
-## [0.0.2] - Unreleased
+## [0.0.3] - Unreleased
+
+### Changed
+
+- The site is now the Static Site Generator homepage at
+  https://static-site-generator.com/ instead of a legacy-name site at
+  shokunin.one: base URL, canonical and Open Graph URLs, robots.txt,
+  security.txt and the README follow.
+- The home page, FAQ and about page present ssg itself; the rename is a
+  short "Formerly Shokunin" page at the same `/migration/` URL, keeping the
+  old-flag mapping table.
+- A themes section links themes.static-site-generator.com, and the API
+  reference links docs.static-site-generator.com.
+
+## [0.0.2] - 2026-10-26 (merged, not tagged)
 
 ### Changed
 
