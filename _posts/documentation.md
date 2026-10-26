@@ -1,126 +1,95 @@
 ---
-
-# Front Matter (YAML)
-
-author: "Sebastien Rousseau"
-banner_alt: ""
-banner_height: ""
-banner_width: ""
-banner: ""
-cdn: "https://kura.pro"
-changefreq: "weekly"
-charset: "utf-8"
-cname: ""
-copyright: "© Copyright 2024 - Shokunin Static Site Generator. All rights reserved."
-date: "Mar 04, 2024"
-description: "Welcome to the Shokunin documentation! This guide will show you how to get started with Shokunin, a modern static site generator (SSG) built with Rust."
-download: ""
-format-detection: "telephone=no"
-hreflang: "en"
-icon: "https://kura.pro/shokunin/images/favicon.ico"
-id: "https://shokunin.one/documentation/index.html"
-image_alt: "Logo of Shokunin, the fastest Rust-based Static Site Generator (SSG)"
-image_height: "630"
-image_width: "1200"
-image: "https://kura.pro/shokunin/images/logos/shokunin.webp"
-keywords: "Shokunin, documentation, build websites, SSG, static site generator, Rust, installation, quick start, contribute, open source"
-language: "en-GB"
-layout: "page"
-locale: "en_GB"
-logo_alt: "Logo of Shokunin, a powerful, Rust-based Static Site Generator"
-logo_height: "33"
-logo_width: "181"
-logo: "https://kura.pro/shokunin/images/titles/title-shokunin.webp"
-menu: "active"
-measurementID: "G-8MGBE9BCZC"
-name: "Documentation"
-permalink: "https://shokunin.one/documentation/index.html"
-rating: "general"
-referrer: "no-referrer"
-revisit-after: "7 days"
-robots: "index, follow"
+name: "shokunin"
 short_name: "shokunin"
-subtitle: "Installation instructions, and documentation for Shokunin Static Site Generator (SSG)"
-tags: "Shokunin, SSG, documentation, build websites, installation, quick start, contribute, open source, Rust"
-theme_color: "181, 0, 0"
-title: "Shokunin Docs: Learn How to Build Websites with the SSG"
-url: "https://shokunin.one"
-viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
-
-# RSS - The RSS feed front matter (YAML).
-
-atom_link: "https://shokunin.one/documentation/rss.xml"
-category: "Software, Static Site Generator, Rust"
-docs: "https://validator.w3.org/feed/docs/rss2.html"
-generator: "Shokunin SSG (version 0.0.26)"
-item_description: "Welcome to the Shokunin documentation! This guide will show you how to get started with Shokunin, a modern static site generator (SSG) built with Rust."
-item_guid: "https://shokunin.one/documentation/rss.xml"
-item_link: "https://shokunin.one/documentation/rss.xml"
-item_pub_date: "Mon, 04 Mar 2024 06:06:06 +0100"
-item_title: "Shokunin Docs: Learn How to Build Websites with the SSG"
-last_build_date: "Mon, 04 Mar 2024 06:06:06 +0100"
-managing_editor: "contact@shokunin.one"
-pub_date: "Mon, 04 Mar 2024 06:06:06 +0100"
-ttl: "60"
-type: "website"
-webmaster: "contact@shokunin.one"
-
-# Apple - The Apple front matter (YAML).
-
-apple_mobile_web_app_orientations: "portrait"
-apple_touch_icon_sizes: "192x192"
-apple-mobile-web-app-capable: "yes"
-apple-mobile-web-app-status-bar-inset: "black"
-apple-mobile-web-app-status-bar-style: "black-translucent"
-apple-mobile-web-app-title: "Shokunin, a powerful, Rust-based Static Site Generator"
-apple-touch-fullscreen: "yes"
-
-# MS Application - The MS Application front matter (YAML).
-
-msapplication-config: "/browserconfig.xml"
-msapplication-tap-highlight: "no"
-msapplication-TileColor: "181, 0, 0"
-msapplication_tile_image: "https://kura.pro/shokunin/images/logos/shokunin.svg"
-
-# Twitter Card - The Twitter Card front matter (YAML).
-
-twitter_card: "summary"
-twitter_creator: "@wwdseb"
-twitter_description: "Welcome to the Shokunin documentation! This guide will show you how to get started with Shokunin, a modern static site generator (SSG) built with Rust."
-twitter_image: "https://kura.pro/shokunin/images/logos/shokunin.svg"
-twitter_image_alt: "Logo of Shokunin, a powerful, Rust-based Static Site Generator"
-twitter_site: "@wwdseb"
-twitter_title: "Shokunin Docs: Learn How to Build Websites with the SSG"
-twitter_url: "https://shokunin.one/documentation/index.html"
-
-# Humans.txt - The Humans.txt front matter (YAML).
-
-author_website: "https://shokunin.one"
-author_twitter: "@wwdseb"
-author_location: "London, UK"
-thanks: "Thanks for reading!"
-site_last_updated: "2024-03-04"
-site_standards: "HTML5, CSS3, RSS, Atom, JSON, XML, YAML, Markdown, TOML"
-site_components: "Shokunin SSG, Shokunin CLI, Shokunin Templates, Shokunin Themes, Kaishi SSG, Kaishi CLI, Kaishi Templates, Kaishi Themes"
-site_software: "Shokunin, Rust"
-
+title: "Command reference for ssg 0.0.69 | Shokunin"
+description: "Reference for the ssg 0.0.69 command line: the build, dev, check, plugins, audit and deploy subcommands, their shared options, the legacy flags and the main ssg.toml keys."
+keywords: "ssg command reference, ssg build options, ssg audit options, ssg.toml"
+author: "Sebastien Rousseau"
+date: "2026-10-26"
+news_publication_date: "2026-10-26"
+layout: "page"
+language: "en-GB"
+schema: "page"
+changefreq: "monthly"
+eyebrow: "Reference"
+headline: "Command reference"
+lead: "The ssg 0.0.69 command line, as printed by ssg --help."
+nav_docs: "true"
 ---
+## Subcommands
 
-![divider][divider].class=\"m-10 w-100\"
+| Command | What it does |
+| :--- | :--- |
+| `ssg build` | Build the site into the configured output directory |
+| `ssg dev` | Build, serve on `127.0.0.1:8000`, watch for changes and push them to the browser |
+| `ssg check` | Run the build-time validators without writing output |
+| `ssg plugins list` | List the build plugins in the order they run |
+| `ssg audit` | Run the fifteen audit gates against a built site |
+| `ssg deploy` | Build the site and ship it to a target |
 
-## Installation
+## Options for build, dev and check
 
-To install Shokunin, please see the [installation page][01].
+| Option | Meaning |
+| :--- | :--- |
+| `-f, --config <FILE>` | Configuration file |
+| `-c, --content <DIR>` | Content directory |
+| `-o, --output <DIR>` | Output directory |
+| `-t, --template <DIR>` | Template directory |
+| `--theme <NAME>` | Theme name, which sets the template directory |
+| `-j, --jobs <N>` | Number of threads |
+| `-q, --quiet` / `--verbose` | Less or more output |
 
-## Quick Start
+`ssg build` also takes `--drafts` to include draft pages and
+`--incremental` to rebuild only the pages a change affects.
 
-To get started with Shokunin, please see the [quick start guide][02].
+## ssg audit
 
-## Contribute
+| Option | Meaning |
+| :--- | :--- |
+| `-o, --output <DIR>` | The built site, `./public` by default |
+| `-f, --config <FILE>` | `ssg.toml`, for its `[audit]` section |
+| `--gate <NAME>` | Run one gate only |
+| `--fail-on <LEVEL>` | Severity that fails the run: `info`, `warn` or `error` (default) |
+| `--json`, `--junit`, `--sarif` | Machine-readable output |
+| `--no-skip-network` | Also check external links |
+| `--explain` | With `--gate`, print what the gate checks |
 
-If you would like to contribute to Shokunin, please see the [contribute page][03].
+## ssg deploy
 
-[divider]: https://kura.pro/common/images/elements/divider.svg "Divider"
-[01]: /installation/index.html "Installation page"
-[02]: /quick-start/index.html "Quick Start Guide"
-[03]: /contribute/index.html "Contribute to Shokunin"
+`--target` is one of `netlify`, `vercel`, `cloudflare-pages`,
+`github-pages`, `s3` or `none`. Tokens come from per-target environment
+variables, for example `SSG_NETLIFY_TOKEN`; `none` builds and skips the
+upload.
+
+## Legacy flags
+
+The bare-flag command line from the Shokunin days, such as
+`ssg -n mysite` or `ssg -c content -o public -t templates`, still runs in
+0.0.69 with a deprecation warning, and is due to be removed in 1.0. The
+[migration page](/migration/#how-do-the-old-flags-map-to-the-new-commands)
+maps it to the subcommands.
+
+## ssg.toml
+
+The keys this site's own `ssg.toml` uses:
+
+```toml
+site_name = "Shokunin"
+site_title = "Shokunin is now Static Site Generator (ssg)"
+site_description = "..."
+base_url = "https://shokunin.one"
+language = "en-GB"
+
+content_dir = "_posts"
+template_dir = "_layouts"
+output_dir = "docs"
+
+[agents]
+agents_txt = true
+ai_plugin = true
+
+[edge_headers]
+targets = ["netlify", "cloudflare"]
+```
+
+The repository's `ssg.schema.json` describes every key.

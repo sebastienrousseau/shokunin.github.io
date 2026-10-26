@@ -1,401 +1,256 @@
-<!DOCTYPE html>
-<html lang="{{language}}">
-
-<head>
-  <meta charset="{{charset}}" />
-  <meta itemprop="datePublished" content="{{item_pub_date}}" id="date">
-  <meta itemprop="dateModified" content="{{last_build_date}}" id="last-modified">
-  <title>{{title}}</title>
-
-  <!-- # Start Primary Meta Tags -->
-  {{primary}}
-  <!-- # End Primary Meta Tags -->
-
-  <!-- # Start Open Graph / Facebook Meta Tags -->
-  {{opengraph}}
-  <!-- # End Open Graph / Facebook Meta Tags -->
-
-  <!-- # Start Accessibility Meta Tags -->
-  <meta name="accessibility" content="ARIA, fullKeyboardControl, noFlashingHazard" />
-  <!-- # End Accessibility Meta Tags -->
-
-  <!-- # Start Apple Meta Tags -->
-  {{apple}}
-  <!-- # End Apple Meta Tags -->
-
-  <!-- # Start Content Security Policy Meta Tags -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self';
-      script-src 'self' 'unsafe-inline' 'unsafe-eval' *.google-analytics.com https://cdn.jsdelivr.net unpkg.com www.googletagmanager.com x.clarity.ms https://www.googletagmanager.com;
-      connect-src 'self' www.googletagmanager.com https://region1.google-analytics.com;
-      img-src 'self' data: https: kura.pro www.googletagmanager.com;
-      style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com;
-      font-src 'self' https://fonts.gstatic.com;
-      media-src 'self' https://kura.pro;" />
-  <!-- # End Content Security Policy Meta Tags -->
-
-  <!-- # Start Microsoft Meta Tags -->
-  {{microsoft}}
-  <!-- # End Microsoft Meta Tags -->
-
-  <!-- # Start Twitter Meta Tags -->
-  {{twitter}}
-  <!-- # End Twitter Meta Tags -->
-
-  <!-- # Start Links -->
-  <link rel="alternate" href="{{url}}" hreflang="{{hreflang}}" />
-  <link rel="preload" as="image" href="{{banner}}">
-  <link rel="canonical" href="{{url}}" />
-  <link rel="icon" type="image/x-icon" href="{{cdn}}/{{short_name}}/images/favicon.ico" sizes="16x16 32x32" />
-  <link as="style" crossorigin="anonymous"
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-    onload="this.onload=null;this.rel='stylesheet'" rel="preload" />
-  <link rel="apple-touch-icon" href="{{cdn}}/{{short_name}}/images/icons/{{apple_touch_icon_sizes}}.png"
-    sizes="{{apple_touch_icon_sizes}}" />
-  <link rel="manifest" href="/manifest.json" />
-  <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
-  <!-- # End Links -->
-
-  <!-- # Start Styles -->
-  <style>
-    @keyframes dropDown {
-      from {
-        transform: translateY(-.618rem)
-      }
-
-      to {
-        transform: translateY(0)
-      }
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0
-      }
-
-      to {
-        opacity: 1
-      }
-    }
-
-    .active,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    strong {
-      font-weight: 400
-    }
-
-    .article-info {
-      color: rgb(var(--theme-color));
-      font-weight: 400
-    }
-
-    .blur-light {
-      backdrop-filter: saturate(180%) blur(20px);
-      background-color: rgba(255, 255, 255, .618)
-    }
-
-    .card {
-      overflow: hidden
-    }
-
-    .drop-down,
-    .fade-in {
-      animation-fill-mode: forwards
-    }
-
-    .drop-down {
-      animation: dropDown 1.618s ease
-    }
-
-    .fade-in {
-      animation: fadeIn 3s ease
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      color: rgb(var(--theme-color))
-    }
-
-    :root{--theme-color: {{theme_color}}}
-    * {
-      font-weight: 300
-    }
-
-    a {
-      color: rgb(var(--theme-color));
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline
-    }
-
-    pre {
-      background: #f9f9f9;
-      border: 1px solid #ddd;
-      border-left: 3px solid rgb(var(--theme-color));
-      color: #666;
-      display: block;
-      font-family: monospace;
-      font-size: 15px;
-      line-height: 1.618;
-      margin-bottom: 1.618em;
-      max-width: 100%;
-      overflow: auto;
-      padding: 1em 1.618em;
-      page-break-inside: avoid;
-      word-wrap: break-word
-    }
-
-    .zoom-in {
-      transition: transform .618s cubic-bezier(.618, 1, .618, 1)
-    }
-
-    .zoom-in:hover {
-      transform: scale(1.0618)
-    }
-
-    .zoom-out {
-      transition: transform .618s cubic-bezier(.618, 1, .618, 1)
-    }
-
-    .zoom-out:hover {
-      transform: scale(.618)
-    }
-
-    .window:before {
-      height: 1.6875em;
-      width: 100%;
-      background: #dedede url(https://kura.pro/common/images/buttons/button-browser.webp) no-repeat 0.5em 0.5em;
-      border-radius: 3px 3px 0 0;
-      content: "";
-      display: block;
-      padding: 0.5em 0.5em 0.5em 0em;
-    }
-
-    .window-body {
-      background: #000;
-      border: 1px solid #dedede;
-      border-radius: 0 0 3px 3px;
-      padding: 0 0 2.618em 1.618em;
-    }
-    .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-}
-
-  </style>
-  <!-- # End Styles -->
-</head>
-
-<body id="page-top" itemscope itemtype="http://schema.org/WebPage"
-  class="fw-light text-center bg-white text-start fs-6">
-  <!-- # Start Responsive navbar -->
-  <nav class="navbar navbar-expand-lg bd-navbar sticky-top shadow-small border-bottom blur-light" id="mainNav" itemscope
-    itemtype="http://schema.org/SiteNavigationElement">
-    <div class="container-xxl p-3">
-      <figure class="py-0 mb-0">
-        <a href="/" tabindex="0" class="navbar-brand">
-          <img alt="Logo of {{name}}" title="Image of the logo of {{name}}" height="{{logo_height}}" id="{{name}}"
-            src="{{logo}}" width="{{logo_width}}" />
-        </a>
-        <figcaption class="visually-hidden">{{subtitle}}</figcaption>
-      </figure>
-      <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-        class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link {{menu}}" aria-current="page" href="/index.html">Home</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">Documentation</a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <li class="nav-item">
-                <a class="dropdown-item" href="/installation/index.html">Installation</a>
-              </li>
-              <li class="nav-item">
-                <a class="dropdown-item" href="/quick-start/index.html">Quick start</a>
-              </li>
-              <li class="nav-item">
-                <a class="dropdown-item" href="/contribute/index.html">Contribute</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" target="_blank" href="https://github.com/sebastienrousseau/shokunin">GitHub</a>
-          </li>
-          <li class="nav-item">
-            <a aria-pressed="false" class="btn btn-dark rounded-pill px-3" href="/contact/index.html">Get in touch
-            </a>
-          </li>
-        </ul>
+{{#extends "base"}}
+{{#block "main"}}
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow eyebrow-hero">{{eyebrow}}</p>
+      <h1 id="hero-heading">{{headline}}</h1>
+      <p class="lead hero-lead">{{lead}}</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="{{site_path}}getting-started/">Get started</a>
+        <a class="btn btn-hero-secondary" href="{{site_path}}features/">See what it does</a>
       </div>
     </div>
-  </nav>
-  <!-- # End Responsive navbar -->
-  <!-- Header-->
-  <header class="bg-dark text-white text-center text-shadow shadow-small position-relative">
-    <video autoplay="" class="fade-in w-100 h-100" height="720" muted="" loop="" playsinline="" poster="{{banner}}" width="1280" aria-labelledby="videoDesc">
-        <source src="https://kura.pro/stock/videos/mount_fuji.mp4" type="video/mp4"> Your browser does not support the video tag.
-    </video>
-    
-    <div id="videoDesc" class="visually-hidden">
-      Landscape video loop of Mount Fuji, depicting the serene and majestic mountain under clear skies. This video is purely visual with no audio components.
-    </div>
-    <section class="py-5 container position-absolute top-50 start-50 translate-middle">
-      <div class="row py-lg-5">
-        <div class="col-lg-6 col-md-8 mx-auto">
-          <p class="fs-1">{{name}}</p>
-          <p class="fs-5">{{subtitle}}</p>
-          <div class="window">
-            <div class="window-body">
-              <code class="text-light float-start user-select-all" style="padding: 11.618px;">$ cargo install ssg</code>
-            </div>
-          </div>
-          </p>
+    <!--
+      Three cards, each a fact from ssg 0.0.69: the quality gate this
+      site passes on every build, the fifteen gates `ssg audit` runs, and
+      the rename from Shokunin in 0.0.36 (CHANGELOG). Decorative, so
+      hidden from assistive technology: the same facts are in the page
+      text below.
+    -->
+    <div class="hero-stage" aria-hidden="true">
+      <div class="hero-glow"></div>
+      <div class="mock mock-treasury">
+        <div class="mock-row">
+          <svg class="mock-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" /></svg>
         </div>
-        <p>
-          <a href="{{doc_url}}" class="btn btn-lg btn-primary my-2" title="CTA for {{doc_title}}">{{doc_title}}</a>
-          <a href="{{quick_start_url}}" class="btn btn-lg btn-light my-2"
-            title="CTA for {{quick_start_title}}">{{quick_start_title}}</a>
-          <br /><br />
-        </p>
+        <p class="mock-label">Quality gate pillars passing</p>
+        <strong class="mock-amount">10 / 10</strong>
+        <div class="mock-row">
+          <span class="mock-mono">ssg build</span>
+          <span class="mock-pill">0 issues</span>
+        </div>
       </div>
-    </section>
-  </header>
+      <div class="mock mock-growth">
+        <p class="mock-label mock-label-clay">Audit</p>
+        <strong class="mock-amount">15 gates <span class="mock-pill">WCAG</span></strong>
+        <div class="mock-row">
+          <span class="mock-mono">ssg audit</span>
+          <span class="mock-pill">CSP · SRI · feeds</span>
+        </div>
+      </div>
+      <div class="mock mock-phone">
+        <span class="mock-notch"></span>
+        <div class="mock-notice">
+          <p class="mock-notice-title">Shokunin is now ssg</p>
+          <strong class="mock-notice-amount">Renamed in 0.0.36</strong>
+          <p class="mock-notice-meta">Same crate: cargo install ssg</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-slope" aria-hidden="true"></div>
+</section>
 
-  <!-- Main content-->
-  <main id="main" class="bd-masthead bg-light fs-5 p-5" aria-label="main">
-    <div class="text-start justify-content-between">{{content}}</div>
-  </main>
+<section class="section section-partners" aria-labelledby="targets-heading">
+  <div class="container">
+    <h2 class="section-label" id="targets-heading">Release builds for</h2>
+    <ul class="partners">
+      <li class="partner"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg><span>Linux</span></li>
+      <li class="partner"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg><span>macOS</span></li>
+      <li class="partner"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg><span>Windows</span></li>
+      <li class="partner"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2" /><rect x="9" y="9" width="6" height="6" /></svg><span>x86_64 and arm64</span></li>
+      <li class="partner"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></svg><span>crates.io</span></li>
+    </ul>
+  </div>
+</section>
 
-  <!-- Footer-->
-  <footer id="footer" aria-label="footer" class="footer border-top mt-auto py-3">
-    <span class="px-2">{{copyright}}</span>
-    <p class="mb-0">
-      <span class="px-2"><a href="/contact/index.html">Contact</a></span>
-      <span class="px-2"><a href="/privacy/index.html">Privacy & Cookie Policy</a></span>
-      <span class="px-2"><a href="/terms/index.html">Terms of Use</a></span>
-    </p>
-  </footer>
+<section class="section" id="features" aria-labelledby="features-heading">
+  <div class="container stack">
+    <div class="section-head">
+      <p class="eyebrow">What it does</p>
+      <h2 id="features-heading">A generator that checks the site it builds</h2>
+      <p class="lead">Each card opens its section on the features page.</p>
+    </div>
+    <div class="grid grid-3">
+      <article class="card">
+        <span class="icon-badge badge-green" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" /></svg></span>
+        <h3>A quality gate on every build</h3>
+        <p>Every build scores the site on ten pillars and reports each issue it finds, page by page.</p>
+        <a class="card-link" href="{{site_path}}features/#a-quality-gate-on-every-build">What the gate checks</a>
+      </article>
+      <article class="card">
+        <span class="icon-badge badge-blue" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg></span>
+        <h3>Fifteen audit gates</h3>
+        <p>ssg audit checks the built files: WCAG, structured data, CSP and SRI, links, metadata, feeds, images and more.</p>
+        <a class="card-link" href="{{site_path}}features/#fifteen-audit-gates">See the gates</a>
+      </article>
+      <article class="card">
+        <span class="icon-badge badge-clay" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg></span>
+        <h3>CSP and Subresource Integrity</h3>
+        <p>Inline styles and scripts move to hashed files, and every local stylesheet and script carries an integrity hash.</p>
+        <a class="card-link" href="{{site_path}}features/#csp-and-subresource-integrity">How pages are hardened</a>
+      </article>
+      <article class="card">
+        <span class="icon-badge badge-gold" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /></svg></span>
+        <h3>Content schemas</h3>
+        <p>Declare the front matter each page must carry, and the build stops with a named error when a field is missing.</p>
+        <a class="card-link" href="{{site_path}}features/#content-schemas">How schemas work</a>
+      </article>
+      <article class="card">
+        <span class="icon-badge badge-burgundy" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 11a9 9 0 0 1 9 9" /><path d="M4 4a16 16 0 0 1 16 16" /><circle cx="5" cy="19" r="1" /></svg></span>
+        <h3>Feeds, sitemaps and search</h3>
+        <p>RSS, Atom and JSON feeds, sitemaps, a search index and llms.txt come out of the same build.</p>
+        <a class="card-link" href="{{site_path}}features/#what-a-build-produces">What a build writes</a>
+      </article>
+      <article class="card">
+        <span class="icon-badge badge-navy" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></svg></span>
+        <h3>One-command deploys</h3>
+        <p>ssg deploy builds and ships to Netlify, Vercel, Cloudflare Pages, GitHub Pages or S3.</p>
+        <a class="card-link" href="{{site_path}}features/#one-command-deploys">Deploy targets</a>
+      </article>
+    </div>
+  </div>
+</section>
 
-  <!-- # Start Scripts -->
-  <script async crossorigin="anonymous"
-    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
-  <script type="application/ld+json">
-      {
-        "@context": "https://schema.org/",
-        "@type": "WebPage",
-        "author": {
-          "@type": "Person",
-          "@id": "{{author}}"
-        },
-        "copyrightHolder": {
-          "@type": "Person",
-          "@id": "{{author}}"
-        },
-        "copyrightYear": "{{copyright}}",
-        "creator": {
-          "@type": "Person",
-          "@id": "{{author}}"
-        },
-        "dateModified": "{{last_build_date}}",
-        "datePublished": "{{item_pub_date}}",
-        "description": "{{description}}",
-        "headline": "{{subtitle}}",
-        "image": {
-          "@type": "ImageObject",
-          "url": "{{image}}"
-        },
-        "inLanguage": "{{language}}",
-        "mainEntityOfPage": "{{permalink}}",
-        "name": "{{name}}",
-        "publisher": {
-          "@type": "Person",
-          "@id": "{{author}}"
-        }
-      }
-    </script>
-  <script type="module" defer>
-    // This is an Immediately Invoked Function Expression (IIFE) which helps
-    // to avoid declaring any globals.
-    (function () {
-      // Create a new script element
-      var script = document.createElement("script");
+<section class="section section-soft" id="commands" aria-labelledby="commands-heading">
+  <div class="container stack">
+    <div class="section-head">
+      <p class="eyebrow">Commands</p>
+      <h2 id="commands-heading">Build, check, audit</h2>
+      <p class="lead">Three of the six subcommands in ssg 0.0.69.</p>
+    </div>
+    <div class="grid grid-3">
+      <article class="card">
+        <p class="tag tag-green">ssg build</p>
+        <h3>Build the site</h3>
+        <p>Compiles Markdown content with templates into the output directory and runs the quality gate.</p>
+        <a class="card-link" href="{{site_path}}documentation/#subcommands">All subcommands</a>
+      </article>
+      <article class="card">
+        <p class="tag tag-blue">ssg check</p>
+        <h3>Validate without writing</h3>
+        <p>Runs the content, accessibility, SEO, JSON-LD and CSP checks and writes no output.</p>
+        <a class="card-link" href="{{site_path}}documentation/#subcommands">All subcommands</a>
+      </article>
+      <article class="card">
+        <p class="tag tag-clay">ssg audit</p>
+        <h3>Audit the result</h3>
+        <p>Runs the fifteen gates against the built files and exits non-zero on an error.</p>
+        <a class="card-link" href="{{site_path}}features/#fifteen-audit-gates">The fifteen gates</a>
+      </article>
+    </div>
+  </div>
+</section>
 
-      // Set the source of the script element to "/main.js".
-      // A timestamp is appended as a query string to ensure the browser
-      // always fetches the latest version of the script, bypassing the
-      // cache.
-      script.src = "/main.js";
+<section class="section section-dark" id="developers" aria-labelledby="dev-heading">
+  <div class="container dev-grid">
+    <div class="dev-copy stack">
+      <p class="eyebrow eyebrow-clay">Install</p>
+      <h2 id="dev-heading">From nothing to a built site</h2>
+      <p class="lead dev-lead">Install the crate, scaffold a project, build it and audit the output. Building from source needs Rust 1.89 or newer; release archives need nothing.</p>
+      <ul class="pills" aria-label="Ways to install ssg">
+        <li class="pill">cargo install ssg</li>
+        <li class="pill">GitHub release archives</li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn btn-hero-primary" href="{{site_path}}getting-started/">Read the getting started guide</a>
+      </div>
+    </div>
 
-      // The script is of type "text/javascript"
+    <figure class="code-window">
+      <figcaption class="code-titlebar">
+        <span class="traffic" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="code-filename">terminal</span>
+      </figcaption>
+      <pre class="code-body"><code><span class="syn-function">cargo</span> install ssg
 
-      // The script is set to execute asynchronously as soon as it's
-      //available
+<span class="syn-comment"># Scaffold a project (legacy form, still supported)</span>
+<span class="syn-function">ssg</span> -n mysite
+<span class="syn-keyword">cd</span> mysite
 
-      // Append the script element to the head of the document
-      document.head.appendChild(script);
-    })(); // The function is immediately invoked
-  </script>
-  <script>
-    // JavaScript code
-    var dropDownElements = document.querySelectorAll('.drop-down');
-    dropDownElements.forEach(function (element) {
-      element.classList.add('animate');
-    });
+<span class="syn-comment"># Build into public/, then audit it</span>
+<span class="syn-function">ssg</span> build -f config.toml
+<span class="syn-function">ssg</span> audit -o public -f config.toml</code></pre>
+    </figure>
+  </div>
+</section>
 
-    window.addEventListener('scroll', function () {
-      var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-      dropDownElements.forEach(function (element) {
-        if (scrollTop === 0) {
-          element.classList.add('animate');
-        } else {
-          element.classList.remove('animate');
-        }
-      });
-    });
+<section class="section" id="trust" aria-labelledby="trust-heading">
+  <div class="container">
+    <div class="card governance-card">
+      <div class="stack">
+        <div class="eyebrow eyebrow-green">Security</div>
+        <h2 id="trust-heading">Releases you can verify</h2>
+        <p class="lead">Every release package comes with a SHA-256 sum, an OpenPGP signature and a build provenance attestation.</p>
+        <p>The signing key is in KEYS.asc in the repository. The security page shows how to check an archive before you run it, and how to report a vulnerability.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="{{site_path}}security/">Read the security page</a>
+        </div>
+      </div>
+      <dl class="metrics">
+        <div class="metric">
+          <dt>Checksums</dt>
+          <dd>SHA-256</dd>
+        </div>
+        <div class="metric">
+          <dt>Signatures</dt>
+          <dd>OpenPGP</dd>
+        </div>
+        <div class="metric">
+          <dt>Build provenance</dt>
+          <dd>SLSA</dd>
+        </div>
+        <div class="metric">
+          <dt>Licence</dt>
+          <dd>MIT or Apache-2.0</dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</section>
 
-    const copyToClipboard = async () => {
-      try {
-        const element = document.querySelector(".user-select-all");
-        await navigator.clipboard.writeText(element.textContent);
-        console.log("Text copied to clipboard!");
-        element.textContent = "Copied!";
-      } catch (error) {
-        console.error("Failed to copy to clipboard:", error);
-        // Optional: Display an error message to the user
-      }
-    };
-  </script>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{measurementID}}"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', '{{measurementID}}');
-  </script>
-</body>
+<section class="section section-soft" id="scale" aria-labelledby="scale-heading">
+  <div class="container stack">
+    <div class="section-head section-head-centred">
+      <p class="eyebrow">In numbers</p>
+      <h2 id="scale-heading">What ssg 0.0.69 ships</h2>
+      <p class="lead mx-auto">Counted from the 0.0.69 binary and its GitHub release.</p>
+    </div>
+    <dl class="grid grid-4 stats">
+      <div class="stat">
+        <dt>Subcommands</dt>
+        <dd>6</dd>
+      </div>
+      <div class="stat">
+        <dt>Audit gates</dt>
+        <dd>15</dd>
+      </div>
+      <div class="stat">
+        <dt>Quality-gate pillars</dt>
+        <dd>10</dd>
+      </div>
+      <div class="stat">
+        <dt>Minimum Rust version</dt>
+        <dd>1.89</dd>
+      </div>
+    </dl>
+    <ul class="stream" aria-label="Release formats for ssg 0.0.69">
+      <li class="stream-pill"><span class="status-dot" aria-hidden="true"></span>.tar.gz for Linux and macOS</li>
+      <li class="stream-pill"><span class="status-dot" aria-hidden="true"></span>.zip and .msi for Windows</li>
+      <li class="stream-pill"><span class="status-dot" aria-hidden="true"></span>.deb and .rpm</li>
+      <li class="stream-pill"><span class="status-dot" aria-hidden="true"></span>.pkg for macOS</li>
+    </ul>
+  </div>
+</section>
 
-</html>
+<section class="section">
+  <div class="container stack">
+    <div class="prose">{{!content}}</div>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="{{site_path}}getting-started/">Get started</a>
+      <a class="btn btn-secondary" href="https://github.com/sebastienrousseau/static-site-generator">Source on GitHub</a>
+    </div>
+  </div>
+</section>
+{{/block}}
