@@ -1,9 +1,9 @@
 ---
-name: "shokunin"
-short_name: "shokunin"
-title: "Accessibility statement | Shokunin"
-description: "How shokunin.one is built to be accessible, how it is checked on every build, and how to report a barrier."
-keywords: "shokunin accessibility, accessibility statement"
+name: "ssg"
+short_name: "ssg"
+title: "Accessibility statement | Static Site Generator"
+description: "How static-site-generator.com is built to be accessible, how it is checked on every build, and how to report a barrier."
+keywords: "ssg website accessibility, accessibility statement"
 author: "Sebastien Rousseau"
 date: "2026-10-26"
 news_publication_date: "2026-10-26"
@@ -13,7 +13,7 @@ schema: "page"
 changefreq: "monthly"
 eyebrow: "Accessibility"
 headline: "Accessibility statement"
-lead: "shokunin.one aims to be usable by everyone, with any input device and any assistive technology."
+lead: "static-site-generator.com aims to be usable by everyone, with any input device and any assistive technology."
 ---
 ## How is the site built for accessibility?
 

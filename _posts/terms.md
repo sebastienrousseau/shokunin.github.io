@@ -1,9 +1,9 @@
 ---
-name: "shokunin"
-short_name: "shokunin"
-title: "Terms of use | Shokunin"
-description: "The terms for using shokunin.one and the licences that apply to Static Site Generator and to this website's source."
-keywords: "shokunin terms, ssg licence"
+name: "ssg"
+short_name: "ssg"
+title: "Terms of use | Static Site Generator"
+description: "The terms for using static-site-generator.com and the licences that apply to Static Site Generator and to this website's source."
+keywords: "static site generator terms, ssg licence"
 author: "Sebastien Rousseau"
 date: "2026-10-26"
 news_publication_date: "2026-10-26"
@@ -25,7 +25,7 @@ licence, which come with no warranty.
 
 ## Which licence applies to this website?
 
-The source of shokunin.one is available under Apache-2.0 or MIT, at your
+The source of static-site-generator.com is available under Apache-2.0 or MIT, at your
 option, in the
 [shokunin.github.io repository](https://github.com/sebastienrousseau/shokunin.github.io).
 Its theme, Prism, is MIT-licensed.
@@ -33,6 +33,7 @@ Its theme, Prism, is MIT-licensed.
 ## Anything else?
 
 The information on this site is provided in good faith and may lag behind the
-latest release; the README, the API reference on docs.rs and the security
-policy in the static-site-generator repository are the reference. Report a
+latest release; the README and security policy in the static-site-generator
+repository and the API reference at docs.static-site-generator.com are the
+reference. Report a
 mistake through the [contact page](/contact/).

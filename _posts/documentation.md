@@ -1,7 +1,7 @@
 ---
-name: "shokunin"
-short_name: "shokunin"
-title: "Command reference for ssg 0.0.69 | Shokunin"
+name: "ssg"
+short_name: "ssg"
+title: "Command reference for ssg 0.0.69 | Static Site Generator"
 description: "Reference for the ssg 0.0.69 command line: the build, dev, check, plugins, audit and deploy subcommands, their shared options, the legacy flags and the main ssg.toml keys."
 keywords: "ssg command reference, ssg build options, ssg audit options, ssg.toml"
 author: "Sebastien Rousseau"
@@ -74,10 +74,10 @@ maps it to the subcommands.
 The keys this site's own `ssg.toml` uses:
 
 ```toml
-site_name = "Shokunin"
-site_title = "Shokunin is now Static Site Generator (ssg)"
+site_name = "Static Site Generator"
+site_title = "Static Site Generator (ssg): ..."
 site_description = "..."
-base_url = "https://shokunin.one"
+base_url = "https://static-site-generator.com"
 language = "en-GB"
 
 content_dir = "_posts"

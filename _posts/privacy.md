@@ -1,9 +1,9 @@
 ---
-name: "shokunin"
-short_name: "shokunin"
-title: "Privacy: what shokunin.one collects | Shokunin"
-description: "What happens to your data on shokunin.one: hosting on GitHub Pages, the contact form, and the theme preference stored in your browser."
-keywords: "shokunin privacy, shokunin.one privacy policy"
+name: "ssg"
+short_name: "ssg"
+title: "Privacy: what static-site-generator.com collects | Static Site Generator"
+description: "What happens to your data on static-site-generator.com: hosting on GitHub Pages, the contact form, and the theme preference stored in your browser."
+keywords: "static-site-generator.com privacy policy"
 author: "Sebastien Rousseau"
 date: "2026-10-26"
 news_publication_date: "2026-10-26"
@@ -19,7 +19,7 @@ lead: "Very little, and nothing that identifies you unless you send a message."
 
 Only your choice of light, dark or system theme, saved in your browser's
 local storage so the next page uses it. The site sets no cookies and runs no
-analytics; the 2024 site's Google Analytics tag is gone.
+analytics.
 
 ## Who hosts it?
 

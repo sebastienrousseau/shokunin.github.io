@@ -1,7 +1,7 @@
 ---
-name: "shokunin"
-short_name: "shokunin"
-title: "Security: verifying releases and reporting vulnerabilities | Shokunin"
+name: "ssg"
+short_name: "ssg"
+title: "Security: verifying releases and reporting vulnerabilities | Static Site Generator"
 description: "How to check an ssg release before running it (SHA-256, OpenPGP signature, build provenance), what ssg does for your site's security, and how to report a vulnerability."
 keywords: "ssg security, verify ssg release, ssg gpg signature, ssg slsa provenance, report vulnerability"
 author: "Sebastien Rousseau"

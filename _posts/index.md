@@ -1,9 +1,9 @@
 ---
-name: "shokunin"
-short_name: "shokunin"
-title: "Shokunin is now Static Site Generator (ssg)"
-description: "Shokunin, the Rust static site generator, was renamed Static Site Generator (ssg) in version 0.0.36. What changed, and how to install, build and check a site with ssg 0.0.69."
-keywords: "Shokunin, Shokunin static site generator, ssg, Static Site Generator, Rust static site generator, cargo install ssg"
+name: "ssg"
+short_name: "ssg"
+title: "Static Site Generator (ssg): a Rust static site generator that checks what it builds"
+description: "Static Site Generator (ssg) is an open-source static site generator written in Rust. It builds a site from Markdown and templates, scores it on a ten-pillar quality gate and audits the output on fifteen gates."
+keywords: "Static Site Generator, ssg, Rust static site generator, cargo install ssg, accessibility audit, CSP, Subresource Integrity"
 author: "Sebastien Rousseau"
 date: "2026-10-26"
 news_publication_date: "2026-10-26"
@@ -11,41 +11,43 @@ layout: "index"
 language: "en-GB"
 schema: "page"
 changefreq: "weekly"
-eyebrow: "Shokunin, renamed"
-headline: "Shokunin is now Static Site Generator"
-lead: "The Rust static site generator once called Shokunin has been named Static Site Generator, or ssg, since version 0.0.36. Same crate, same author, and a build that checks the site it produces."
+eyebrow: "Open-source, written in Rust"
+headline: "A static site generator that checks what it builds"
+lead: "ssg turns Markdown and templates into a site, scores every build on a ten-pillar quality gate, and audits the output on fifteen gates, from WCAG to CSP, SRI, links and feeds."
 ---
-## What happened to Shokunin?
+## What is Static Site Generator?
 
-Shokunin was the name of a static site generator written in Rust by
-[Sebastien Rousseau](https://sebastienrousseau.com/), first committed in
-March 2023 and always published on crates.io as
-[`ssg`](https://crates.io/crates/ssg). In version 0.0.36, released in April 2026, every
-reference to "Shokunin" in the project was renamed to "Static Site
-Generator". The crate name, the `ssg` command and the repository's history
-carried on. The [migration page](/migration/) covers what changed for
-people who used the old command line.
+Static Site Generator, or ssg, is a free, open-source static site generator
+written in Rust by [Sebastien Rousseau](https://sebastienrousseau.com/). It
+compiles Markdown content with HTML templates into a site, and checks the
+result as it goes: a ten-pillar quality gate on every build, and fifteen
+audit gates you can run on the output, covering accessibility, structured
+data, the content security policy, Subresource Integrity, links, metadata
+and feeds. It is dual-licensed under MIT or Apache-2.0, and this site is
+built with it.
 
-## What is ssg today?
-
-A static site generator that compiles Markdown content with HTML templates
-into a site, and checks the result as it goes: a ten-pillar quality gate on
-every build, and fifteen audit gates you can run on the output, covering
-accessibility, structured data, the content security policy, Subresource
-Integrity, links, metadata and feeds. The [features page](/features/) lists
-what it does; this site is built with it.
-
-## Where is the official documentation?
-
-In the [static-site-generator repository](https://github.com/sebastienrousseau/static-site-generator) and the API reference on
-[docs.rs](https://docs.rs/ssg). This site summarises them for people who
-know the project as Shokunin; when the two disagree, the repository wins.
-
-## How do I start?
+## How do I install it?
 
 ```bash
 cargo install ssg
 ```
 
-The [getting started guide](/getting-started/) goes from there to a built
-and audited site.
+or download a signed package from the
+[GitHub releases](https://github.com/sebastienrousseau/static-site-generator/releases). The
+[getting started guide](/getting-started/) goes from there to a built and
+audited site.
+
+## Where is the reference?
+
+The API reference is at
+[docs.static-site-generator.com](https://docs.static-site-generator.com/),
+the themes at
+[themes.static-site-generator.com](https://themes.static-site-generator.com/),
+and the source, the issue tracker and every release at
+[GitHub](https://github.com/sebastienrousseau/static-site-generator).
+
+## Formerly Shokunin
+
+Until version 0.0.36 the project was called Shokunin. The crate and the
+command were always `ssg`; the [Formerly Shokunin](/migration/) page maps
+the old flags to the current subcommands.
